@@ -1,0 +1,25 @@
+
+Dear Customer:
+
+Thanks a lot for your support and purchase SunFounder products.
+
+In this folder you will find:
+
+1. Code - All the code and fritzing pictures are indluded in this folder.
+
+2. Datasheet - The datasheets of the components.
+
+3. Library - Including the needed libraries, you can copy all of them to the path of Arduino/libraries to add them in one time.
+
+4.Install Arduinio IDE in different and FAQ - A documents which is used to introduce different install steps in different operation system.4 basic FAQs are also in the document.
+
+5.SunFounder Mega Kit - The user manual of this kit.
+
+Please help to download Arduino IDE at https://www.arduino.cc/en/Main/Software.
+ 
+If you have questions for the code, you can refer this website https://www.arduino.cc/en/Reference/HomePage. 
+
+
+Thank you for using our products!
+
+SunFounder Support Team.
