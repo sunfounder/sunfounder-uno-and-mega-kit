@@ -1,4 +1,4 @@
-# davinci-kit-for-raspberry-pi
+# SunFounder Uno Kit and SunFounder Mega Kit
 This repository is for SunFounder Uno Kit and SunFounder Mega Kit. you can buy it on [our website](https://www.sunfounder.com/), or search sunfounder in Amazon.
 
 Quick Links:
