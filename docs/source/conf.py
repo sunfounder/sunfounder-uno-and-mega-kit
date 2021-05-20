@@ -61,6 +61,6 @@ html_css_files = [
     'https://ezblock.cc/readDocFile/topHead.css',
 ]
 
-language = 'de'  # 设置新项目的语言与中文
-locale_dirs = ['locale/']  # 设置本地化数据目录
+language = 'de'
+locale_dirs = ['locale/']
 
