@@ -1,5 +1,5 @@
-Simple Creation-Small Fan
-==============================
+Lesson 24 Simple Creation-Small Fan
+====================================
 
 Introduction
 ---------------------
@@ -124,7 +124,7 @@ Code Analysis
 
 **Code Analysis** **24-1** **Workflow of the Small Fan**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     void loop() {
 
@@ -132,12 +132,11 @@ Code Analysis
 
       int reading = digitalRead(buttonPin);
 
-      if (reading != lastButtonState)// If the button state is different from
-      last time
+      if (reading != lastButtonState) // If the button state is different from last time
 
       {
 
-         lastDebounceTime = millis();// reset the debouncing timer
+         lastDebounceTime = millis(); // reset the debouncing timer
 
       }
 
@@ -152,7 +151,7 @@ Code Analysis
 
 .. |image153| image:: media_mega2560/image244.png
 
-|image153|// If it’s over 50ms and *reading* does not equal to
+|image153| // If it’s over 50ms and *reading* does not equal to
 *buttonState*, it indicates the button state has changed.
 
 .. image:: media_mega2560/image243.png
@@ -164,7 +163,7 @@ Code Analysis
 
 .. |image154| image:: media_mega2560/image246.png
 
-|image154|// If buttonState is high level, it means the button has been
+|image154| // If buttonState is high level, it means the button has been
 pressed.
 
 .. image:: media_mega2560/image243.png
@@ -184,7 +183,7 @@ will light up and it goes out when you release the button.
 // The rotational speed is different when the button is pressed at
 different times.
 
-.. code-block:: python
+.. code-block:: Arduino
 
     switch(stat)
 
@@ -192,22 +191,19 @@ different times.
 
     case 1:
 
-      clockwise(rank1);// When stat=1, set the rotate speed of the motor as
-      rank1=150
+      clockwise(rank1); //When stat=1, set the rotate speed of the motor as rank1=150
 
       break;
 
     case 2:
 
-      clockwise(rank2);// When stat=2, set the rotate speed of the motor as
-      rank1=200
+      clockwise(rank2); // When stat=2, set the rotate speed of the motor as rank1=200
 
       break;
 
     case 3:
 
-      clockwise(rank3);// When stat=3, set the rotate speed of the motor as
-      rank1=250
+      clockwise(rank3);// When stat=3, set the rotate speed of the motor as rank1=250
 
       break;
 

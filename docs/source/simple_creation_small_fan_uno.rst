@@ -1,5 +1,5 @@
-Simple Creation-Small Fan Uno
-======================================
+Lesson 24 Simple Creation-Small Fan Uno
+========================================
 
 Introduction
 -------------------
@@ -13,7 +13,7 @@ Components
 ----------------
 
 .. image:: media_uno/uno26.png
-    :align: center
+
 
 
 
@@ -134,8 +134,7 @@ Code Analysis
 
       int reading = digitalRead(buttonPin);
 
-      if (reading != lastButtonState)// If the button state is different from
-      last time
+      if (reading != lastButtonState)// If the button state is different from last time
 
       {
 
@@ -143,21 +142,22 @@ Code Analysis
 
       }
 
-      if ((millis() - lastDebounceTime) > debounceDelay) // Determine whether
-      the button has been pressed for over 50ms to prevent signal generated
-      due to accidental touch.
+      if ((millis() - lastDebounceTime) > debounceDelay) 
+      /* Determine whether the button has been pressed 
+      for over 50ms to prevent signal generated due to accidental touch.*/
 
       {
 
-         if (reading != buttonState) // If it’s over 50ms and *reading* does not
-         equal to *buttonState*, it indicates the button state has changed.
+         if (reading != buttonState) 
+         /*If it’s over 50ms and *reading* does not equal to *buttonState*, 
+         it indicates the button state has changed.*/
 
          {
 
             buttonState = reading; // Store the state of button in buttonState
 
-            if (buttonState == HIGH) // If buttonState is high level, it means the
-            button has been pressed.
+            if (buttonState == HIGH) 
+            //If buttonState is high level, it means the button has been pressed.
 
             {
 
@@ -175,8 +175,8 @@ Code Analysis
 
             }
 
-            else //else, turn off the LED. When you press the button, the LED will
-            light up and it goes out when you release the button.
+            else /*else, turn off the LED. When you press the button, the LED will
+            light up and it goes out when you release the button.*/
 
                digitalWrite(ledPin, LOW);
 
@@ -184,8 +184,7 @@ Code Analysis
 
       }
 
-      // The rotational speed is different when the button is pressed at
-      different times.
+      // The rotational speed is different when the button is pressed at different times.
 
       switch(stat)
 
@@ -193,22 +192,19 @@ Code Analysis
 
       case 1:
 
-         clockwise(rank1);// When stat=1, set the rotate speed of the motor as
-         rank1=150
+         clockwise(rank1);// When stat=1, set the rotate speed of the motor as rank1=150
 
          break;
 
       case 2:
 
-         clockwise(rank2);// When stat=2, set the rotate speed of the motor as
-         rank1=200
+         clockwise(rank2);// When stat=2, set the rotate speed of the motor as rank1=200
 
          break;
 
       case 3:
 
-         clockwise(rank3);// When stat=3, set the rotate speed of the motor as
-         rank1=250
+         clockwise(rank3);// When stat=3, set the rotate speed of the motor as rank1=250
 
          break;
 
@@ -225,11 +221,12 @@ Code Analysis
       lastButtonState = reading;
 
    }
+   
 **Code Analysis** **24-2** **clockwise() function**
 
 .. code-block:: arduino
 
-    void clockwise(int Speed)//
+    void clockwise(int Speed)
 
     {
 

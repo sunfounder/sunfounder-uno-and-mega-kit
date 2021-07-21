@@ -1,5 +1,5 @@
-Simple Creation-Answer Machine
-=======================================
+Lesson 23 Simple Creation-Answer Machine
+=============================================
 
 Introduction
 ----------------
@@ -79,25 +79,27 @@ Code Analysis
 
 **Code Analysis** **23-1** **loop() function**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     b4State = digitalRead(button4);
 
-    //when button4 pressed
+    // when button4 pressed
 
     if(b4State == 0)
 
     {
 
-      if(b4State == 0) //confirm that the button4 is pressed. One pin of the
-      button is connected to pin 9, the other pin is connected to GND, and
-      when the button is pressed, pin 9 is pulled low.
+      if(b4State == 0) 
+      /*confirm that the button4 is pressed. 
+      One pin of the button is connected to pin 9, the other pin is connected to GND, 
+      and when the button is pressed, pin 9 is pulled low.
+      */
 
       {
 
-        flag = 1; //if so,flag is 1
+        flag = 1; // if so,flag is 1
 
-        digitalWrite(LED4, HIGH); //turn the host LED on
+        digitalWrite(LED4, HIGH); // turn the host LED on
 
         delay(200);
 
@@ -109,7 +111,7 @@ Code Analysis
 
     {
 
-      //read the state of the state of buttons
+      // read the state of the state of buttons
 
       b1State = digitalRead(button1);
 
@@ -117,7 +119,7 @@ Code Analysis
 
       b3State = digitalRead(button3);
 
-      //If the button1 press the first
+      // If the button1 press the first
 
       if(b1State == 0)
 
@@ -127,16 +129,15 @@ Code Analysis
 
         digitalWrite(LED4, LOW);
 
-        Alarm(); //buzzer sound
+        Alarm(); // buzzer sound
 
-        digitalWrite(LED1,HIGH); //turn the LED1 on only
+        digitalWrite(LED1,HIGH); // turn the LED1 on only
 
         digitalWrite(LED2,LOW);
 
         digitalWrite(LED3,LOW);
 
-        while(digitalRead(button4)); //detect the button4,if pressed,out of the
-        while loop
+        while(digitalRead(button4)); // detect the button4,if pressed,out of the while loop
 
       }
 
@@ -145,7 +146,7 @@ Code Analysis
 
 **Code Analysis** **23-2** **Alarm() function**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     void Alarm()
 
@@ -153,13 +154,13 @@ Code Analysis
 
       for(int i=0;i<100;i++){
 
-        digitalWrite(buzzerPin,HIGH); //the buzzer sound
+        digitalWrite(buzzerPin,HIGH); // the buzzer sound
 
         delay(2);
 
-        digitalWrite(buzzerPin,LOW); //without sound
+        digitalWrite(buzzerPin,LOW); // without sound
 
-        delay(2); //when delay time changed,the frequency changed
+        delay(2); // when delay time changed,the frequency changed
 
       }
 

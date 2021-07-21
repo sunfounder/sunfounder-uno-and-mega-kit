@@ -1,5 +1,5 @@
-Doorbell Uno
-=====================
+Lesson 6 Doorbell Uno
+=========================
 
 Introduction
 -----------------
@@ -33,9 +33,8 @@ tape is an active one.
 The difference between an active buzzer and a passive buzzer:
 
 .. image:: media_uno/image70.png
-   :width: 2.99306in
-   :height: 1.07431in
-   :align: center
+    :align: center
+
 
 An active buzzer has a built-in oscillating source, so it will make
 sounds when electrified. But a passive buzzer does not have such source,
@@ -63,9 +62,8 @@ Experimental Procedures
 short pin is Cathode).
 
 .. image:: media_uno/image72.png
-   :width: 6.08819in
-   :height: 3.98472in
-   :align: center
+    :align: center
+
 
 **Step 2:** Open the code file.
 
@@ -77,8 +75,8 @@ Now, you should hear the buzzer beep.
 
 .. image:: media_uno/image73.jpeg
    :alt: 4
-   :width: 7.44097in
-   :height: 4.7875in
+   :align: center
+
 
 Code
 --------
@@ -96,11 +94,11 @@ Code Analysis
 
     const int buttonPin = 2; //the button connect to pin2
 
-    const int buzzerPin = 8;//the led connect to pin8
+    const int buzzerPin = 8; //the led connect to pin8
 
     /**********************************/
 
-    int buttonState = 0; // variable for reading the pushbutton status
+    int buttonState = 0; //variable for reading the pushbutton status
 
 Connect the button to pin 2 and buzzer to pin 8. Define a variable
 *buttonState* to restore the state of the button.
@@ -137,35 +135,31 @@ either HIGH or LOW.
 
 **Code Analysis 6-4 Turn on the LED when the button is pressed**
 
-.. code-block:: arduino
+.. code-block:: Arduino
 
-    if (buttonState == HIGH ) //When press the button, run the following
-    code.
+    if (buttonState == HIGH ) //When press the button, run the following code.
+    { 
+        for (i = 0; i < 50; i++) 
+        /*When i=o, which accords with the condition i<=50, i++ equals to 1 
+        (here in i = i + 1, the two "i"s are not the same, but i(now） = i（before） + 1). 
+        Run the code in the curly braces: let the buzzer beep for 3ms and stop for 3ms. 
+        Then repeat 50 times.*/
 
-    { for (i = 0; i < 50; i++) //When i=o, which accords with the condition
-    i<=50, i++ equals to 1 (here in i = i + 1, the two "i"s are not the
-    same, but i\ :sub:`now` = i\ :sub:`before` + 1). Run the code in the
-    curly braces: let the buzzer beep for 3ms and stop for 3ms. Then repeat
-    50 times.
+        { 
+            digitalWrite(buzzerPin, HIGH); //Let the buzzer beep.
+            delay(3); //wait for 3ms
+            digitalWrite(buzzerPin, LOW); //Stop the buzzer.
+            delay(3); //wait for 3ms 
+        }
 
-    { digitalWrite(buzzerPin, HIGH); //Let the buzzer beep.
-
-    delay(3);//wait for 3ms
-
-    digitalWrite(buzzerPin, LOW); //Stop the buzzer.
-
-    delay(3);//wait for 3ms }
-
-    for (i = 0; i < 80; i++) //Let the buzzer beep for 5ms and stop for 5ms,
-    repeat 80 times.
-
-    { digitalWrite(buzzerPin, HIGH);
-
-    delay(5);//wait for 5ms
-
-    digitalWrite(buzzerPin, LOW);
-
-    delay(5);//wait for 5ms }}
+        for (i = 0; i < 80; i++) //Let the buzzer beep for 5ms and stop for 5ms, repeat 80 times.
+        { 
+            digitalWrite(buzzerPin, HIGH);
+            delay(5); //wait for 5ms
+            digitalWrite(buzzerPin, LOW);
+            delay(5); //wait for 5ms 
+        }
+    }
 
 In this part, when the **buttonState** is High level, then let the
 buzzer beeping in different frequency which can simulate the doorbell.

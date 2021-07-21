@@ -1,5 +1,5 @@
-Humiture Sensor
-======================
+Lesson 17 Humiture Sensor
+============================
 
 Introduction
 ---------------------
@@ -60,8 +60,7 @@ Now, you can see the value of the current humidity and temperature
 displayed on the LCD.
 
 .. image:: media_mega2560/image196.jpeg
-   :width: 6.27083in
-   :height: 4.63819in
+   
 
 Code
 -------
@@ -77,15 +76,15 @@ Code Analysis
 
 .. code-block:: arduino
 
-    #include <dht.h> //Include the head file dht.h
+    #include <dht.h> // Include the head file dht.h
 
-    #include <LiquidCrystal.h> //
+    #include <LiquidCrystal.h> 
 
     LiquidCrystal lcd(4, 6, 10, 11, 12, 13); // initialize the LCD1602
 
     dht DHT;
 
-    #define DHT11_PIN 3 //the humiture sensor attact to pin3
+    #define DHT11_PIN 3 // the humiture sensor attact to pin3
 
 **Code Analysis** **17-2** **Read the value of humiture**
 
@@ -143,8 +142,7 @@ read11(): Return values:
 
     lcd.print("Tem:");
 
-    lcd.print(DHT.temperature,1); //print the temperature on lcd，keep one
-    decimal point
+    lcd.print(DHT.temperature,1); // print the temperature on lcd，keep one decimal point
 
     lcd.print(" C");
 
@@ -152,8 +150,8 @@ read11(): Return values:
 
     lcd.print("Hum:");
 
-    lcd.print(DHT.humidity,1); //print the humidity on lcd
+    lcd.print(DHT.humidity,1); // print the humidity on lcd
 
     lcd.print(" %");
 
-    delay(200); //wait a while
+    delay(200); // wait a while

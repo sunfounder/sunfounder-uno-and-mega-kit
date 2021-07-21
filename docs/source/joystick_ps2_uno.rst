@@ -1,5 +1,5 @@
-Joystick PS2 Uno
-=====================
+Lesson 18 Joystick PS2 Uno
+===========================
 
 Introduction
 ---------------------
@@ -27,9 +27,7 @@ In this experiment, we use the Uno board to detect the moving direction
 of the Joystick knob and pressing of the button.
 
 .. image:: media_uno/image151.png
-   :width: 6.67639in
-   :height: 4.05417in
-   :align: center
+
 
 
 
@@ -39,9 +37,7 @@ Experimental Procedures
 **Step 1:** Build the circuit.
 
 .. image:: media_uno/image152.png
-   :width: 5.84653in
-   :height: 3.96458in
-   :align: center
+
 
 **Step 2:** Open the code file.
 
@@ -54,9 +50,7 @@ Serial Monitor will change accordingly; press the button, and the
 coordinate of Z=0 will also be displayed.
 
 .. image:: media_uno/image153.jpeg
-   :width: 7.27431in
-   :height: 4.9875in
-   :align: center
+
 
 Code
 -------
@@ -87,7 +81,8 @@ SW pins of the joystick ps2.
 
       digitalWrite(swPin, HIGH); //And initial value is HIGH
 
-      Serial.begin(9600);}
+      Serial.begin(9600);
+   }
 
     void loop()
 
@@ -104,4 +99,5 @@ SW pins of the joystick ps2.
 
       Serial.println(digitalRead(swPin)); // print the value of SW
 
-      delay(500);}
+      delay(500);
+   }

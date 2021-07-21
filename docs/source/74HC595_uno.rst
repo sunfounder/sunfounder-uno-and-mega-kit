@@ -1,5 +1,5 @@
-74HC595 Uno
-================
+Lesson 20 74HC595 Uno
+======================
 
 Introduction
 ----------------------
@@ -39,9 +39,7 @@ OE is enabled (low level), the data in memory register is output to the
 bus.
 
 .. image:: media_uno/image163.png
-   :width: 5.15347in
-   :height: 2.61111in
-   :align: center
+
 
 Pins of 74HC595 and Their Functions
 ------------------------------------------
@@ -88,8 +86,6 @@ output to the bus (Q0-Q7). So the 16 characters are displayed in the
 
 .. image:: media_uno/image164.png
    :alt: C:\Users\sunfounder\Desktop\fds.png
-   :width: 7.325in
-   :height: 3.46458in
    :align: center
 
 
@@ -122,8 +118,6 @@ DP        Q0
 
 .. image:: media_uno/image165.png
    :alt: 16
-   :width: 6.33403in
-   :height: 4.26667in
    :align: center
 
 **Step 2:** Open the code file.
@@ -154,8 +148,7 @@ Code Analysis
 
 .. code-block:: arduino
 
-    int datArray[16] = {252, 96, 218, 242, 102, 182, 190, 224, 254, 246,
-    238, 62, 156, 122, 158, 142};
+    int datArray[16] = {252, 96, 218, 242, 102, 182, 190, 224, 254, 246, 238, 62, 156, 122, 158, 142};
 
 This array stores the data of the 16 characters from 0 to F. 252 stands
 for 0, which you can calculate by yourself. To display 0, the segment g
@@ -179,8 +172,7 @@ calculate other characters similarly.
 
     {
 
-      digitalWrite(STcp,LOW); //ground ST_CP and hold low for as long as you
-      are transmitting
+      digitalWrite(STcp,LOW); //ground ST_CP and hold low for as long as you are transmitting
 
       shiftOut(DS,SHcp,MSBFIRST,datArray[num]);
 

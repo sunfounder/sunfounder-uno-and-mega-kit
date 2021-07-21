@@ -1,5 +1,5 @@
-Joystick PS2
-=====================
+Lesson 18 Joystick PS2
+===========================
 
 Introduction
 ---------------
@@ -39,8 +39,7 @@ Experimental Procedures
 
 .. image:: media_mega2560/image199.png
    :alt: Joystick PS2_bb
-   :width: 6.28264in
-   :height: 4.26944in
+
 
 **Step 2:** Open the code file.
 
@@ -53,8 +52,7 @@ Serial Monitor will change accordingly; press the button, and the
 coordinate of Z=0 will also be displayed.
 
 .. image:: media_mega2560/image200.jpeg
-   :width: 7.10347in
-   :height: 5.32917in
+
 
 Code
 --------
@@ -69,7 +67,7 @@ Code Analysis
 The code is use the Serial monitor to print the value of the VRX,VRY and
 SW pins of the joystick ps2.
 
-.. code-block:: python
+.. code-block:: Arduino
 
     const int xPin = A0; //the VRX attach to
 
@@ -90,7 +88,7 @@ SW pins of the joystick ps2.
     }
 
     void loop()
-
+    
     {
 
       Serial.print("X: ");
@@ -105,4 +103,6 @@ SW pins of the joystick ps2.
 
       Serial.println(digitalRead(swPin)); // print the value of SW
 
-      delay(500);}
+      delay(500);
+   
+      }

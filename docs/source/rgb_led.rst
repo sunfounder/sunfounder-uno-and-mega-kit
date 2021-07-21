@@ -1,5 +1,5 @@
-RGB LED
-============
+Lesson 9 RGB LED
+==================
 
 Introduction
 ----------------
@@ -72,6 +72,8 @@ In this experiment, the latter is used. The common cathode, or CC, means
 to connect the cathodes of the three LEDs. After you connect it with GND
 and plug in the three pins, the LED will flash the corresponding color.
 
+.. image:: media_mega2560/mega37.png
+    :align: center
 
 An RGB LED has 4 pins: the longest one is GND; the others are Red, Green
 and Blue. Touch its plastic shell and you will find a cut. The pin

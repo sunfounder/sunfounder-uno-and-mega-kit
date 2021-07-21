@@ -1,4 +1,4 @@
-Infrared-Receiver
+Lesson 16 Infrared-Receiver
 ============================
 
 Introduction
@@ -37,8 +37,7 @@ Experimental Procedures
 
 .. image:: media_mega2560/image188.png
    :alt: Infrared-Receiver_bb
-   :width: 5.98542in
-   :height: 4.20556in
+   
 
 **Step 2:** Open the code file.
 
@@ -56,7 +55,7 @@ go out.
     control to cut off the power and pull it out before you use the
     remote control.
 
-    2) Please gently press the button on the remote to avoid invalid data
+    1) Please gently press the button on the remote to avoid invalid data
     FFFFFFFF.
 
     .. image:: media_mega2560/image189.png
@@ -75,46 +74,45 @@ Code Analysis
 
 **Code Analysis** **16-1** **Initialize the infrared-receiver**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     #include <IRremote.h>
 
-    const int irReceiverPin = 2; //the infrared-receiver attact to pin2
+    const int irReceiverPin = 2; // the infrared-receiver attact to pin2
 
-    const int ledPin = 13; //built-in LED
+    const int ledPin = 13; // built-in LED
 
-    IRrecv irrecv(irReceiverPin); //Initialize the infrared-receiver
+    IRrecv irrecv(irReceiverPin); // Initialize the infrared-receiver
 
-    decode_results results; //The decoding result is placed in the result of
-    the decode results structure.
+    decode_results results; // The decoding result is placed in the result of the decode results structure.
 
 **Code Analysis** **16-2** **Enable infrared-receiver**
 
-.. code-block:: python
+.. code-block:: Arduino
 
-    irrecv.enableIRIn(); //Restart the receiver
+    irrecv.enableIRIn(); // Restart the receiver
 
 **Code Analysis** **16-3** **Receive and print the data**
 
-.. code-block:: python
+.. code-block:: Arduino
 
-    if (irrecv.decode(&results)) { //If receive a data
+    if (irrecv.decode(&results)) { // If receive a data
 
 **decode(&results):** Decodes the received IR message, returns 0 if no
 data ready, 1 if data ready. Results of decoding are stored in results
 
-.. code-block:: python
+.. code-block:: Arduino
 
-        Serial.print("irCode: "); //print "irCode: " on the serial monitor
+        Serial.print("irCode: "); // print "irCode: " on the serial monitor
 
-        Serial.print(results.value, HEX); //print the signal on serial monitor
+        Serial.print(results.value, HEX); // print the signal on serial monitor
         in hexadecimal
 
         Serial.print(", bits: ");
 
         Serial.println(results.bits); // Print the data bits
 
-        irrecv.resume(); //Receive next data
+        irrecv.resume(); // Receive next data
 
     }
 
@@ -122,24 +120,22 @@ data ready, 1 if data ready. Results of decoding are stored in results
 
 **Code Analysis** **16-4** **If the power button is pressed**
 
-.. code-block:: python
+.. code-block:: Arduino
 
-    if(results.value == 0xFFA25D) // if the power button on the remote
-    control is pressed
+    if(results.value == 0xFFA25D) // if the power button on the remote control is pressed
 
 The 0xFFA25D is the code of the power button on the remote control, if
 you want to define other button, you can read the code of every button
 from the serial monitor.
 
 .. image:: media_mega2560/image189.png
-   :width: 7.05208in
-   :height: 2.41667in
+  
 
-.. code-block:: python
+.. code-block:: Arduino
 
     {
 
-        digitalWrite(ledPin,HIGH); //Turn on the LED
+        digitalWrite(ledPin,HIGH); // Turn on the LED
 
     }
 
@@ -147,6 +143,6 @@ from the serial monitor.
 
     {
 
-        digitalWrite(ledPin,LOW); //else turn of the LED
+        digitalWrite(ledPin,LOW); // else turn of the LED
 
     }

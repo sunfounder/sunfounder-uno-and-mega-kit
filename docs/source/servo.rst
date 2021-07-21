@@ -1,5 +1,5 @@
-Servo
-============
+Lesson 12 Servo
+==================
 
 Introduction
 -----------------
@@ -82,8 +82,8 @@ Code Analysis
 
 With the *Servo.h* file included, you can call the functions in this
 file later. Servo is a built-in library in the Arduino IDE. You can find
-the Servo folder under the installation path *C:\Program
-Files\Arduino\libraries*.
+the Servo folder under the installation path *C:\\Program
+Files\\Arduino\\libraries*.
 
 **Code Analysis** **12-2** **Initialize the servo**
 

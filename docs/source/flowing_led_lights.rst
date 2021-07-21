@@ -1,5 +1,5 @@
-Flowing LED Lights
-=========================
+Lesson 4 Flowing LED Lights
+===============================
 
 Introduction
 -----------------
@@ -97,7 +97,7 @@ Use the for() statement to set pin2-pin9 to a high level inturn.
 .. image:: media_mega2560/image69.png
 
 
-Then let the 8 LEDs go out from pin9 to pin2 in turn
+Then let the 8 LEDs go out from pin9 to pin2 in turn.
 
 .. image:: media_mega2560/image70.png
 

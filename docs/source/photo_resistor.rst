@@ -1,5 +1,5 @@
-Photo resistor
-====================
+Lesson 11 Photo resistor
+==========================
 
 Introduction
 ------------------
@@ -109,7 +109,7 @@ character. Characters and strings are sent as is.
 
 **Serial.println():** Thiscommand takes the same forms as
 Serial.print(), but it is followed by a carriage return character (ASCII
-13, or '\r') and a newline character (ASCII 10, or '\n').
+13, or '\\r') and a newline character (ASCII 10, or '\\n').
 
 .. image:: media_mega2560/image148.png
 

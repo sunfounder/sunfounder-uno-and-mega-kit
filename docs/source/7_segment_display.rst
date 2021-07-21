@@ -1,5 +1,5 @@
-7-Segment Display
-=========================
+Lesson 19 7-Segment Display
+===============================
 
 Introduction
 ---------------------

@@ -1,5 +1,5 @@
-Stepper Motor
-===================
+Lesson 21 Stepper Motor
+=========================
 
 Introduction
 --------------------
@@ -140,7 +140,7 @@ Code Analysis
 
 **Code Analysis** **21-1** **Initialize the stepper**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     #include <Stepper.h> //include a head file
 
@@ -169,12 +169,11 @@ to get the number of steps (e.g. 360 / 3.6 gives 100 steps). (*int*).
 
 **Code Analysis** **21-2** **setSpeed() function**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     //speed of 180 per minute
 
-    stepper.setSpeed(180); //set the motor speed in rotations per
-    minute(RPMs)
+    stepper.setSpeed(180); //set the motor speed in rotations per minute(RPMs)
 
 **setSpeed(rpms):** Sets the motor speed in rotations per minute (RPMs).
 This function doesn't make the motor turn, just sets the speed at which
@@ -187,11 +186,13 @@ a positive number (long)
 
 **Code Analysis 21-3** **setSpeed() function**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     void loop()
 
-    { //get analog value
+    { 
+    
+    //get analog value
 
     int val = analogRead(0); //Read the value of the potentiometer
 
@@ -201,8 +202,7 @@ a positive number (long)
 
     //store as prevous value
 
-    previous = val; //the value of potentiometer assignment to variable
-    previous
+    previous = val; //the value of potentiometer assignment to variable previous
 
     }
 

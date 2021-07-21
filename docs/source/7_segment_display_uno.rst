@@ -1,4 +1,4 @@
-7-Segment Display Uno
+Lesson 19 7-Segment Display Uno
 ================================
 
 Introduction
@@ -120,10 +120,7 @@ dp        4
 ========= =========
 
 .. image:: media_uno/image159.png
-   :alt: 15
-   :width: 6.66806in
-   :height: 4.38403in
-   :align: center
+
    
 
 
@@ -153,19 +150,19 @@ simple. Let's take a look.
 
 .. code-block:: arduino
 
-   digital_1();//diaplay 1 to the 7-segment
-
-   delay(1000);//wait for a second
-
-   digital_2();//diaplay 2 to the 7-segment
+   digital_1(); //diaplay 1 to the 7-segment
 
    delay(1000); //wait for a second
 
-   digital_3();//diaplay 3 to the 7-segment
+   digital_2(); //diaplay 2 to the 7-segment
 
    delay(1000); //wait for a second
 
-   digital_4();//diaplay 4 to the 7-segment
+   digital_3(); //diaplay 3 to the 7-segment
+
+   delay(1000); //wait for a second
+
+   digital_4(); //diaplay 4 to the 7-segment
 
 
 Calling these functions into the loop() is to let the 7-Segment display

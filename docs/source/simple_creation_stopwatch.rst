@@ -1,5 +1,5 @@
-imple Creation-Stopwatch
-===============================
+Lesson 22 Simple Creation-Stopwatch
+=====================================
 
 Introduction
 -----------------------
@@ -111,11 +111,10 @@ starts from 0.
 
 **Code Analysis** **22-1** **Initialize the timer**
 
-.. code-block:: python
+.. code-block:: Arduino
 
-    Timer1.initialize(100000); // set a timer of length 100000 microseconds
-    (or 0.1 sec - or 10Hz => the led will blink 5 times, 5 cycles of
-    on-and-off, per second)
+    Timer1.initialize(100000); 
+    // set a timer of length 100000 microseconds(or 0.1 sec - or 10Hz => the led will blink 5 times, 5 cycles of on-and-off, per second)
 
     Timer1.attachInterrupt( add ); // attach the service routine here
 
@@ -125,43 +124,46 @@ Here we use an add routine.
 
 **Code Analysis** **22-2** **Loop function**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     void loop()
 
     {
 
-        clearLEDs();//clear the 7-segment display screen
+        clearLEDs(); //clear the 7-segment display screen
 
-        pickDigit(0);//Light up 7-segment display d1
+        pickDigit(0); //Light up 7-segment display d1
 
-        pickNumber((n/1000));// get the value of thousand
+        pickNumber((n/1000)); // get the value of thousand
 
-        delay(del);//delay 5ms
+        delay(del); //delay 5ms
 
-        clearLEDs();//clear the 7-segment display screen
 
-        pickDigit(1);//Light up 7-segment display d2
+        clearLEDs(); //clear the 7-segment display screen
 
-        pickNumber((n%1000)/100);// get the value of hundred
+        pickDigit(1); //Light up 7-segment display d2
 
-        delay(del);//delay 5ms
+        pickNumber((n%1000)/100); // get the value of hundred
 
-        clearLEDs();//clear the 7-segment display screen
+        delay(del); //delay 5ms
 
-        pickDigit(2);//Light up 7-segment display d3
 
-        pickNumber(n%100/10);//get the value of ten
+        clearLEDs(); //clear the 7-segment display screen
 
-        delay(del);//delay 5ms
+        pickDigit(2); //Light up 7-segment display d3
 
-        clearLEDs();//clear the 7-segment display screen
+        pickNumber(n%100/10); //get the value of ten
 
-        pickDigit(3);//Light up 7-segment display d4
+        delay(del); //delay 5ms
 
-        pickNumber(n%10);//Get the value of single digit
 
-        delay(del);//delay 5ms
+        clearLEDs(); //clear the 7-segment display screen
+
+        pickDigit(3); //Light up 7-segment display d4
+
+        pickNumber(n%10); //Get the value of single digit
+
+        delay(del); //delay 5ms
 
     }
 
@@ -173,14 +175,14 @@ Such as n=1345, (1345/1000)=1, (1345%1000)/100)=3, ((1345%100)/10)=4,
 
 **Code Analysis** **22-3** **pickDigit(int x) function**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     void pickDigit(int x) //light up a 7-segment display
 
     {
 
-        //The 7-segment LED display is a common-cathode one. So also use
-        digitalWrite to set d1 as high and the LED will go out
+        //The 7-segment LED display is a common-cathode one. 
+        //So also use digitalWrite to set d1 as high and the LED will go out
 
         digitalWrite(d1, HIGH);
 
@@ -196,7 +198,7 @@ Such as n=1345, (1345/1000)=1, (1345%1000)/100)=3, ((1345%100)/10)=4,
 
         case 0:
 
-            digitalWrite(d1, LOW);//Light d1 up
+            digitalWrite(d1, LOW); //Light d1 up
 
             break;
 
@@ -242,7 +244,7 @@ until a break, or the end of the switch statement is reached.
 
 **Code Analysis 22-4 pickNumber(int x) function**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     switch(x)
 
@@ -269,6 +271,7 @@ until a break, or the end of the switch statement is reached.
     case 3:
 
         three();
+        ...
 
     }
 
@@ -282,7 +285,7 @@ digitalWrite to set a to f as high, g as low. Based on the pin diagram
 just mentioned, when a to f is high and g is low, the number 0 will be
 displayed.
 
-.. code-block:: python
+.. code-block:: Arduino
 
     void zero() //the 7-segment led display 0
 
@@ -306,7 +309,7 @@ displayed.
 
 **Code Analysis 23-5 clearLEDs() function**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     void clearLEDs() //clear the 7-segment display screen
 
@@ -333,7 +336,7 @@ out.
 
 **Code Analysis 22-6 add() function**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     void add()
 
@@ -341,11 +344,9 @@ out.
 
         // Toggle LED
 
-        count ++; //The original value of count is 0. count++=1; keep the
-        counting till 10, because one LED can display a maximum of 9.
+        count ++; //The original value of count is 0. count++=1; keep the counting till 10, because one LED can display a maximum of 9.
 
-        if(count == 10) // If count=10, which is 1 second, the following
-        statement will be run.
+        if(count == 10) // If count=10, which is 1 second, the following statement will be run.
 
         {
 
@@ -357,7 +358,7 @@ out.
 
             {
 
-                n = 0; //n restores to 0.
+                n = 0; //n restores to 0
 
             }
 

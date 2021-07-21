@@ -1,5 +1,5 @@
-Simple Creation-Stopwatch Uno
-================================
+Lesson 22 Simple Creation-Stopwatch Uno
+========================================
 
 Introduction
 ---------------------
@@ -38,9 +38,7 @@ Schematic Diagram
 -------------------------
 
 .. image:: media_uno/image177.png
-   :width: 6.95139in
-   :height: 3.78194in
-   :align: center
+
 
 
 Experimental Procedures
@@ -65,10 +63,7 @@ D4                        10
 ========================= =========
 
 .. image:: media_uno/image178.png
-   :alt: 19
-   :width: 6.47292in
-   :height: 4.69375in
-   :align: center
+
    
 
 **Step 2:** Open the code file.
@@ -169,8 +164,7 @@ Here we use an add routine.
 The loop function is used to let four segment display to display the
 single digit, ten, one hundred and thousand of a value.
 
-Such as n=1345, (1345/1000)=1, (1345%1000)/100)=3, ((1345%100)/10)=4,
-(n%10)=5.
+Such as n=1345, (1345/1000)=1, (1345%1000)/100)=3, ((1345%100)/10)=4, (n%10)=5.
 
 **Code Analysis** **22-3** **pickDigit(int x) function**
 
@@ -342,11 +336,12 @@ out.
 
         // Toggle LED
 
-        count ++; //The original value of count is 0. count++=1; keep the
-        counting till 10, because one LED can display a maximum of 9.
+        count ++; 
+        /* The original value of count is 0. count++=1; 
+        keep the counting till 10, because one LED can display a maximum of 9.*/
 
-        if(count == 10) // If count=10, which is 1 second, the following
-        statement will be run.
+        if(count == 10) 
+        // If count=10, which is 1 second, the following statement will be run.
 
         {
 

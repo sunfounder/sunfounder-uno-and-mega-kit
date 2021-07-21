@@ -1,4 +1,4 @@
-Thermistor
+Lesson 14 Thermistor
 ====================
 
 Introduction
@@ -18,7 +18,7 @@ Components
     :align: center
 
 Experimental Principle
----------------------
+------------------------
 
 Thermistor is a sensitive element, it has two types: Negative
 Temperature Coefficient (NTC) and Positive Temperature Coefficient
@@ -121,8 +121,7 @@ Experimental Procedures
 
 **Step 4:** Upload the sketch to the board.
 
-Now, you can see the current temperature displayed both in
-Celsius and Fahrenheit degrees on the LCD1602.
+Now, you can see the current temperature displayed both in Celsius and Fahrenheit degrees on the LCD1602.
 
 .. image:: media_mega2560/image174.jpeg
 
@@ -152,8 +151,11 @@ Read the resistance value of the thermistor to a via the
 signal from the analog pin. Here use a long type to make the value of a
 to be a long integer.
 
-float tempC = beta / (log((1025.0 \* 10 / a - 10) / 10) + beta / 298.0)
-- 273.0; //The formula here is to calculate the temperature in Celsius,
+.. code-block:: Arduino
+    
+    float tempC = beta / (log((1025.0 * 10 / a - 10) / 10) + beta / 298.0) - 273.0; 
+
+The formula here is to calculate the temperature in Celsius,
 which we deduced previously.
 
 .. image:: media_mega2560/image177.png
@@ -163,7 +165,7 @@ equals to 1.8 \* Celsius + 32.
 
 **Code Analysis** **14-3** **Display the temperature on LCD1602**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     lcd.setCursor(0, 0); // set the cursor to column 0, line 0
 
@@ -183,7 +185,6 @@ equals to 1.8 \* Celsius + 32.
 
     lcd.print(tempF);// Print a Fahrenheit temperature to the LCD.
 
-    lcd.print(" F"); // Print the unit of the Fahrenheit temperature to the
-    LCD.
+    lcd.print(" F"); // Print the unit of the Fahrenheit temperature to the LCD.
 
     delay(200); //wait for 100 milliseconds

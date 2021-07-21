@@ -1,5 +1,5 @@
-Infrared-Receiver Uno
-=============================
+Lesson 16 Infrared-Receiver Uno
+================================
 
 Introduction
 ------------------
@@ -36,9 +36,7 @@ Experimental Procedures
 **Step 1:** Build the circuit.
 
 .. image:: media_uno/image141.png
-   :width: 4.88125in
-   :height: 3.9375in
-   :align: center
+
 
 **Step 2:** Open the code file.
 
@@ -56,7 +54,7 @@ out.
     control to cut off the power and pull it out before you use the
     remote control.
 
-    2) Please gently press the button on the remote to avoid invalid data
+    1) Please gently press the button on the remote to avoid invalid data
     FFFFFFFF.
 
     .. image:: media_uno/image142.png
@@ -85,8 +83,7 @@ Code Analysis
 
     IRrecv irrecv(irReceiverPin); //Initialize the infrared-receiver
 
-    decode_results results; //The decoding result is placed in the result of
-    the decode results structure.
+    decode_results results; //The decoding result is placed in the result of the decode results structure.
 
 **Code Analysis** **16-2** **Enable infrared-receiver**
 
@@ -107,8 +104,7 @@ data ready, 1 if data ready. Results of decoding are stored in results
 
         Serial.print("irCode: "); //print "irCode: " on the serial monitor
 
-        Serial.print(results.value, HEX); //print the signal on serial monitor
-        in hexadecimal
+        Serial.print(results.value, HEX); //print the signal on serial monitor in hexadecimal
 
         Serial.print(", bits: ");
 
@@ -124,8 +120,7 @@ data ready, 1 if data ready. Results of decoding are stored in results
 
 .. code-block:: arduino
 
-    if(results.value == 0xFFA25D) // if the power button on the remote
-    control is pressed
+    if(results.value == 0xFFA25D) // if the power button on the remote control is pressed
 
 The 0xFFA25D is the code of the power button on the remote control, if
 you want to define other button, you can read the code of every button

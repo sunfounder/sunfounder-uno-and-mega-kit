@@ -1,5 +1,5 @@
-Ultrasonic
-===============
+Lesson 15 Ultrasonic
+=====================
 
 Introduction
 ----------------
@@ -40,7 +40,7 @@ till disappearing at 7m position.
 The module includes ultrasonic transmitters, receiver and control
 circuit. The basic principle of work:
 
-1) Using IO trigger for at least 10us high level signal;
+1) Using IO trigger for at least 10us high level signal.
 
 2) The module automatically sends eight 40 kHz square waves and detect
    whether there is a pulse signal sent back.
@@ -56,9 +56,9 @@ The timing diagram is as shown below. You only need to supply a short
 module will send out an 8-cycle burst of ultrasound at 40 kHz and raise
 its echo. The echo is a distance object that is pulse width and the
 range in proportion .You can calculate the range through the time
-interval between sending trigger signal and receiving echo signal. Thus,
+interval between sending trigger signal and receiving echo signal. 
 
-uS / 58 = centimeters or uS / 148 =inch; or: the range = high level time
+Thus, uS / 58 = centimeters or uS / 148 =inch; or: the range = high level time
 \* velocity (340M/S) / 2; You're recommended to use over 60ms
 measurement cycle, in order to prevent conflicts between trigger signal
 and echo signal.
@@ -112,24 +112,24 @@ Code Analysis
 **Code Analysis** **15-1** **Initialize the ultrasonic sensor and
 LCD1602**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     #include <LiquidCrystal.h> // use #include to define the header file.
 
     #include <NewPing.h> // use #include to define the header file.
 
-    LiquidCrystal lcd(4, 6, 10, 11, 12, 13);//lcd(RS,E,D4,D5,D6,D7)
+    LiquidCrystal lcd(4, 6, 10, 11, 12, 13); //lcd(RS,E,D4,D5,D6,D7)
 
-    #define TRIGGER_PIN 2 // trig pin on the ultrasonic sensor attach to
-    pin2 .
+    #define TRIGGER_PIN 2 // trig pin on the ultrasonic sensor attach to pin2.
 
     #define ECHO_PIN 3 // echo pin on the ultrasonic sensor attach to pin3.
 
-    #define MAX_DISTANCE 400 // Maximum distance we want to ping for (in
-    centimeters). Maximum sensor distance is rated at 400-500cm.
+    #define MAX_DISTANCE 400 
+    // Maximum distance we want to ping for (in centimeters). 
+    // Maximum sensor distance is rated at 400-500cm.
 
-    NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); // NewPing setup of
-    pins and maximum distance.
+    NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); 
+    // NewPing setup of pins and maximum distance.
 
 Create a NewPing variable sonar. The basic format of NewPing is: NewPing
 (uint8_t trigger_pin, uint8_t echo_pin, int max_cm_distance). Here uint8
@@ -153,23 +153,23 @@ sending and receiving into a distance. The unit is cm.
 
 **Code Analysis** **15-3** **Display the distance on the LCE1602**
 
-.. code-block:: python
+.. code-block:: Arduino
 
-    lcd.setCursor(0, 0);//Place the cursor at Line 1, Column 1. From here
-    the characters are to be displayed
+    lcd.setCursor(0, 0); 
+    // Place the cursor at Line 1, Column 1.From here the characters are to be displayed
 
-    lcd.print("Distance:");////Print Distance: on the LCD
+    lcd.print("Distance:"); // Print Distance: on the LCD
 
-    lcd.setCursor(0, 1);//Set the cursor at Line 1, Column 0
+    lcd.setCursor(0, 1); // Set the cursor at Line 1, Column 0
 
-    lcd.print(" ");//Here is to leave some spaces after the characters so as
-    to clear the previous characters that may still remain.
+    lcd.print(" "); /* Here is to leave some spaces after the characters so as
+    to clear the previous characters that may still remain.*/
 
-    lcd.setCursor(9, 1);//Set the cursor at Line 1, Column 9.
+    lcd.setCursor(9, 1); // Set the cursor at Line 1, Column 9.
 
-    lcd.print(distance);// print on the LCD the value of the distance
-    converted from the time between ping sending and receiving.
+    lcd.print(distance); /* print on the LCD the value of the distance
+    converted from the time between ping sending and receiving.*/
 
-    lcd.setCursor(12, 1);//Set the cursor at Line 1, Column 12.
+    lcd.setCursor(12, 1); // Set the cursor at Line 1, Column 12.
 
-    lcd.print("cm");//print the unit "cm"
+    lcd.print("cm"); // print the unit "cm"

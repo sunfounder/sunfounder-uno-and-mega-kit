@@ -1,5 +1,5 @@
-Flowing LED Lights Uno
-=========================
+Lesson 4 Flowing LED Lights Uno
+=================================
 
 Introduction
 ----------------
@@ -28,6 +28,7 @@ lights.
 .. image:: media_uno/image57.png
    :width: 6.32222in
    :height: 4.65069in
+   :align: center
 
 
 Experimental Procedures
@@ -44,6 +45,7 @@ Experimental Procedures
 .. image:: media_uno/image58.png
    :width: 6.32222in
    :height: 4.65069in
+   :align: center
 
 Now, you should see eight LEDs brighten one by one from the LED
 connected to pin 2 to that to pin 9, and then dim in turn from the LED
@@ -55,6 +57,7 @@ at pin 9. This whole process will repeat until the circuit is power off.
    :alt: 2
    :width: 7.12569in
    :height: 4.68125in
+   :align: center
 
 Code
 -------
@@ -70,12 +73,14 @@ Code Analysis
 
 .. code-block:: arduino
 
-    for (int i = 2; i <= 9; i++)//8 LEDs are connect to pin2-pin9, When i=2,
-    which accords with the condition i<=9, then run the code in the curly
-    braces, set the pin2 to OUTPUT. After that run i++(here in i = i + 1,
-    the two "i"s are not the same, but i\ :sub:`now` = i\ :sub:`before` +
-    1). Use the for() statement to set pin 2-pin 9 as output respectively.
-
+    for (int i = 2; i <= 9; i++)
+    /*8 LEDs are connect to pin2-pin9, When i=2, 
+    which accords with the condition i<=9, 
+    then run the code in the curly braces, set the pin2 to OUTPUT. 
+    After that run i++(here in i = i + 1, the two "i"s are not the same, 
+    but i\ :sub:`now` = i\ :sub:`before` + 1). 
+    Use the for() statement to set pin 2-pin 9 as output respectively.*/
+    
     {
 
         pinMode(i, OUTPUT); //initialize a as an output
@@ -102,7 +107,7 @@ Use the for() statement to set pin2-pin9 to a high level inturn.
 
         digitalWrite(a, HIGH); //turn this led on
 
-        delay(100);//wait for 100 ms
+        delay(100); //wait for 100 ms
 
     }
 
@@ -116,7 +121,7 @@ Then let the 8 LEDs go out from pin9 to pin2 in turn.
 
         digitalWrite(a, LOW); //turn this led on
 
-        delay(100);//wait for 100 ms
+        delay(100); //wait for 100 ms
 
     }
 
@@ -131,7 +136,7 @@ turn and let them go out in turn.
 
         digitalWrite(a, HIGH); //turn this led on
 
-        delay(100);//wait for 100 ms
+        delay(100); //wait for 100 ms
 
     }
 
@@ -141,6 +146,6 @@ turn and let them go out in turn.
 
         digitalWrite(a, LOW); //turn this led on
 
-        delay(100);//wait for 100 ms
+        delay(100); //wait for 100 ms
 
     }

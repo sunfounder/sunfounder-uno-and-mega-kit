@@ -1,5 +1,5 @@
-Simple Creation-Answer Machine Uno
-========================================
+Lesson 23 Simple Creation-Answer Machine Uno
+=============================================
 
 Introduction
 --------------------
@@ -29,9 +29,7 @@ LED will light up and all the other LEDs will go out. If you want to
 start another round, press button 4 to reset.
 
 .. image:: media_uno/image183.png
-   :width: 6.60417in
-   :height: 3.92708in
-   :align: center
+
 
 
 Experimental Procedures
@@ -40,9 +38,7 @@ Experimental Procedures
 **Step 1:** Build the circuit.
 
 .. image:: media_uno/image184.png
-   :width: 6.60417in
-   :height: 3.92708in
-   :align: center
+
 
 **Step 2:** Open the code file.
 
@@ -82,9 +78,9 @@ Code Analysis
 
       {
 
-         if(b4State == 0) //confirm that the button4 is pressed. One pin of the
-  button is connected to pin 9, the other pin is connected to GND, and
-  when the button is pressed, pin 9 is pulled low.
+         if(b4State == 0) 
+         /*confirm that the button4 is pressed. One pin of the button is connected to pin 9, 
+         the other pin is connected to GND, and when the button is pressed, pin 9 is pulled low.*/
 
          {
 

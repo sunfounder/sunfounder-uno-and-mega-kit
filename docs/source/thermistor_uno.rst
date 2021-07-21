@@ -1,5 +1,5 @@
-Thermistor Uno
-===================
+Lesson 14 Thermistor Uno
+==========================
 
 Introduction
 ------------------
@@ -35,9 +35,7 @@ Schematic Diagram
 ------------------------
 
 .. image:: media_uno/image128.png
-   :width: 5.98125in
-   :height: 3.6125in
-   :align: center
+
 
 The principle is that the resistance of the NTC thermistor changes with
 the temperature difference in the outer environment. It detects the
@@ -125,10 +123,7 @@ Experimental Procedures
 **Step 4:** Upload the sketch to the board.
 
 .. image:: media_uno/image129.png
-   :alt: 10.1
-   :width: 5.71042in
-   :height: 4.35625in
-   :align: center
+
 
 
 Now, you can see the current temperature displayed both in
@@ -159,23 +154,22 @@ Code Analysis
 
     #define resistance 10 //the value of the pull-up resistor
 
-Define the beta coefficient as 4090, which is described in the datasheet
-of thermistor.
+Define the beta coefficient as 4090, which is described in the datasheet of thermistor.
 
 **Code Analysis** **14-2** **Get the temperature**
 
 .. code-block:: arduino
 
-    long a = analogRead(analogPin);//Read the resistance value of the
-    thermistor to a via the signal from the analog pin. Here use a long type
-    to make the value of a to be a long integer.
+    long a = analogRead(analogPin); 
+    long a = analogRead(analogPin); 
+    //Read the resistance value of the thermistor to a via the signal from the analog pin. 
+    //Here use a long type to make the value of a to be a long integer.
 
-    float tempC = beta / (log((1025.0 \* 10 / a - 10) / 10) + beta / 298.0)
-    - 273.0; //The formula here is to calculate the temperature in Celsius,
-    which we deduced previously.
+    float tempC = beta / (log((1025.0 * 10 / a - 10) / 10) + beta / 298.0) - 273.0; 
+    //The formula here is to calculate the temperature in Celsius, which we deduced previously.
 
-    float tempF = 1.8 \* tempC + 32.0; //define the temperature in
-    Fahrenheit. As we know Fahrenheit equals to 1.8 \* Celsius + 32.
+    float tempF = 1.8 * tempC + 32.0; 
+    //define the temperature in Fahrenheit. As we know Fahrenheit equals to 1.8 * Celsius + 32.
 
 **Code Analysis** **14-3** **Display the temperature on LCD1602**
 
@@ -183,11 +177,11 @@ of thermistor.
 
     lcd.setCursor(0, 0); // set the cursor to column 0, line 0
 
-    lcd.print("Temp: ");// Print a message of "Temp: "to the LCD.
+    lcd.print("Temp: "); // Print a message of "Temp: "to the LCD.
 
     lcd.print(tempC);
 
-    lcd.print(char(223));//print the unit" ° "
+    lcd.print(char(223)); //print the unit" ° "
 
     lcd.print("C");
 
@@ -197,9 +191,8 @@ of thermistor.
 
     lcd.print("Fahr: ");
 
-    lcd.print(tempF);// Print a Fahrenheit temperature to the LCD.
+    lcd.print(tempF); // Print a Fahrenheit temperature to the LCD.
 
-    lcd.print(" F"); // Print the unit of the Fahrenheit temperature to the
-    LCD.
+    lcd.print(" F"); // Print the unit of the Fahrenheit temperature to the LCD.
 
-    delay(200); //wait for 100 milliseconds
+    delay(200); // wait for 100 milliseconds

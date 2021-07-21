@@ -1,5 +1,5 @@
-Stepper Motor Uno
-====================
+Lesson 21 Stepper Motor Uno
+============================
 
 Introduction
 ------------------
@@ -108,9 +108,7 @@ Schematic Diagram
 ---------------------
 
 .. image:: media_uno/image172.png
-   :width: 8.44514in
-   :height: 3.99097in
-   :align: center
+
 
 
 
@@ -194,8 +192,7 @@ to get the number of steps (e.g. 360 / 3.6 gives 100 steps). (*int*).
 
     //speed of 180 per minute
 
-    stepper.setSpeed(180); //set the motor speed in rotations per
-    minute(RPMs)
+    stepper.setSpeed(180); //set the motor speed in rotations per minute(RPMs)
 
 **setSpeed(rpms):** Sets the motor speed in rotations per minute (RPMs).
 This function doesn't make the motor turn, just sets the speed at which
@@ -209,20 +206,18 @@ minute - a positive number (long)
 .. code-block:: arduino
 
     void loop()
+    {
+      //get analog value
 
-    { //get analog value
+      int val = analogRead(0); //Read the value of the potentiometer
 
-    int val = analogRead(0); //Read the value of the potentiometer
+      //current reading minus the reading of history
 
-    //current reading minus the reading of history
+      stepper.step(val - previous); //Turn the motor in val-previous steps
 
-    stepper.step(val - previous); //Turn the motor in val-previous steps
+      //store as prevous value
 
-    //store as prevous value
-
-    previous = val; //the value of potentiometer assignment to variable
-    previous
-
+      previous = val; //the value of potentiometer assignment to variable previous
     }
 
 **step(steps):** Turns the motor a specific number of steps, at a speed

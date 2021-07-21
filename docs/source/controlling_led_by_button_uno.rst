@@ -1,5 +1,5 @@
-Controlling LED by Button Uno
-=================================
+Lesson 5 Controlling LED by Button Uno
+=========================================
 
 Introduction
 ----------------
@@ -53,9 +53,8 @@ the same time. Then release the button (pin 12 changes to LOW) and pin
 the button is pressed and released.
 
 .. image:: media_uno/image66.png
-   :alt: C:\Users\sunfounder\Desktop\fdsf.png
-   :width: 4.54028in
-   :height: 3.68958in
+    :align: center
+
 
 Experimental Procedures
 -------------------------------
@@ -63,8 +62,8 @@ Experimental Procedures
 **Step 1:** Build the circuit.
 
 .. image:: media_uno/image67.png
-   :width: 6.46667in
-   :height: 4.23681in
+    :align: center
+
 
 **Step 2:** Open the code file.
 
@@ -76,8 +75,8 @@ Now, press the button, and the LED on the Uno board will light up.
 
 .. image:: media_uno/image68.jpeg
    :alt: 3
-   :width: 7.83681in
-   :height: 5.07292in
+   :align: center
+
 
 Code
 -------
@@ -95,7 +94,7 @@ Code Analysis
 
     const int buttonPin = 12; //the button connect to pin 12
 
-    const int ledPin = 13;//the led connect to pin13
+    const int ledPin = 13; //the led connect to pin13
 
     int buttonState = 0; // variable for reading the pushbutton status
 

@@ -1,5 +1,5 @@
-Doorbell
-==============
+Lesson 6 Doorbell
+====================
 
 Introduction
 --------------

@@ -61,6 +61,6 @@ html_css_files = [
     'https://ezblock.cc/readDocFile/topHead.css',
 ]
 
-language = 'de'
+language = 'en'
 locale_dirs = ['locale/']
 

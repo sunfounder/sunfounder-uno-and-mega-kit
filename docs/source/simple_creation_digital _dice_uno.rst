@@ -1,4 +1,4 @@
-Simple Creation - Digital Dice Uno
+Lesson 25 Simple Creation - Digital Dice Uno
 ==================================================
 
 Introduction
@@ -24,9 +24,7 @@ pressed again, the process will repeat.
 
 .. image:: media_uno/image195.png
    :alt: C:\Users\sunfounder\Desktop\ytryh.png
-   :width: 7.02847in
-   :height: 3.86806in
-   :align: center
+
 
 Experimental Procedures
 ---------------------------
@@ -34,9 +32,7 @@ Experimental Procedures
 **Step 1:** Build the circuit.
 
 .. image:: media_uno/image196.png
-   :width: 6.12014in
-   :height: 4.09653in
-   :align: center
+
 
 **Step 2:** Open the code file.
 
@@ -83,15 +79,15 @@ random numbers is 0-1023.
 
         int stat = digitalRead(keyIn); //store value read from keyIn
 
-        if(stat == HIGH) // check if the pushbutton is pressed, If yes, the
-        corresponding pin is high level
+        if(stat == HIGH) /*check if the pushbutton is pressed, If yes, the
+        corresponding pin is high level*/
 
         {
 
             num ++; //*num* adds 1
 
-            if(num > 1) //If *num* > 1, clear the value. This is to prevent repeated
-            pressing. So just count it as once no matter how many times you press.
+            if(num > 1) /*If num> 1, clear the value. This is to prevent repeated
+            pressing. So just count it as once no matter how many times you press.*/
 
             {
 
@@ -113,8 +109,8 @@ random numbers is 0-1023.
 
             delay(1000); //wait for 1 second
 
-            while(!digitalRead(keyIn)); //When not press button,program stop here
-            Make it keep displaying the last random number.
+            while(!digitalRead(keyIn)); /*When not press button,program stop here
+            Make it keep displaying the last random number.*/
 
             int stat = digitalRead(keyIn);
 
@@ -146,7 +142,7 @@ random numbers is 0-1023.
 
         //show random numbers at 100 microseconds intervals
 
-        // If the button has not been pressed
+        //If the button has not been pressed
 
         randNumber = random(1,7);
 
@@ -164,8 +160,7 @@ random numbers is 0-1023.
 
     {
 
-        digitalWrite(latchPin,LOW); //ground latchPin and hold low for
-        transmitting
+        digitalWrite(latchPin,LOW); //ground latchPin and hold low for transmitting
 
         shiftOut(dataPin,clockPin,MSBFIRST,datArray[num]);
 

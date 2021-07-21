@@ -1,5 +1,5 @@
-Simple Creation - Digital Dice
-===================================
+Lesson 25 Simple Creation - Digital Dice
+=========================================
 
 Introduction
 ------------------
@@ -71,86 +71,81 @@ Code Analysis
 --------------------
 
 **Code Analysis** **25-1** **The initial random number comes from A0**
+
 .. code-block:: arduino
 
-    randomSeed(analogRead(0));
+   randomSeed(analogRead(0));
 
 The initial random number is generated from A0 and the range for the
 random numbers is 0-1023.
 
 **Code Analysis** **25-2** **Digital Dice**
 
-.. image:: media_mega2560/image255.png
-   :width: 5.27014in
-   :height: 0.66667in
+.. code-block:: Arduino
 
-.. |image162| image:: media_mega2560/image256.png
+   void loop()
+   {
+      int stat = digitalRead(keyIn);  //store value read from keyIn
+      if(stat == HIGH)  // check if the pushbutton is pressed
 
-|image162| If yes, the corresponding pin is high level
+If yes, the corresponding pin is high level.
 
-.. image:: media_mega2560/image257.png
-   :height: 0.17708in
+.. code-block:: Arduino
+      
+   {
+      num ++; // num adds 1
+      if(num > 1) 
+      {
+         num = 0;
+      }
+   }
 
-
-num ++; //*num* adds 1
-
-if(num > 1) //If *num* > 1, clear the value. This is to prevent repeated
-pressing. So just count it as once no matter how many times you press.
-
-.. image:: media_mega2560/image258.png
-   :width: 0.97917in
-   :height: 0.90625in
-
-.. code-block:: arduino
-
-    Serial.println(num); // print the num on serial monitor
-
-    if(num == 1) //when pushbutton is pressed
-
-    {
-
+If num > 1, clear the value. This is to prevent repeated pressing. So just count it as once no matter how many times you press.
+      
+.. code-block:: Arduino
+   
+   Serial.println(num);  // print the num on serial monitor
+   if(num == 1)  //when pushbutton is pressed
+   {
       randNumber = random(1,7); //Generate a random number in 1-7
+      showNum(randNumber);  //show the randNumber on 7-segment
+      delay(1000);  //wait for 1 second   
+      while(!digitalRead(keyIn));  //When not press button,program stop here. 
+      
+Make it keep displaying the last random number.
 
-      showNum(randNumber); //show the randNumber on 7-segment
+.. code-block:: Arduino     
 
-      delay(1000); //wait for 1 second
+   int stat = digitalRead(keyIn); 
 
-      while(!digitalRead(keyIn)); //When not press button,program stop here
-      Make it keep displaying the last random number.
+Read the state of the button again.
 
-.. |image163| image:: media_mega2560/image259.png
+.. code-block:: Arduino 
 
-|image163| // Read the state of the button again.
+   if(stat == HIGH) // check if the pushbutton is pressed
+   
+If yes, run the code below.
 
-.. |image164| image:: media_mega2560/image260.png
+.. code-block:: Arduino 
 
-|image164|. If yes, run the code below
-
-{
-
-.. |image165| image:: media_mega2560/image261.png
-
-|image165| //num+1=2
-
-.. image:: media_mega2560/image262.png
-   :width: 5.375in
-   :height: 0.26042in
-
-.. image:: media_mega2560/image263.png
-   :width: 3.68681in
-   :height: 0.89583in
-
-.. |image166| image:: media_mega2560/image264.png
-
-|image166| // clear the *num*
-
-.. image:: media_mega2560/image265.png
-   :width: 1.17708in
-   :height: 1.14583in
-
-.. image:: media_mega2560/image266.png
-   :width: 4.41597in
-   :height: 1.38542in
+         {
+            num ++; // num+1=2
+            digitalWrite(ledPin,HIGH); //turn on the led
+            delay(100);
+            digitalWrite(ledPin,LOW); //turn off the led
+            delay(100);
+            if(num >= 1) // clear the num
+            {
+               num = 0;
+            }
+         }
+      }
+      //show random numbers at 100 microseconds intervals
+      //If the button has not been pressed
+      randNumber = random(1,7);
+      showNum(randNumber);
+      delay(100);
+   }
 
 **Code Analysis** **25-3** **showNum() function**
 

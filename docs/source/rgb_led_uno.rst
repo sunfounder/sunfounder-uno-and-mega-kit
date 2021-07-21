@@ -1,5 +1,5 @@
-RGB LED Uno
-===============
+Lesson 9 RGB LED Uno
+=====================
 
 Introduction
 -------------------
@@ -42,9 +42,8 @@ words, with Arduino's PWM frequency at about 500Hz, the green lines
 would measure 2 milliseconds each.
 
 .. image:: media_uno/image91.jpeg
-   :width: 3.425in
-   :height: 3.425in
    :align: center
+
 
 A call to analogWrite() is on a scale of 0 - 255, such that
 analogWrite(255) requests a 100% duty cycle (always on), and
@@ -66,10 +65,8 @@ the three pins and superimpose them, which, according to statistics, can
 create 16,777,216 different colors.
 
 .. image:: media_uno/image92.jpeg
-   :alt: timg
-   :width: 1.36667in
-   :height: 1.28333in
    :align: center
+ 
 
 RGB LEDs can be categorized into common anode and common cathode ones.
 In this experiment, the latter is used. The common cathode, or CC, means
@@ -85,10 +82,8 @@ closest to the cut is the first pin, marked as Red, then GND, Green and
 Blue in turn.
 
 .. image:: media_uno/image95.png
-   :alt: IMG_270
-   :width: 5.66736in
-   :height: 1.98611in
    :align: center
+
 
 Or you can distinguish them in another way. As GND is the longest one
 and can be defined directly, you just need to confirm the other three
@@ -115,9 +110,8 @@ the three pins are given different PWM values, the RGB LED will display
 different colors.
 
 .. image:: media_uno/image96.png
-   :width: 5.27708in
-   :height: 3.83056in
    :align: center
+
 
 Experimental Procedures
 ------------------------------
@@ -125,8 +119,6 @@ Experimental Procedures
 **Step 1:** Build the circuit.
 
 .. image:: media_uno/image97.png
-   :width: 6.05417in
-   :height: 3.99514in
    :align: center
 
 **Step 2:** Open the code file.
@@ -139,10 +131,8 @@ Here you should see the RGB LED flash circularly red, green, and blue
 first, then red, orange, yellow, green, blue, indigo, and purple.
 
 .. image:: media_uno/image98.jpeg
-   :alt: 6
-   :width: 7.58264in
-   :height: 4.77778in
    :align: center
+
 
 Code
 -------
@@ -164,16 +154,13 @@ You can use the paint tool on your computer to get the RGB value.
 1) Open the paint tool on your computer and click to Edit colors.
 
 .. image:: media_uno/image99.png
-   :width: 4.90625in
-   :height: 1.07292in
    :align: center
 
-2) Select one color, then you can see the RGB value of this color. Fill
+
+1) Select one color, then you can see the RGB value of this color. Fill
    them in the code.
 
 .. image:: media_uno/image100.png
-   :width: 3.44931in
-   :height: 2.51806in
    :align: center
 
 .. code-block:: arduino
@@ -215,8 +202,8 @@ You can use the paint tool on your computer to get the RGB value.
 
 .. code-block:: arduino
 
-    void color (unsigned char red, unsigned char green, unsigned char
-    blue)// the color generating function
+    void color (unsigned char red, unsigned char green, unsigned char blue)
+    // the color generating function
 
     {
 

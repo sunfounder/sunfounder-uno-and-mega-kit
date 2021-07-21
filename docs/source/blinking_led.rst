@@ -1,5 +1,5 @@
-Blinking LED
-===============
+Lesson 3 Blinking LED
+===========================
 
 Introduction
 ---------------------
@@ -32,9 +32,6 @@ Therefore in lots of experiments, it is often used as a hub to connect
 two or more devices.
 
 .. image:: media_mega2560/image42.jpeg
-   :alt: IMG_274
-   :width: 6in
-   :height: 1.92917in
    :align: center
 
 
@@ -204,7 +201,7 @@ Then plug the board into the computer with a 5V USB cable.
 
 
 **Step 2**: Open the Lesson_3_Blinking_LED.ino code file in the path of
-*SunFounder Mega Kit\Code\Lesson_3_Blinking_LED*
+*SunFounder Mega Kit\\Code\\Lesson_3_Blinking_LED*
 
 **Step 3:** Select the Board and Port
 
@@ -256,7 +253,7 @@ Code Analysis
 **Code Analysis 3-1 Define variables**
 
 .. image:: media_mega2560/image60.png
-    :align: center
+   
 
 
 You should define every variable before using in case of making
@@ -290,13 +287,13 @@ function. Otherwise there will be errors in compiling.
 You can write:
 
 .. image:: media_mega2560/image62.png
-    :align: center
+   
 
 
 **Code Analysis 3-3** **loop function**
 
 .. image:: media_mega2560/image63.png
-    :align: center
+    
 
 
 This program is to set *ledPin* as HIGH to turn on the LED, with a delay

@@ -1,5 +1,5 @@
-Tilt Switch Uno
-=====================
+Lesson 7 Tilt Switch Uno
+=========================
 
 Introduction
 --------------------
@@ -22,17 +22,13 @@ triggering circuits. Otherwise the ball will stay away from the
 contacts, thus breaking the circuits.
 
 .. image:: media_uno/image75.jpeg
-   :width: 4.15903in
-   :height: 2.90417in
-   :align: center
+
 
 Schematic Diagram
 ---------------------
 
 .. image:: media_uno/image76.png
-   :width: 3.60694in
-   :height: 3.82986in
-   :align: center
+
 
 Experimental Procedures
 -----------------------------
@@ -40,9 +36,7 @@ Experimental Procedures
 **Step 1:** Build the circuit.
 
 .. image:: media_uno/image77.png
-   :width: 3.60694in
-   :height: 3.82986in
-   :align: center
+
 
 **Step 2:** Open the code file.
 
@@ -54,10 +48,7 @@ Now, tilt the switch, and the LED attached to pin 13 on Uno board will
 light up.
 
 .. image:: media_uno/image78.jpeg
-   :alt: 7 (2)
-   :width: 5.13403in
-   :height: 3.94792in
-   :align: center
+
 
 Code
 --------
@@ -73,17 +64,17 @@ Code Analysis
 
 .. code-block:: arduino
 
-    const int ledPin = 13;//the led attach to
+    const int ledPin = 13; //the led attach to
 
     void setup()
 
     {
 
-      pinMode(ledPin,OUTPUT);//initialize the ledPin as an output
+      pinMode(ledPin,OUTPUT); //initialize the ledPin as an output
 
-      pinMode(2,INPUT);//set pin2 as INPUT
+      pinMode(2,INPUT); //set pin2 as INPUT
 
-      digitalWrite(2, HIGH);//set pin2 as HIGH
+      digitalWrite(2, HIGH); //set pin2 as HIGH
 
     }
 
@@ -93,21 +84,21 @@ Code Analysis
 
     {
 
-      int digitalVal = digitalRead(2);//Read the value of pin2
+      int digitalVal = digitalRead(2); //Read the value of pin2
 
-      if(HIGH == digitalVal)//if tilt switch is not breakover
+      if(HIGH == digitalVal) //if tilt switch is not breakover
 
       {
 
-         digitalWrite(ledPin,LOW);//turn the led off
+         digitalWrite(ledPin,LOW); //turn the led off
 
       }
 
-      else ////if tilt switch breakover
+      else //if tilt switch breakover
 
       {
 
-         digitalWrite(ledPin,HIGH);//turn the led on
+         digitalWrite(ledPin,HIGH); //turn the led on
 
       }
 

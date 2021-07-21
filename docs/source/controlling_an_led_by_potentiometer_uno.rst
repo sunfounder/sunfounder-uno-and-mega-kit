@@ -1,5 +1,5 @@
-Controlling an LED by Potentiometer Uno
-=============================================
+Lesson 10 Controlling an LED by Potentiometer Uno
+===================================================
 
 Introduction
 --------------------
@@ -78,9 +78,7 @@ Finally, the Uno will perform related operations. Click the icon at the
 top right corner and a window will pop up as shown below:
 
    .. image:: media_uno/image105.png
-      :width: 5.77847in
-      :height: 4.6125in
-      :align: center
+
 
 Analog V.S. Digital
 ------------------------
@@ -94,9 +92,7 @@ exact number. Analog signals include those of light intensity, humidity,
 temperature, and so on.
 
 .. image:: media_uno/image106.png
-   :width: 8.80903in
-   :height: 2.93611in
-   :align: center
+
 
 
 Schematic Diagram
@@ -121,9 +117,7 @@ Experimental Procedures
 **Step 1:** Build the circuit.
 
 .. image:: media_uno/image108.png
-   :width: 6.46667in
-   :height: 4.32986in
-   :align: center
+
    
 
 **Step 2:** Open the code file.
@@ -138,9 +132,7 @@ Find the Serial.begin() code to see what baud rate is set, here is 9600.
 Then click the top right corner icon to open the Serial Monitor.
 
 .. image:: media_uno/image109.png
-   :width: 5.0625in
-   :height: 2.28125in
-   :align: center
+
 
 **Step 6:** Set the baud rate to 9600.
 
@@ -148,9 +140,7 @@ The default baud rate for serial monitors is 9600, and if the code is
 also set to 9600, there is no need to change the baud rate bar.
 
 .. image:: media_uno/image110.png
-   :width: 3.44792in
-   :height: 0.97917in
-   :align: center
+
 
 Spin the shaft of the potentiometer and you should see the luminance of
 the LED change.
@@ -179,8 +169,7 @@ Code Analysis
 
 .. code-block:: arduino
 
-    inputValue = analogRead(analogPin);//read the value from the
-    potentiometer
+    inputValue = analogRead(analogPin);//read the value from the potentiometer
 
 This line is to store the values A0 has read in the *inputValue* which
 has been defined before.
@@ -204,15 +193,14 @@ digits, defaulting to two decimal places. Bytes are sent as a single
 character. Characters and strings are sent as is.
 
 **Serial.print():** Commandant takes the same forms as Serial.print(),
-but it is followed by a carriage return character (ASCII 13, or '\r')
-and a newline character (ASCII 10, or '\n').
+but it is followed by a carriage return character (ASCII 13, or '\\r')
+and a newline character (ASCII 10, or '\\n').
 
 **Code Analysis 10-3 Map the values**
 
 .. code-block:: arduino
 
-    outputValue = map(inputValue, 0, 1023, 0, 255); //Convert from 0-1023
-    proportional to the number of a number of from 0 to 255
+    outputValue = map(inputValue, 0, 1023, 0, 255); //Convert from 0-1023 proportional to the number of a number of from 0 to 255
 
 **map(value, Fromm, from High, to Low, thigh)** re-maps a number from
 one range to another. That is, a **value** of **Fromm** would get mapped
@@ -237,8 +225,7 @@ LED**
 
 .. code-block:: arduino
 
-    analogWrite(ledPin, outputValue); //turn the LED on depending on the
-    output value
+    analogWrite(ledPin, outputValue); //turn the LED on depending on the output value
 
 Write the output value to *led Pin* and you will see that the luminance
 of LED changes with your spinning of the potentiometer knob.

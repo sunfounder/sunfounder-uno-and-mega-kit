@@ -1,5 +1,5 @@
-74HC595
-===========
+Lesson 20 74HC595
+=======================
 
 Introduction
 ------------------
@@ -167,14 +167,13 @@ calculate other characters similarly.
 
 **Code Analysis** **20-2** **Display 0-F in the 7-segment display**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     for(int num = 0; num < 16; num++)
 
     {
 
-      digitalWrite(STcp,LOW); //ground ST_CP and hold low for as long as you
-      are transmitting
+      digitalWrite(STcp,LOW); //ground ST_CP and hold low for as long as you are transmitting
 
       shiftOut(DS,SHcp,MSBFIRST,datArray[num]);
 

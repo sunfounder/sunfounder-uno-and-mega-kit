@@ -1,4 +1,4 @@
-Blinking LED Uno
+Lesson 3 Blinking LED Uno
 ==============================
 
 Introduction
@@ -34,6 +34,7 @@ metal strips.
    :alt: breadboard_MPJA_type
    :width: 8.64792in
    :height: 3.00486in
+   :align: center
 
 
 
@@ -76,6 +77,7 @@ As shown in the card, each color stands for a number.
 .. image:: media_uno/image44.jpeg
    :width: 5.45417in
    :height: 5.81875in
+   :align: center
 
 LED
 ^^^^^^^
@@ -280,7 +282,7 @@ function. Otherwise there will be errors in compiling.
 
     {
 
-        digitalWrite(ledPin,HIGH);//turn the LED on
+        digitalWrite(ledPin,HIGH); //turn the LED on
 
         delay(500); //wait for half a second
 

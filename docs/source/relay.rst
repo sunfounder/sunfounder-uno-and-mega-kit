@@ -1,5 +1,5 @@
-Relay
-========
+Lesson 8 Relay
+====================
 
 Introduction
 --------------
@@ -44,11 +44,9 @@ be completed.
 
 4. Set of electrical **contacts** – There are two contact points:
 
-．Normally open – connected when the relay is activated, and
-disconnected when it is inactive.
+* Normally open – connected when the relay is activated, and disconnected when it is inactive.
 
-．Normally close – not connected when the relay is activated, and
-connected when it is inactive.
+* Normally close – not connected when the relay is activated, and connected when it is inactive.
 
 5. **Molded frame** – Relays are covered with plastic for protection.
 

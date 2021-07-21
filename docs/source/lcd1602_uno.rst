@@ -1,5 +1,5 @@
-LCD1602 Uno
-===============
+Lesson 13 LCD1602 Uno
+=====================
 
 Introduction
 ------------------
@@ -65,9 +65,7 @@ controlled by D4-D7. For programming, it is optimized by calling
 function libraries.
 
 .. image:: media_uno/image123.png
-   :width: 6.16458in
-   :height: 4.07708in
-   :align: center
+
 
 
 
@@ -168,9 +166,7 @@ to pin 6, and d4-d7 to pin10-13 respectively.
 
 .. code-block:: arduino
 
-    lcd.begin(16, 2); // set up the LCD's number of columns and rows:
-
-    begin(col,row) is to set the display of LCD. Here set as 16 x 2.
+    lcd.begin(16, 2); // set up the LCD's number of columns and rows: begin(col,row) is to set the display of LCD. Here set as 16 x 2.
 
 **Code Analysis** **13-5** **Set the cursor position of LCD**
 
@@ -186,13 +182,11 @@ and array2[]**
 
 .. code-block:: arduino
 
-    for ( int positionCounter1 = 0; positionCounter1 < 26;
-    positionCounter1++)
+    for ( int positionCounter1 = 0; positionCounter1 < 26; positionCounter1++)
 
     {
 
-        lcd.scrollDisplayLeft(); //Scrolls the contents of the display one space
-        to the left.
+        lcd.scrollDisplayLeft(); //Scrolls the contents of the display one space to the left.
 
         lcd.print(array1[positionCounter1]); // Print a message to the LCD.
 
@@ -215,16 +209,13 @@ next time.
 
 .. code-block:: arduino
 
-    lcd.setCursor(15,1); // set the cursor to column 15, line 1 // Set the
-    cursor at Col. 15 Line 1, where the characters will start to show.
+    lcd.setCursor(15,1); // set the cursor to column 15, line 1 // Set the cursor at Col. 15 Line 1, where the characters will start to show.
 
-    for (int positionCounter2 = 0; positionCounter2 < 26;
-    positionCounter2++)
+    for (int positionCounter2 = 0; positionCounter2 < 26; positionCounter2++)
 
     {
 
-        lcd.scrollDisplayLeft(); //Scrolls the contents of the display one space
-        to the left.
+        lcd.scrollDisplayLeft(); //Scrolls the contents of the display one space to the left.
 
         lcd.print(array2[positionCounter2]); // Print a message to the LCD.
 

@@ -1,5 +1,5 @@
-Servo Uno
-===========
+Lesson 12 Servo Uno
+===================
 
 Introduction
 --------------------
@@ -42,9 +42,7 @@ Schematic Diagram
 ---------------------
 
 .. image:: media_uno/image119.png
-   :width: 7.85069in
-   :height: 4.26319in
-   :align: center
+
 
 Experimental Procedures
 ---------------------------
@@ -59,7 +57,7 @@ of the control board)
 **Step 4:** Upload the sketch to the board.
 
 .. image:: media_uno/image120.png
-   :align: center
+
    
 
 
@@ -84,11 +82,11 @@ Code Analysis
 
 **Code Analysis** **12-1** **Include a library**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     #include <Servo.h>
 
-    Servo myservo;//create servo object to control a servo
+    Servo myservo; //create servo object to control a servo
 
 With the *Servo.h* file included, you can call the functions in this
 file later. Servo is a built-in library in the Arduino IDE. You can find
@@ -97,17 +95,17 @@ Files\Arduino\libraries*.
 
 **Code Analysis** **12-2** **Initialize the servo**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     void setup()
 
     {
 
-        myservo.attach(9);//attachs the servo on pin 9 to servo object
+        myservo.attach(9); //attachs the servo on pin 9 to servo object
 
-        myservo.write(0);//back to 0 degrees
+        myservo.write(0); //back to 0 degrees
 
-        delay(1000);//wait for a second
+        delay(1000); //wait for a second
 
     }
 
@@ -121,7 +119,7 @@ stay in the 0 angle firstly.
 
 **Code Analysis** **12-3** **Servo rotate**
 
-.. code-block:: python
+.. code-block:: Arduino
 
     void loop()
 

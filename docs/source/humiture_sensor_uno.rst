@@ -1,5 +1,5 @@
-Humiture Sensor Uno
-=======================
+Lesson 17 Humiture Sensor Uno
+===============================
 
 Introduction
 --------------------
@@ -27,10 +27,7 @@ Humiture Sensor
 ^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: media_uno/image146.png
-   :alt: DHT11_Pins
-   :width: 2.35764in
-   :height: 1.72708in
-   :align: center
+
 
 Only three pins are available for use: VCC, GND, and DATA. The
 communication process begins with the DATA line sending start signals to
@@ -89,11 +86,9 @@ Code Analysis
 
     #include <dht.h> //Include the head file dht.h
 
-    #include <LiquidCrystal.h> //
+    #include <LiquidCrystal.h> 
 
-    LiquidCrystal lcd(4, 6, 10, 11, 12, 13); // initialize the LCD1602
-
-    dht DHT;
+    LiquidCrystal lcd(4, 6, 10, 11, 12, 13); // initialize the LCD1602 dht DHT;
 
     #define DHT11_PIN 3 //the humiture sensor attact to pin3
 
@@ -156,8 +151,7 @@ read11(): Return values:
 
     lcd.print("Tem:");
 
-    lcd.print(DHT.temperature,1); //print the temperature on lcd，keep one
-    decimal point
+    lcd.print(DHT.temperature,1); //print the temperature on lcd，keep one decimal point
 
     lcd.print(" C");
 

@@ -1,4 +1,4 @@
-Install and introduce Arduino IDE
+Install and Introduce Arduino IDE
 =======================================
 
 Description

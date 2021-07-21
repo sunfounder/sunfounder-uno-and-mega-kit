@@ -1,5 +1,5 @@
-Relay Uno
-============
+Lesson 8 Relay Uno
+===================
 
 Introduction
 ------------------
@@ -43,11 +43,9 @@ be completed.
 
 4. Set of electrical **contacts** – There are two contact points:
 
-．Normally open – connected when the relay is activated, and
-disconnected when it is inactive.
+* Normally open – connected when the relay is activated, and disconnected when it is inactive.
 
-．Normally close – not connected when the relay is activated, and
-connected when it is inactive.
+* Normally close – not connected when the relay is activated, and connected when it is inactive.
 
 5. **Molded** frame – Relays are covered with plastic for protection.
 
@@ -65,10 +63,8 @@ In this way, the switching on and off of the relay can control the state
 of a load circuit. 
 
 .. image:: media_uno/image84.jpeg
-   :alt: IMG_256
-   :width: 4.84306in
-   :height: 2.85417in
-   :align: center
+
+
 
 Transistor
 ^^^^^^^^^^^^^^^
@@ -97,10 +93,7 @@ semiconductors and one P-type and that the latter is the opposite. See
 the figure below. 
 
 .. image:: media_uno/image86.png
-   :alt: IMG_258
-   :width: 4.68472in
-   :height: 4.25in
-   :align: center
+
 
 When a High level signal goes through an NPN transistor, it is
 energized. But a PNP one needs a Low level signal to manage it. Both
@@ -120,9 +113,7 @@ Then its normally open contact is closed, and the LED will light up.
 When pin 8 is given a Low level, the LED will stay dim.
 
 .. image:: media_uno/image87.png
-   :width: 5.43681in
-   :height: 4.03958in
-   :align: center
+
 
 **Function of the freewheeling diode**: When the voltage input changes
 from High (5V) to Low (0V), the transistor changes from saturation
@@ -147,9 +138,7 @@ Experimental Procedures
 **Step 1:**\ Build the circuit
 
 .. image:: media_uno/image88.png
-   :width: 5.93958in
-   :height: 3.97778in
-   :align: center
+
 
 **Step 2:** Open the code file.
 
@@ -163,10 +152,7 @@ addition, you can hear a tick-tock caused by breaking the normally close
 contact and closing the normally open one.
 
 .. image:: media_uno/image89.jpeg
-   :alt: 5
-   :width: 7.21389in
-   :height: 4.75694in
-   :align: center
+
 
 Code
 --------

@@ -1,5 +1,5 @@
-Controlling an LED by Potentiometer
-===========================================
+Lesson 10 Controlling an LED by Potentiometer
+=================================================
 
 Introduction
 -----------------------

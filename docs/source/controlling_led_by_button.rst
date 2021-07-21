@@ -1,5 +1,5 @@
-Controlling LED by Button
-===============================
+Lesson 5 Controlling LED by Button
+=====================================
 
 Introduction
 ----------------
@@ -72,8 +72,7 @@ Experimental Procedures
 
 .. image:: media_mega2560/image79.png
    :alt: Controlling LED by Button_bb
-   :width: 6.27083in
-   :height: 4.10694in
+   
 
 **Step 2:** Open the code file.
 

@@ -1,5 +1,5 @@
-LCD1602
-==========
+Lesson 13 LCD1602
+======================
 
 Introduction
 ---------------------
@@ -118,8 +118,8 @@ With the *LiquidCrystal.h* file included, you can call the functions in
 this file later.
 
 LiquidCrystal is a built-in library in the Arduino IDE. You can find the
-LiquidCrystal folder under the installation path *C:\Program
-Files\Arduino\libraries*.
+LiquidCrystal folder under the installation path *C:\\Program
+Files\\Arduino\\libraries*.
 
 .. image:: media_mega2560/image164.png
 
@@ -176,19 +176,16 @@ the characters start to show. Here set it as 15col, 0 row.
 **Code Analysis** **13-6** **LCD displays the elements inside array1[]
 and array2[]**
 
-.. code-block:: python
+.. code-block:: Arduino
 
-    for ( int positionCounter1 = 0; positionCounter1 < 26;
-    positionCounter1++)
-
+    for (int positionCounter1 = 0; positionCounter1 < 26; positionCounter1++)
     {
 
-        lcd.scrollDisplayLeft(); //Scrolls the contents of the display one space
-        to the left.
+        lcd.scrollDisplayLeft(); // Scrolls the contents of the display one space to the left.
 
         lcd.print(array1[positionCounter1]); // Print a message to the LCD.
 
-        delay(tim); //wait for 250 microseconds
+        delay(tim); // wait for 250 microseconds
 
     }
 
@@ -209,20 +206,16 @@ next time.
 Set the cursor at Col. 15 Line 1, where the characters will
 start to show.
 
-.. code-block:: python
+.. code-block:: Arduino
 
-    for (int positionCounter2 = 0; positionCounter2 < 26;
-    positionCounter2++)
-
-
+    for (int positionCounter2 = 0; positionCounter2 < 26; positionCounter2++)
     {
 
-        lcd.scrollDisplayLeft(); //Scrolls the contents of the display one space
-        to the left.
+        lcd.scrollDisplayLeft(); // Scrolls the contents of the display one space to the left.
 
         lcd.print(array2[positionCounter2]); // Print a message to the LCD.
 
-        delay(tim); //wait for 250 microseconds
+        delay(tim); // wait for 250 microseconds
 
     }
 
