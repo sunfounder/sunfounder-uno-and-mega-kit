@@ -2,7 +2,7 @@ For Uno User
 =================
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     blinking_led_uno
     flowing_led_lights_uno
