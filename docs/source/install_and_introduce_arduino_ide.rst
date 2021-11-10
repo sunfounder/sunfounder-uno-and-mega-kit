@@ -8,7 +8,7 @@ Arduino is an open source platform with simple software and hardware.
 You can pick it up in short time even if you are a beginner. It provides
 an integrated development environment (IDE) for code compiling,
 compatible with multiple control boards. So you can just download the
-Arduino IDE, upload the sketches (i.e. the code files) to the board, and
+Arduino IDE, upload the sketches (the code files) to the board, and
 then you can see relative experimental phenomena. For more information,
 refer to http://www.arduino.cc.
 
@@ -26,7 +26,7 @@ the IDE first. Skip it if you have done this.
 Now go to `arduino.cc <http://www.arduino.cc>`__ and click SOFTWARE ->
 DOWNLOADs. on the page, check the software list on the right side.
 
-.. image:: media_mega2560/image14.png
+.. image:: img/image14.png
    :width: 7.47292in
    :height: 4.31389in
    :align: center
@@ -40,7 +40,7 @@ For Installer File
 
 **Step 1**: Find the .exe file just downloaded.
 
-.. image:: media_mega2560/image15.png
+.. image:: img/image15.png
    :width: 0.88542in
    :height: 1.33403in
    :align: center
@@ -48,14 +48,14 @@ For Installer File
 **Step 2:** Double click the file and a window will pop up as below.
 Click **I Agree**.
 
-.. image:: media_mega2560/image16.png
+.. image:: img/image16.png
    :width: 4.4375in
    :height: 3.04167in
    :align: center
 
 **Step 3:** Click **Next.**
 
-.. image:: media_mega2560/image17.png
+.. image:: img/image17.png
    :width: 4.4375in
    :height: 3.04167in
    :align: center
@@ -64,7 +64,7 @@ Click **I Agree**.
 disk. You can click **Browse** and choose other paths. Click **OK**.
 Then click Install.
 
-.. image:: media_mega2560/image18.png
+.. image:: img/image18.png
    :width: 4.4375in
    :height: 3.04167in
    :align: center
@@ -93,7 +93,7 @@ a while, a prompt message of failed installation will appear.
 devices, Arduino Mega 2560 with an exclamation mark appear, which means
 the computer did not recognize the board.
 
-.. image:: media_mega2560/image19.png
+.. image:: img/image19.png
    :alt: F4857A15-F5A0-4238-BD48-EF569EB63C7E
    :width: 4.67708in
    :height: 4.03125in
@@ -103,7 +103,7 @@ the computer did not recognize the board.
 **Step3**: Right click on **Arduino Mega 2560** and select **Update
 Driver Software**.
 
-.. image:: media_mega2560/image20.png
+.. image:: img/image20.png
    :alt: 0D198239-6DE8-4ca2-8EDF-9C0E88369E96
    :width: 4.08333in
    :height: 3.77083in
@@ -112,7 +112,7 @@ Driver Software**.
 **Step4:** Choose the second option, **Browse my computer for Driver
 software**.
 
-.. image:: media_mega2560/image21.png
+.. image:: img/image21.png
    :alt: F059EA37-B1D9-4dd5-ACE7-24B4BE3A5F2A
    :width: 6.54167in
    :height: 4.79167in
@@ -124,7 +124,7 @@ software**.
 folder where you just extracted the file. Go to the *drivers* folder and
 click **OK** -> **Next**.
 
-.. image:: media_mega2560/image22.png
+.. image:: img/image22.png
    :alt: 5C7FB903-CA25-4108-9481-C8BFFBDFB619
    :width: 6.375in
    :height: 4.39583in
@@ -135,7 +135,7 @@ click **OK** -> **Next**.
 **Step6:** Select ‘Always trust software from “Arduino LLC” ‘ then click
 Install.
 
-.. image:: media_mega2560/image23.png
+.. image:: img/image23.png
    :width: 6.51042in
    :height: 4.75in
    :align: center
@@ -144,7 +144,7 @@ It may need a sec. Then the system prompts you the driver has been
 installed successfully. So the computer can recognize the board now.
 Click **Close**.
 
-.. image:: media_mega2560/image24.png
+.. image:: img/image24.png
    :align: center
 
 Open the Arduino Software (IDE)
@@ -153,14 +153,14 @@ Open the Arduino Software (IDE)
 Double-click the Arduino icon (arduino.exe) created by the installation
 process
 
-.. image:: media_mega2560/image25.png
+.. image:: img/image25.png
    :width: 0.69792in
    :height: 0.70833in
    :align: center
 
 Then the Arduino IDE will appear. Let's check details of the software.
 
-.. image:: media_mega2560/image26.jpeg
+.. image:: img/image26.jpeg
    :align: center
 
 1. **Verify**: Compile your code. Any syntax problem will be prompted

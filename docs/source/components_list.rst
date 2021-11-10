@@ -1,26 +1,26 @@
 Components List
 =================
 
-.. image:: media_mega2560/image6.jpeg
+.. image:: img/image6.jpeg
    :align: center
 
-.. image:: media_mega2560/image7.jpeg
+.. image:: img/image7.jpeg
    :align: center
 
-.. image:: media_mega2560/image8.jpeg
+.. image:: img/image8.jpeg
    :align: center
 
-.. image:: media_mega2560/image9.jpeg
+.. image:: img/image9.jpeg
    :align: center
 
-.. image:: media_mega2560/image10.jpeg
+.. image:: img/image10.jpeg
    :align: center
 
-.. image:: media_mega2560/image11.jpeg
+.. image:: img/image11.jpeg
    :align: center
 
-.. image:: media_mega2560/image12.jpeg
+.. image:: img/image12.jpeg
    :align: center
 
-.. image:: media_mega2560/image13.jpeg
+.. image:: img/image13.jpeg
    :align: center

@@ -32,19 +32,19 @@ is inconvenient when you need to add quite a lot of libraries.
 **Step 1**: Select **Sketch** -> **Include Library** -> **Add ZIP
 Library**.
 
-.. image:: media_mega2560/image27.png
+.. image:: img/image27.png
    :align: center
 
 **Step 2**: Find *SunFounder Mega Kit\Library*, Click **Open**.
 
-.. image:: media_mega2560/image28.png
+.. image:: img/image28.png
    :align: center
 
 **Step 3**: When you see “Library added to your libraries. Check
 "Include library" menu”, it means you have added the library
 successfully. Please use the same method to add other libraries then.
 
-.. image:: media_mega2560/image29.png
+.. image:: img/image29.png
    :align: center
 
 Method 2
@@ -61,24 +61,24 @@ is difficult to find libraries/Arduino.
 you can see the path of the libraries folder in the text box as shown
 below.
 
-.. image:: media_mega2560/image30.png
+.. image:: img/image30.png
    :align: center
 
 **Step 2**: Copy all Libraries in the **Library** folder.
 
-.. image:: media_mega2560/image31.png
+.. image:: img/image31.png
    :align: center
 
 **Step 3**: Go to the path above and you will see there is a *libraries*
 folder, click to open it.
 
-.. image:: media_mega2560/image32.png
+.. image:: img/image32.png
    :align: center
 
 **Step 4**: Paste all the libraries copied before to the folder. Then
 you can see them in libraries folder.
 
-.. image:: media_mega2560/image33.png
+.. image:: img/image33.png
    :align: center
 
 Method 3
@@ -89,13 +89,13 @@ Using the Library Manager to install a new library into the Arduino IDE.
 **Step1:** Click **Sketch** -> **Include Library** ->\ **Manage
 Libraries**
 
-.. image:: media_mega2560/image34.png
+.. image:: img/image34.png
    :align: center
 
 **Step2:** Input a library name to search it, such as dht, you can
 choose the latest version to install.
 
-.. image:: media_mega2560/image35.png
+.. image:: img/image35.png
    :align: center
 
 Once it has finished, you can close the library manager.

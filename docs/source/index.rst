@@ -17,10 +17,14 @@ Here is the Email: cs@sunfounder.com.
    :maxdepth: 2
 
    components_list
+   components/component_introduction
+   download_code
    install_and_introduce_arduino_ide
    add_libraries
-   for_mega2560_user
-   for_uno_user
+   mega2560/for_mega2560_user
+   uno/for_uno_user
+   pictoblox/play_with_scratch
+   faq
    thank-learning
 
 Copyright Notice
