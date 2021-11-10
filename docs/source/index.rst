@@ -23,6 +23,10 @@ Here is the Email: cs@sunfounder.com.
    add_libraries
    mega2560/for_mega2560_user
    uno/for_uno_user
+
+.. toctree::
+   :maxdepth: 3
+
    pictoblox/play_with_scratch
    faq
    thank-learning
