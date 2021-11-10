@@ -19,7 +19,7 @@ Now let's start the journey of discovery!
 
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     
     install_and_introduce
     projects
