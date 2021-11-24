@@ -16,3 +16,7 @@ The principle is very simple. When the switch is tilted in a certain angle, the 
 * `SW520D Tilt Switch Datasheet <https://www.tme.com/Document/f1e6cedd8cb7feeb250b353b6213ec6c/SW-520D.pdf>`_
 
 **Example**
+
+* :ref:`Lesson 5 Tilt Switch` (Mega Board Project)
+* :ref:`tilt_uno` (R3 Board Project)
+* :ref:`8. Tumbler` (Scratch Project)

@@ -12,6 +12,12 @@ Once the download is complete, unzip it. Refer to :ref:`Stage Mode` to run indiv
 
 But the 11th project reads the temperature and humidity values in Upload mode, so please refer to :ref:`Upload Mode`.
 
+.. note::
+
+    In the example, Arduino Uno is used. If you use Arduino Mega2560, the circuit building and programming steps are basically the same, the only difference is that you need to select Arduino Mega for the Board before programming.
+    
+    .. image:: img/0_mega.png
+
 .. toctree::
     :maxdepth: 1
 

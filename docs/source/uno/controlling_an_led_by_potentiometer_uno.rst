@@ -1,3 +1,5 @@
+.. _potentiometer_uno:
+
 Lesson 8 Controlling an LED by Potentiometer
 ===================================================
 
@@ -14,48 +16,13 @@ Components
 .. image:: media_uno/uno11.png
     :align: center
 
-Component Introduction
-----------------------------
 
-Potentiometer
-^^^^^^^^^^^^^^^^^^^^^^^
-
-Potentiometer is also a resistance component with 3 terminals and its
-resistance value can be adjusted according to some regular variation.
-Potentiometer usually consists of resistor and movable brush. When the
-brush is moving along the resistor, there is a certain resistance or
-voltage output depending on the displacement.
-
-.. image:: media_uno/uno12.png
-    :align: center
-
-The functions of the potentiometer in the circuit are as follows:
-
-1. Serving as a voltage divider
-
-..
-
-   Potentiometer is a continuously adjustable resistor. When you adjust
-   the shaft or sliding handle of the potentiometer, the movable contact
-   will slide on the resistor. At this point, a voltage can be output
-   depending on the voltage applied onto the potentiometer and the angle
-   the movable arm has rotated to or the travel it has made.
-
-2. Serving as a rheostat
-
-..
-
-   When the potentiometer is used as a rheostat, connect the middle pin
-   and one of the other 2 pins in the circuit. Thus you can get a
-   smoothly and continuously changed resistance value within the travel
-   of the moving contact.
-
-3. Serving as a current controller
-
-..
-
-   When the potentiometer acts as a current controller, the sliding
-   contact terminal must be connected as one of the output terminals.
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`LED`
+* :ref:`Resistor`
+* :ref:`Potentiometer`
 
 Serial Monitor
 --------------------
@@ -67,8 +34,6 @@ open it. You can send and receive data via the serial port on the
 control board and control the board by input from the keyboard.
 
 .. image:: media_uno/image104.png
-   :width: 6.38542in
-   :height: 5.07292in
    :align: center
 
 Here, the Serial Monitor serves as a transfer station for communication
@@ -79,19 +44,6 @@ top right corner and a window will pop up as shown below:
 
    .. image:: media_uno/image105.png
 
-
-Analog V.S. Digital
-------------------------
-
-A linear potentiometer is an analog electronic component. So what’s the
-difference between an analog value and a digital one? Simply put,
-digital means on/off, high/low level with just two states, either 0
-or 1. But the data state of analog signals is linear, for example, from
-1 to 1000; the signal value changes over time instead of indicating an
-exact number. Analog signals include those of light intensity, humidity,
-temperature, and so on.
-
-.. image:: media_uno/image106.png
 
 
 
@@ -150,9 +102,6 @@ Monitor and the data in the window will change with your spinning of the
 potentiometer knob.
 
 .. image:: media_uno/image111.jpeg
-   :alt: 7
-   :width: 6.69931in
-   :height: 4.90556in
    :align: center
 
 Code 
@@ -165,7 +114,7 @@ Code
 Code Analysis
 ---------------
 
-**Code Analysis** **10-1** **Read the value from A0**
+**Read the value from A0**
 
 .. code-block:: arduino
 
@@ -178,7 +127,7 @@ has been defined before.
 means that it will map input voltages between 0 and 5 volts into integer
 values between 0 and 1023.
 
-**Code Analysis** **10-2 Print values on Serial Monitor**
+**Print values on Serial Monitor**
 
 .. code-block:: arduino
 
@@ -196,7 +145,7 @@ character. Characters and strings are sent as is.
 but it is followed by a carriage return character (ASCII 13, or '\\r')
 and a newline character (ASCII 10, or '\\n').
 
-**Code Analysis 10-3 Map the values**
+**Map the values**
 
 .. code-block:: arduino
 
@@ -220,8 +169,7 @@ the Serial Monitor and analyze it.
 
     Serial.println(outputValue); //print outputValue
 
-**Code Analysis** **10-4** **Write the value of the potentiometer to
-LED**
+**Write the value of the potentiometer to LED**
 
 .. code-block:: arduino
 

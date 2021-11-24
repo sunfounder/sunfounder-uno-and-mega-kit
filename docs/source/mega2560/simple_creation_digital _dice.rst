@@ -15,7 +15,16 @@ Components
     :align: center
 
 
-Experimental Principle
+* :ref:`SunFounder Mega Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Resistor`
+* :ref:`7-segment Display`
+* :ref:`74HC595`
+* :ref:`Button`
+* :ref:`Capacitor`
+
+Schematic Diagram
 -----------------------------
 
 The idea behind a digital dice is very simple: a 7-segment display
@@ -34,15 +43,9 @@ Experimental Procedures
 **Step 1:** Build the circuit
 
 .. image:: media_mega2560/image211.png
-   :alt: 74HC595
-   :width: 1.26736in
-   :height: 0.53264in
    :align: center
 
 .. image:: media_mega2560/image253.png
-   :alt: Simple Creation - Digital Dice_bb
-   :width: 6.90139in
-   :height: 4.59028in
    :align: center
 
 **Step 2:** Open the code file.
@@ -56,9 +59,6 @@ Press the button, and the jumping will slow down until it stops three
 seconds later. Press the button again, and the process will repeat.
 
 .. image:: media_mega2560/image254.jpeg
-   :alt: \_MG_5373
-   :width: 6.50347in
-   :height: 4.30069in
 
 Code
 --------
@@ -70,7 +70,7 @@ Code
 Code Analysis
 --------------------
 
-**Code Analysis** **25-1** **The initial random number comes from A0**
+**The initial random number comes from A0**
 
 .. code-block:: arduino
 
@@ -79,7 +79,7 @@ Code Analysis
 The initial random number is generated from A0 and the range for the
 random numbers is 0-1023.
 
-**Code Analysis** **25-2** **Digital Dice**
+**Digital Dice**
 
 .. code-block:: Arduino
 
@@ -147,23 +147,25 @@ If yes, run the code below.
       delay(100);
    }
 
-**Code Analysis** **25-3** **showNum() function**
+**showNum() function**
 
-.. image:: media_mega2560/image267.png
-   :width: 6.44722in
-   :height: 1.85417in
+.. code-block:: arduino
+
+    void showNum(int num)
+
+    {
+
+        digitalWrite(latchPin,LOW); //ground latchPin and hold low for transmitting
+
+        shiftOut(dataPin,clockPin,MSBFIRST,datArray[num]);
+
+        //return the latch pin high to signal chip that it
+
+        //no longer needs to listen for information
+
+        digitalWrite(latchPin,HIGH); //pull the latchPin to save the data
+
+    }
 
 This function is to display the number in *dataArray[]* on the 7-segment
 display.
-
-Copyright Notice
----------------------
-
-All contents including but not limited to texts, images, and code in
-this manual are owned by the SunFounder Company. You should only use it
-for personal study, investigation, enjoyment, or other non-commercial or
-nonprofit purposes, under the related regulations and copyrights laws,
-without infringing the legal rights of the author and relevant right
-holders. For any individual or organization that uses these for
-commercial profit without permission, the Company reserves the right to
-take legal action.

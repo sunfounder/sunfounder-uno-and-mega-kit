@@ -27,8 +27,6 @@ Now go to `arduino.cc <http://www.arduino.cc>`__ and click SOFTWARE ->
 DOWNLOADs. on the page, check the software list on the right side.
 
 .. image:: img/image14.png
-   :width: 7.47292in
-   :height: 4.31389in
    :align: center
 
 Find the one that suits your operation system and click to download.
@@ -41,23 +39,17 @@ For Installer File
 **Step 1**: Find the .exe file just downloaded.
 
 .. image:: img/image15.png
-   :width: 0.88542in
-   :height: 1.33403in
    :align: center
 
 **Step 2:** Double click the file and a window will pop up as below.
 Click **I Agree**.
 
 .. image:: img/image16.png
-   :width: 4.4375in
-   :height: 3.04167in
    :align: center
 
 **Step 3:** Click **Next.**
 
 .. image:: img/image17.png
-   :width: 4.4375in
-   :height: 3.04167in
    :align: center
 
 **Step 4**: Select the path to install. By default, it's set in the C
@@ -65,8 +57,6 @@ disk. You can click **Browse** and choose other paths. Click **OK**.
 Then click Install.
 
 .. image:: img/image18.png
-   :width: 4.4375in
-   :height: 3.04167in
    :align: center
 
 **Step 5:** Meanwhile, it will prompts install the needed drivers,
@@ -94,9 +84,6 @@ devices, Arduino Mega 2560 with an exclamation mark appear, which means
 the computer did not recognize the board.
 
 .. image:: img/image19.png
-   :alt: F4857A15-F5A0-4238-BD48-EF569EB63C7E
-   :width: 4.67708in
-   :height: 4.03125in
    :align: center
 
 
@@ -104,30 +91,21 @@ the computer did not recognize the board.
 Driver Software**.
 
 .. image:: img/image20.png
-   :alt: 0D198239-6DE8-4ca2-8EDF-9C0E88369E96
-   :width: 4.08333in
-   :height: 3.77083in
    :align: center
 
 **Step4:** Choose the second option, **Browse my computer for Driver
 software**.
 
 .. image:: img/image21.png
-   :alt: F059EA37-B1D9-4dd5-ACE7-24B4BE3A5F2A
-   :width: 6.54167in
-   :height: 4.79167in
    :align: center
 
 
 
 **Step5:** A window pops up then. Click **Browse**. Then go to the
-folder where you just extracted the file. Go to the *drivers* folder and
+folder where you just extracted the file. Go to the **drivers** folder and
 click **OK** -> **Next**.
 
 .. image:: img/image22.png
-   :alt: 5C7FB903-CA25-4108-9481-C8BFFBDFB619
-   :width: 6.375in
-   :height: 4.39583in
    :align: center
 
 
@@ -136,8 +114,6 @@ click **OK** -> **Next**.
 Install.
 
 .. image:: img/image23.png
-   :width: 6.51042in
-   :height: 4.75in
    :align: center
 
 It may need a sec. Then the system prompts you the driver has been
@@ -154,8 +130,6 @@ Double-click the Arduino icon (arduino.exe) created by the installation
 process
 
 .. image:: img/image25.png
-   :width: 0.69792in
-   :height: 0.70833in
    :align: center
 
 Then the Arduino IDE will appear. Let's check details of the software.

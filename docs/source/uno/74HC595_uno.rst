@@ -1,3 +1,5 @@
+.. _74hc595_uno:
+
 Lesson 18 74HC595
 ======================
 
@@ -18,56 +20,12 @@ Components
 .. image:: media_uno/uno22.png
     :align: center
 
-Components Introduction
-----------------------------
-
-74HC595
-^^^^^^^^^^
-
-The 74HC595 consists of an 8−bit shift register and a storage register
-with three−state parallel outputs. It converts serial input into
-parallel output so you can save IO ports of an MCU.
-
-When MR (pin10) is high level and OE (pin13) is low level, data is input
-in the rising edge of SHcp and goes to the memory register through the
-rising edge of SHcp. If the two clocks are connected together, the shift
-register is always one pulse earlier than the memory register. There is
-a serial shift input pin (Ds), a serial output pin (Q) and an
-asynchronous reset button (low level) in the memory register. The memory
-register outputs a Bus with a parallel 8-bit and in three states. When
-OE is enabled (low level), the data in memory register is output to the
-bus.
-
-.. image:: media_uno/image163.png
-
-
-Pins of 74HC595 and Their Functions
-------------------------------------------
-
-**Q0-Q7**: 8-bit parallel data output pins, able to control 8 LEDs or 8
-pins of 7-segment display directly.
-
-**Q7’**: Series output pin, connected to DS of another 74HC595 to
-connect multiple 74HC595s in series.
-
-**MR**: Reset pin, active at low level.
-
-**SHcp**: Time sequence input of shift register. On the rising edge, the
-data in shift register moves successively one bit, i.e. data in Q1 moves
-to Q2, and so forth. While on the falling edge, the data in shift
-register remain unchanged.
-
-**STcp**: Time sequence input of storage register. On the rising edge,
-data in the shift register moves into memory register.
-
-**OE**: Output enable pin, active at low level.
-
-**DS**: Serial data input pin
-
-**VCC**: Positive supply voltage
-
-**GND**: Ground
-
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Resistor`
+* :ref:`7-segment Display`
+* :ref:`74hc595`
 
 Schematic Diagram
 --------------------
@@ -85,7 +43,6 @@ output to the bus (Q0-Q7). So the 16 characters are displayed in the
 7-segment in turn.
 
 .. image:: media_uno/image164.png
-   :alt: C:\Users\sunfounder\Desktop\fds.png
    :align: center
 
 
@@ -117,7 +74,6 @@ DP        Q0
 ========= =========== ===========
 
 .. image:: media_uno/image165.png
-   :alt: 16
    :align: center
 
 **Step 2:** Open the code file.
@@ -129,9 +85,6 @@ DP        Q0
 You should now see the 7-segment display from 0 to 9 and A to F.
 
 .. image:: media_uno/image166.jpeg
-   :alt: 16
-   :width: 6.33403in
-   :height: 4.26667in
    :align: center
 
 Code
@@ -144,7 +97,7 @@ Code
 Code Analysis
 -----------------
 
-**Code Analysis** **20-1** **Set the array elements**
+**Set the array elements**
 
 .. code-block:: arduino
 
@@ -164,7 +117,7 @@ Change the binary numbers into decimal ones:
 So that's the value for the number **0** to be displayed. You can
 calculate other characters similarly.
 
-**Code Analysis** **20-2** **Display 0-F in the 7-segment display**
+**Display 0-F in the 7-segment display**
 
 .. code-block:: arduino
 

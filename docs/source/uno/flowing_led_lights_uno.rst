@@ -15,6 +15,11 @@ Components
 .. image:: media_uno/uno03.png
     :align: center
 
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`LED`
+* :ref:`Resistor`
 
 Schematic Diagram
 ------------------------
@@ -62,7 +67,7 @@ Code
 Code Analysis
 --------------------
 
-**Code Analysis** **4-1** **for() statement**
+**for() statement**
 
 .. code-block:: arduino
 
@@ -88,7 +93,7 @@ statement block, and the **increment** is executed, then the
 **condition** is tested again. When the **condition** becomes false, the
 loop ends.
 
-**Code Analysis** **4-2** **Set flowing led lights**
+**Set flowing led lights**
 
 Use the for() statement to set pin2-pin9 to a high level inturn.
 
@@ -142,3 +147,8 @@ turn and let them go out in turn.
         delay(100); //wait for 100 ms
 
     }
+
+**Experiment Summary**
+
+Through this experiment, you have learned how to use for() statement
+which is a very useful statement when you want to short the code.

@@ -75,3 +75,10 @@ on, and the stepper motor rotates one step. The similar case repeats on
 and on. Therefore, just give the stepper motor a specific timing
 sequence, it will rotate step by step. The ULN2003 here is used to
 provide particular timing sequences for the stepper motor.
+
+
+**Example**
+
+
+* :ref:`Lesson 19 Stepper Motor` (Mega Board Project)
+* :ref:`stepper_uno` (R3 Board Project)

@@ -15,10 +15,14 @@ Components
 .. image:: media_mega2560/mega04.png
     :align: center
 
+* :ref:`SunFounder Mega Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`LED`
+* :ref:`Resistor`
 
 
-
-Experimental Principle
+Schematic Diagram
 ---------------------------
 
 The principle of this experiment is simply to turn on eight LEDs in
@@ -68,19 +72,23 @@ Code
 Code Analysis
 ^^^^^^^^^^^^^^^^
 
-**Code Analysis** **4-1** **for() statement**
+**for() statement**
 
-.. |image21| image:: media_mega2560/image67.png
+.. code-block:: arduino
 
-|image21|//8 LEDs are connect to pin2-pin9, When i=2, which accords with
-the condition i<=9, then run the code in the curly braces, set the pin2
-to OUTPUT. After that run i++(here in i = i + 1, the two "i"s are not
-the same, but i\ :sub:`now` = i\ :sub:`before` + 1). Use the for()
-statement to set pin 2-pin 9 as output respectively.
+    for (int i = 2; i <= 9; i++)
+    /*8 LEDs are connect to pin2-pin9, When i=2, 
+    which accords with the condition i<=9, 
+    then run the code in the curly braces, set the pin2 to OUTPUT. 
+    After that run i++(here in i = i + 1, the two "i"s are not the same, 
+    but i\ :sub:`now` = i\ :sub:`before` + 1). 
+    Use the for() statement to set pin 2-pin 9 as output respectively.*/
+    
+    {
 
-.. image:: media_mega2560/image68.png
-   :width: 6.17708in
-   :height: 0.8125in
+        pinMode(i, OUTPUT); //initialize a as an output
+
+    }
 
 **for (initialization; condition; increment) { //statement(s); }:** The
 for statement is used to repeat a block of statements enclosed in curly
@@ -90,21 +98,60 @@ statement block, and the **increment** is executed, then the
 **condition** is tested again. When the **condition** becomes false, the
 loop ends.
 
-**Code Analysis** **4-2** **Set flowing led lights**
+**Set flowing led lights**
 
 Use the for() statement to set pin2-pin9 to a high level inturn.
 
-.. image:: media_mega2560/image69.png
+.. code-block:: arduino
 
+    for (int a = 2; a <= 9; a++)
+
+    {
+
+        digitalWrite(a, HIGH); //turn this led on
+
+        delay(100); //wait for 100 ms
+
+    }
 
 Then let the 8 LEDs go out from pin9 to pin2 in turn.
 
-.. image:: media_mega2560/image70.png
+.. code-block:: arduino
+
+    for (int a = 9; a <= 2; a--)
+
+    {
+
+        digitalWrite(a, LOW); //turn this led on
+
+        delay(100); //wait for 100 ms
+
+    }
 
 Finally, use the same way to turn on the 8 LEDs from pin9 to pin2 in
 turn and let them go out in turn.
 
-.. image:: media_mega2560/image71.png
+.. code-block:: arduino
+
+    for (int a = 9; a <= 2; a--)
+
+    {
+
+        digitalWrite(a, HIGH); //turn this led on
+
+        delay(100); //wait for 100 ms
+
+    }
+
+    for (int a = 2; a <= 9; a++)
+
+    {
+
+        digitalWrite(a, LOW); //turn this led on
+
+        delay(100); //wait for 100 ms
+
+    }
 
 
 **Experiment Summary**

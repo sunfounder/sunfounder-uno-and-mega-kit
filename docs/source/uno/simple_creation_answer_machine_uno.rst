@@ -1,3 +1,5 @@
+.. _answer_uno:
+
 Lesson 21 Simple Creation-Answer Machine
 =============================================
 
@@ -19,6 +21,14 @@ Components
 
 .. image:: media_uno/uno25.png
     :align: center
+
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Resistor`
+* :ref:`LED`
+* :ref:`Button`
+* :ref:`Buzzer`
 
 Schematic Diagram
 ----------------------
@@ -51,9 +61,6 @@ will see the corresponding LED light up and the buzzer will beep. Then
 press button 4 again to reset before you press other buttons.
 
 .. image:: media_uno/image185.jpeg
-   :alt: 20
-   :width: 7.01875in
-   :height: 5.07153in
    :align: center
    
 Code
@@ -66,7 +73,10 @@ Code
 Code Analysis
 --------------------
 
-**Code Analysis** **23-1** **loop() function**
+The code for this experiment may be a bit long. But the syntax is simple. Let's see.
+**Workflow:** Read the state of button 4, if button 4 is pressed, the LED on pin 10 is illuminated while reading the state of the remaining buttons. If one of the buttons is detected to be pressed, the buzzer beeps and lights the corresponding LED until button 4 is pressed again.
+
+**loop() function**
 
 .. code-block:: arduino
 
@@ -139,7 +149,7 @@ buttons. If one of the buttons is detected to be pressed, the buzzer
 beeps and lights the corresponding LED until button 4 is pressed
 again.
 
-**Code Analysis** **23-2** **Alarm() function**
+**Alarm() function**
 
 .. code-block:: arduino
 

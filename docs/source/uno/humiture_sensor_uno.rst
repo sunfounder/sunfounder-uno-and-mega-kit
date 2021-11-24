@@ -1,3 +1,5 @@
+.. _humi_uno:
+
 Lesson 15 Humiture Sensor
 ===============================
 
@@ -20,29 +22,17 @@ Components
 .. image:: media_uno/uno19.png
     :align: center
 
-Component Introduction
---------------------------
-
-Humiture Sensor
-^^^^^^^^^^^^^^^^^^^^^
-
-.. image:: media_uno/image146.png
-
-
-Only three pins are available for use: VCC, GND, and DATA. The
-communication process begins with the DATA line sending start signals to
-DHT11, and DHT11 receives the signals and returns an answer signal. Then
-the host receives the answer signal and begins to receive 40-bit
-humiture data (8-bit humidity integer + 8-bit humidity decimal + 8-bit
-temperature integer + 8-bit temperature decimal + 8-bit checksum). For
-more information, please refer to DHT11 datasheet.
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`LCD1602`
+* :ref:`Potentiometer`
+* :ref:`Humiture Sensor Module`
 
 Schematic Diagram
 ------------------------------
 
 .. image:: media_uno/image147.png
-   :width: 6.67639in
-   :height: 5.26111in
    :align: center
 
 
@@ -53,8 +43,6 @@ Experimental Procedures
 **Step 1:** Build the circuit.
 
 .. image:: media_uno/image148.png
-   :width: 6.5in
-   :height: 5in
 
 **Step 2:** Open the code file.
 
@@ -66,9 +54,6 @@ Now, you can see the value of the current humidity and temperature
 displayed on the LCD.
 
 .. image:: media_uno/image149.jpeg
-   :alt: 13.1
-   :width: 6.35694in
-   :height: 4.38611in
 
 Code
 -------
@@ -80,7 +65,7 @@ Code
 Code Analysis
 -----------------------
 
-**Code Analysis** **17-1** **Initialize the humiture and LCD1602**
+**Initialize the humiture and LCD1602**
 
 .. code-block:: arduino
 
@@ -93,7 +78,7 @@ Code Analysis
     #define DHT11_PIN 3 //the humiture sensor attact to pin3
 
 
-**Code Analysis** **17-2** **Read the value of humiture**
+**Read the value of humiture**
 
 .. code-block:: arduino
 
@@ -129,11 +114,11 @@ Code Analysis
 
     }
 
-Use the read11() function to read the value of the temperature and
+Use the ``read11()`` function to read the value of the temperature and
 humidity sensor. If OK is displayed on the Serial Monitor, the humiture
 sensor is working properly.
 
-read11(): Return values:
+``read11()``: Return values:
 
 .. code-block:: arduino
 
@@ -143,7 +128,7 @@ read11(): Return values:
 
     // DHTLIB_ERROR_TIMEOUT
 
-**Code Analysis** **17-3** **Display on the LCD1602**
+**Display on the LCD1602**
 
 .. code-block:: arduino
 

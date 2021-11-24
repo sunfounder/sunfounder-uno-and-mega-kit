@@ -19,5 +19,9 @@ Here is the electronic symbol of photoresistor.
 
 **Example**
 
+* :ref:`Lesson 9 Photo resistor` (Mega Board Project)
+* :ref:`photoresistor_uno` (R3 Board Project)
+* :ref:`10. Light Alarm Clock` (Scratch Project)
+
 
 

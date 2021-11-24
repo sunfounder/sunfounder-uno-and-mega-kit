@@ -1,3 +1,6 @@
+.. _servo_uno:
+
+
 Lesson 10 Servo
 ===================
 
@@ -17,26 +20,11 @@ Components
 .. image:: media_uno/uno14.png
     :align: center
 
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Servo`
 
-Component Introduction
-------------------------------
-
-Servo
-^^^^^^^^^^
-
-A servo is generally composed of the following parts: case, shaft, gear
-train, adjustable potentiometer, DC motor, and control circuit board.
-
-It works like this: The Uno board sends out PWM signals to the servo,
-and then the control circuit in the servo receives the signals through
-the signal pin and controls the motor inside to turn. As a result, the
-motor drives the gear chain and then motivates the shaft after
-deceleration. The shaft and adjustable potentiometer of the servo are
-connected together. When the shaft rotates, it drives the pot, so the
-pot outputs a voltage signal to the circuit board. Then the board
-determines the direction and speed of rotation based on the current
-position, so it can stop exactly at the right position as defined and
-hold there.
 
 Schematic Diagram
 ---------------------
@@ -66,9 +54,6 @@ degrees (15 degrees each time). And then it rotates in the opposite
 direction.
 
 .. image:: media_uno/image121.jpeg
-   :alt: L14
-   :width: 7.06736in
-   :height: 5.07222in
 
 Code
 --------
@@ -80,7 +65,7 @@ Code
 Code Analysis
 -------------------
 
-**Code Analysis** **12-1** **Include a library**
+**Include a library**
 
 .. code-block:: Arduino
 
@@ -93,7 +78,7 @@ file later. Servo is a built-in library in the Arduino IDE. You can find
 the Servo folder under the installation path *C:\Program
 Files\Arduino\libraries*.
 
-**Code Analysis** **12-2** **Initialize the servo**
+**Initialize the servo**
 
 .. code-block:: Arduino
 
@@ -117,7 +102,7 @@ accordingly. On a standard servo, this will set the angle of the shaft
 (in degrees), moving the shaft to that orientation. Here let the servo
 stay in the 0 angle firstly.
 
-**Code Analysis** **12-3** **Servo rotate**
+**Servo rotate**
 
 .. code-block:: Arduino
 

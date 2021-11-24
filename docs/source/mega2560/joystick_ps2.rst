@@ -16,7 +16,12 @@ Components
     :align: center
 
 
-Experimental Principle
+* :ref:`SunFounder Mega Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Joystick Module`
+
+Schematic Diagram
 --------------------------
 
 This module has two analog outputs (corresponding to X，Y biaxial
@@ -38,8 +43,6 @@ Experimental Procedures
 **Step 1:** Build the circuit
 
 .. image:: media_mega2560/image199.png
-   :alt: Joystick PS2_bb
-
 
 **Step 2:** Open the code file.
 

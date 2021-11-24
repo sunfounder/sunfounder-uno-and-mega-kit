@@ -1,3 +1,5 @@
+.. _doorbell_uno:
+
 Lesson 4 Doorbell
 =========================
 
@@ -15,42 +17,18 @@ Components
     :align: center
 
 
-Component Introduction
---------------------------
-
-Buzzer
-^^^^^^^^^^
-
-As a type of electronic buzzer with an integrated structure, buzzers,
-which are supplied by DC power, are widely used in computers, printers,
-photocopiers, alarms, electronic toys, automotive electronic devices,
-telephones, timers and other electronic products for voice devices.
-Buzzers can be categorized as active and passive ones (see the following
-picture). Turn the pins of two buzzers face up, and the one with a green
-circuit board is a passive buzzer, while the other enclosed with a black
-tape is an active one.
-
-The difference between an active buzzer and a passive buzzer:
-
-.. image:: media_uno/image70.png
-    :align: center
-
-
-An active buzzer has a built-in oscillating source, so it will make
-sounds when electrified. But a passive buzzer does not have such source,
-so it will not tweet if DC signals are used; instead, you need to use
-square waves whose frequency is between 2K and 5K to drive it. The
-active buzzer is often more expensive than the passive one because of
-multiple built-in oscillating circuits.
-
-In this experiment, we use an active buzzer.
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Resistor`
+* :ref:`Capacitor`
+* :ref:`Button`
+* :ref:`Buzzer`
 
 Schematic Diagram
 -----------------------
 
 .. image:: media_uno/image71.png
-   :width: 6.91389in
-   :height: 5.00139in
    :align: center
    
 
@@ -74,7 +52,6 @@ short pin is Cathode).
 Now, you should hear the buzzer beep.
 
 .. image:: media_uno/image73.jpeg
-   :alt: 4
    :align: center
 
 
@@ -88,7 +65,7 @@ Code
 Code Analysis
 -----------------
 
-**Code Analysis 6-1 Define variables**
+**Define variables**
 
 .. code-block:: arduino
 
@@ -103,7 +80,7 @@ Code Analysis
 Connect the button to pin 2 and buzzer to pin 8. Define a variable
 *buttonState* to restore the state of the button.
 
-**Code Analysis 6-2 Set the input and output status of the pins**
+**Set the input and output status of the pins**
 
 .. code-block:: arduino
 
@@ -121,19 +98,19 @@ We need to know the status of the button in this experiment, so here set
 the *buttonPin* as INPUT; to set HIGH/LOW of the buzzer, we set
 *buzzerPin* as OUTPUT.
 
-**Code Analysis 6-3** **Read the status of the button**
+**Read the status of the button**
 
 .. code-block:: arduino
 
     buttonState = digitalRead(buttonPin);
 
 buttonPin(Pin2) is a digital pin; here is to read the value of the
-button and store it in *buttonState*.
+button and store it in ``buttonState``.
 
 **digitalRead (Pin)**: Reads the value from a specified digital pin,
 either HIGH or LOW.
 
-**Code Analysis 6-4 Turn on the LED when the button is pressed**
+**Turn on the LED when the button is pressed**
 
 .. code-block:: Arduino
 

@@ -23,5 +23,10 @@ You can check the pins of the buzzer, the longer one is the anode and the shorte
 
 **Example**
 
+* :ref:`Lesson 4 Doorbell` (Mega Board Project)
+* :ref:`Lesson 21 Simple Creation-Answer Machine` (Mega Board Project)
+* :ref:`doorbell_uno` (R3 Board Project)
+* :ref:`answer_uno` (R3 Board Project)
+
 
 

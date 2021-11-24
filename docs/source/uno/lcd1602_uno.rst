@@ -1,3 +1,5 @@
+.. _lcd1602_uno:
+
 Lesson 11 LCD1602
 =====================
 
@@ -19,38 +21,12 @@ Components
 .. image:: media_uno/uno15.png
     :align: center
 
-Component Introduction
-------------------------
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`LCD1602`
+* :ref:`Potentiometer`
 
-Generally, LCD1602 has parallel ports, that is, it would control several
-pins at the same time. LCD1602 can be categorized into eight-port and
-four-port connections. If the eight-port connection is used, then all
-the digital ports of the Uno board are almost completely occupied. If
-you want to connect more sensors, there will be no ports available.
-Therefore, the four-port connection is used here for better application.
-
-**VSS:** connected to ground
-
-**VDD:** connected to a +5V power supply
-
-**VO:** to adjust the contrast
-
-**RS:** A register select pin that controls where in the LCD’s memory
-you are writing data to. You can select either the data register, which
-holds what goes on the screen, or an instruction register, which is
-where the LCD’s controller looks for instructions on what to do next.
-
-**R/W:** A Read/Write pin to select between reading and writing mode.
-
-**E:** An enabling pin that reads the information when High level (1) is
-received. The instructions are run when the signal changes from High
-level to Low level.
-
-**D0-D7:** to read and write data
-
-**A and K:** Pins that control the LCD backlight. Connect K to GND and A
-to 3.3v. Open the backlight and you will see clear characters in a
-comparatively dark environment.
 
 Schematic Diagram
 ----------------------
@@ -92,9 +68,6 @@ You should now see the characters "**SunFounder**" and "**hello,
 world**" rolling on the LCD.
 
 .. image:: media_uno/image125.jpeg
-   :alt: 9
-   :width: 6.74792in
-   :height: 4.96389in
    :align: center
 
 Code
@@ -107,7 +80,7 @@ Code
 Code Analysis
 ----------------
 
-**Code Analysis** **13-1** **Include a library**
+**Include a library**
 
 .. code-block:: arduino
 
@@ -131,7 +104,7 @@ function implementation, variable definition, etc.) and LiquidCrystal.h
 definition, etc.). If you want to explore how a function is implemented,
 you can look up in the file *LiquidCrystal.cpp*.
 
-**Code Analysis** **13-2** **Displayed characters**
+**Displayed characters**
 
 .. code-block:: arduino
 
@@ -146,7 +119,7 @@ element in the array, which is a space, and *array1[2]* means the second
 element *S* and so on. So *array1[25]* is the last element (here it's
 also a space).
 
-**Code Analysis** **13-3** **Define the pins of LCD1602**
+**Define the pins of LCD1602**
 
 .. code-block:: arduino
 
@@ -162,13 +135,13 @@ for details.
 So this line defines that pin RS is connected to pin 4, the enable pin
 to pin 6, and d4-d7 to pin10-13 respectively.
 
-**Code Analysis** **13-4** **Initialize the LCD**
+**Initialize the LCD**
 
 .. code-block:: arduino
 
     lcd.begin(16, 2); // set up the LCD's number of columns and rows: begin(col,row) is to set the display of LCD. Here set as 16 x 2.
 
-**Code Analysis** **13-5** **Set the cursor position of LCD**
+**Set the cursor position of LCD**
 
 .. code-block:: arduino
 
@@ -177,8 +150,7 @@ to pin 6, and d4-d7 to pin10-13 respectively.
 **setCursor(col,row)** sets the position of the cursor which is where
 the characters start to show. Here set it as 15col, 0 row.
 
-**Code Analysis** **13-6** **LCD displays the elements inside array1[]
-and array2[]**
+**LCD displays the elements inside array1[] and array2[]**
 
 .. code-block:: arduino
 
@@ -194,11 +166,11 @@ and array2[]**
 
     }
 
-When *positionCounter1*\ =0, which accords with *positionCounter1*\ <26,
-*positionCounter1* adds 1. Move one bit to the left through
-*lcd.scrollDisplayLeft()*. Make the LCD display array1[0] by
-*lcd.print*\ (array1[positionCounter1]) and delay for *tim* ms (250 ms).
-After 26 loops, all the elements in *array1[]* have been displayed.
+When ``positionCounter1 =0``, which accords with ``positionCounter1<26``,
+``positionCounter1`` adds 1. Move one bit to the left through
+``lcd.scrollDisplayLeft()``. Make the LCD display array1[0] by
+``lcd.print(array1[positionCounter1])`` and delay for ``tim`` ms (250 ms).
+After 26 loops, all the elements in ``array1[]`` have been displayed.
 
 .. code-block:: arduino
 
@@ -223,7 +195,7 @@ next time.
 
     }
 
-Similarly, the code is to display the elements in *array2[]* on the LCD.
+Similarly, the code is to display the elements in ``array2[]`` on the LCD.
 Therefore, you will see “SunFounder” scroll in the top line of the LCD,
 move left until it disappears. And then in the bottom line, “hello,
 world ! " appears, scrolls to the left until it disappears.

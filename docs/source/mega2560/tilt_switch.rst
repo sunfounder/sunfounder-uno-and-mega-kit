@@ -13,15 +13,14 @@ Components
 .. image:: media_mega2560/mega10.png
     :align: center
 
-Experimental Principle
+
+* :ref:`SunFounder Mega Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Tilt Switch`
+
+Schematic Diagram
 --------------------------
-
-The principle is very simple. When the switch is tilted in a
-certain angle, the ball inside rolls down and touches the two contacts
-connected to the pins outside, thus triggering circuits. Otherwise the
-ball will stay away from the contacts, thus breaking the circuits.
-
-.. image:: media_mega2560/image95.jpeg
 
 The schematic diagram:
 
@@ -56,7 +55,7 @@ Code
 Code Analysis
 ^^^^^^^^^^^^^^^^^^^
 
-**Code Analysis 7-1 Whole Code**
+**Whole Code**
 
 .. code-block:: Arduino
 

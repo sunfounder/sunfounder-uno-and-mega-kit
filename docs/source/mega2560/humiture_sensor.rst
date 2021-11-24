@@ -20,21 +20,17 @@ Components
 .. image:: media_mega2560/mega28.png
     :align: center
 
-Experimental Principle
+
+* :ref:`SunFounder Mega Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`LCD1602`
+* :ref:`Potentiometer`
+* :ref:`Humiture Sensor Module`
+
+
+Schematic Diagram
 --------------------------
-
-.. image:: media_mega2560/image194.png
-   :alt: DHT11_Pins
-   :width: 2.35764in
-   :height: 1.72708in
-
-Only three pins are available for use: VCC, GND, and DATA. The
-communication process begins with the DATA line sending start signals to
-DHT11, and DHT11 receives the signals and returns an answer signal. Then
-the host receives the answer signal and begins to receive 40-bit
-humiture data (8-bit humidity integer + 8-bit humidity decimal + 8-bit
-temperature integer + 8-bit temperature decimal + 8-bit checksum). For
-more information, please refer to DHT11 datasheet.
 
 The schematic diagram:
 
@@ -46,9 +42,6 @@ Experimental Procedures
 **Step 1:** Build the circuit
 
 .. image:: media_mega2560/image195.png
-   :alt: Humiture Sensor_bb
-   :width: 6.87778in
-   :height: 5.10347in
 
 **Step 2:** Open the code file.
 
@@ -72,7 +65,7 @@ Code
 Code Analysis
 ------------------
 
-**Code Analysis** **17-1** **Initialize the humiture and LCD1602**
+**Initialize the humiture and LCD1602**
 
 .. code-block:: arduino
 
@@ -86,7 +79,7 @@ Code Analysis
 
     #define DHT11_PIN 3 // the humiture sensor attact to pin3
 
-**Code Analysis** **17-2** **Read the value of humiture**
+**Read the value of humiture**
 
 .. code-block:: arduino
 
@@ -122,19 +115,21 @@ Code Analysis
 
     }
 
-Use the read11() function to read the value of the temperature and
+Use the ``read11()`` function to read the value of the temperature and
 humidity sensor. If OK is displayed on the Serial Monitor, the humiture
 sensor is working properly.
 
-read11(): Return values:
+``read11()``: Return values:
 
-// DHTLIB_OK: Indicate the humiture sensor is work well.
+.. code-block:: arduino
 
-// DHTLIB_ERROR_CHECKSUM
+    // DHTLIB_OK: Indicate the humiture sensor is work well.
 
-// DHTLIB_ERROR_TIMEOUT
+    // DHTLIB_ERROR_CHECKSUM
 
-**Code Analysis** **17-3** **Display on the LCD1602**
+    // DHTLIB_ERROR_TIMEOUT
+
+**Display on the LCD1602**
 
 .. code-block:: arduino
 

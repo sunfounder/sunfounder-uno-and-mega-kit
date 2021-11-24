@@ -38,6 +38,12 @@ If you want to know more about potentiometer, refer to: `Potentiometer - Wikiped
 
 **Example**
 
+* :ref:`Lesson 8 Controlling an LED by Potentiometer` (Mega Board Project)
+* :ref:`photoresistor_uno` (R3 Board Project)
+* :ref:`potentiometer_uno` (Scratch Project)
+* :ref:`17. GAME - Breakout Clone` (Scratch Project)
+
+
 
 
 

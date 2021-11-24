@@ -23,3 +23,6 @@ An RGB LED has 4 pins: the longest one is GND; the others are Red, Green and Blu
 
 **Example**
 
+* :ref:`Lesson 7 RGB LED` (Mega Board Project)
+* :ref:`rgb_uno` (R3 Board Project)
+* :ref:`4. Colorful Balls` (Scratch Project)

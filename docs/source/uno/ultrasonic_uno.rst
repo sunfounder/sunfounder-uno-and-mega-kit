@@ -1,3 +1,5 @@
+.. _ultrasonic_uno:
+
 Lesson 13 Ultrasonic
 ==========================
 
@@ -15,56 +17,12 @@ Components
 .. image:: media_uno/uno17.png
     :align: center
 
-
-Components Introduction0
------------------------------
-
-Ultrasonic Sensor
-^^^^^^^^^^^^^^^^^^^
-
-.. image:: media_uno/image132.png
-
-
-The ultrasonic distance sensor is really useful and widely applicable in
-our daily life. It has two probes. One is to send ultrasonic waves and
-the other is to receive the waves and transform the time of sending and
-receiving into a distance, thus detecting the distance between the
-device and an obstacle. In practice it is really convenient and
-functional.
-
-The ultrasonic ranging module HC-SR04 provides 2cm-700cm non-contact
-measurement function, and the ranging accuracy can reach 3mm. Stable
-signal can be ensured within 5m, and signal gradually fades beyond 5m
-till disappearing at 7m position.
-
-The module includes ultrasonic transmitters, receiver and control
-circuit. The basic principle of work:
-
-1) Using IO trigger for at least 10us high level signal;
-
-2) The module automatically sends eight 40 kHz square waves and detect
-   whether there is a pulse signal sent back.
-
-3) If there's a signal sent back, output a high level through pin ECHO;
-   the time duration is the time from sending the ultrasonic to the
-   returning.
-
-Thus, **test distance = (high level time × velocity of sound (340M/S) /
-2**.
-
-The timing diagram is as shown below. You only need to supply a short
-10uS pulse to the trigger input to start the ranging, and then the
-module will send out an 8-cycle burst of ultrasound at 40 kHz and raise
-its echo. The echo is a distance object that is pulse width and the
-range in proportion .You can calculate the range through the time
-interval between sending trigger signal and receiving echo signal. Thus,
-
-**uS / 58 = centimeters or uS / 148 =inch; or: the range = high level
-time \* velocity (340M/S) / 2**; You're recommended to use over 60ms
-measurement cycle, in order to prevent conflicts between trigger signal
-and echo signal.
-
-.. image:: media_uno/image133.png
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Potentiometer`
+* :ref:`Ultrasonic Module`
+* :ref:`LCD1602`
 
 
 Schematic Diagram
@@ -73,16 +31,12 @@ Schematic Diagram
 .. image:: media_uno/image134.png
 
 
-
-
 Experimental Procedures
 ---------------------------
 
 **Step 1**: Build the circuit.
 
 .. image:: media_uno/image135.png
-   :width: 6.44653in
-   :height: 5.0625in
    :align: center
 
 **Step 2:** Open the code file.
@@ -102,8 +56,6 @@ the sensor. You will see the value displayed on the LCD changes, which
 indicates the distance between the paper and the ultrasonic sensor.
 
 .. image:: media_uno/image137.jpeg
-   :width: 8.16597in
-   :height: 6.05694in
    :align: center
 
 Code
@@ -116,8 +68,7 @@ Code
 Code Analysis
 ------------------------
 
-**Code Analysis** **15-1** **Initialize the ultrasonic sensor and
-LCD1602**
+**Initialize the ultrasonic sensor and LCD1602**
 
 .. code-block:: arduino
 
@@ -141,7 +92,7 @@ comes up again. As we mentioned previously in lesson 8 of the RFID
 series, uint means an unsigned integer and 8 means 8 bits. So a value in
 the uint8 format here means an unsigned-char type value.
 
-**Code Analysis** **15-2** **Convert the time to distance**
+**Convert the time to distance**
 
 .. code-block:: arduino
 
@@ -158,7 +109,7 @@ microsecond (us).
 **uS / US_ROUNDTRIP_CM** is a formula to convert the time between ping
 sending and receiving into a distance. The unit is cm.
 
-**Code Analysis** **15-3** **Display the distance on the LCE1602**
+**Display the distance on the LCE1602**
 
 .. code-block:: arduino
 

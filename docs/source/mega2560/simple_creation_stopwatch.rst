@@ -13,7 +13,14 @@ Components
 .. image:: media_mega2560/mega33.png
     :align: center
 
-Experimental Principle
+
+* :ref:`SunFounder Mega Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Resistor`
+* :ref:`4-Digit 7-Segment Display`
+
+Schematic Diagram
 -----------------------------
 
 When a 7-segment display is used, if it is a common anode display,
@@ -29,16 +36,13 @@ The schematic diagram of the 4-digit 7-segment display is as shown
 below:
 
 .. image:: media_mega2560/image225.png
-   :width: 3.25972in
-   :height: 2.87986in
-   :align: center
+    :width: 400
+    :align: center
 
 The schematic diagram:
 
 .. image:: media_mega2560/image226.png
-   :width: 6.91528in
-   :height: 5.60833in
-   :align: center
+    :align: center
 
 
 
@@ -67,8 +71,6 @@ D4                        10
 ========================= ===============
 
 .. image:: media_mega2560/image227.png
-   :width: 6.91528in
-   :height: 5.60833in
    :align: center
 
 **Step 2:** Open the code file.
@@ -81,8 +83,6 @@ Now, you can see the number increases by one per second on the 4-digit
 7-segment display.
 
 .. image:: media_mega2560/image228.jpeg
-   :width: 6.95in
-   :height: 4.77917in
    :align: center
 
 Code
@@ -109,7 +109,7 @@ till 9999. n increases by 1 every second, and the number displayed
 increases accordingly, until n=10000 and n is 0 again. Then the counting
 starts from 0.
 
-**Code Analysis** **22-1** **Initialize the timer**
+**Initialize the timer**
 
 .. code-block:: Arduino
 
@@ -122,7 +122,7 @@ The sentence attachInterrupt(ISR) is to attach an ISR function to call
 when there is an interrupt. ISR stands for interrupt service routine.
 Here we use an add routine.
 
-**Code Analysis** **22-2** **Loop function**
+**Loop function**
 
 .. code-block:: Arduino
 
@@ -173,7 +173,7 @@ single digit, ten, one hundred and thousand of a value.
 Such as n=1345, (1345/1000)=1, (1345%1000)/100)=3, ((1345%100)/10)=4,
 (n%10)=5.
 
-**Code Analysis** **22-3** **pickDigit(int x) function**
+**pickDigit(int x) function**
 
 .. code-block:: Arduino
 
@@ -242,7 +242,7 @@ the end of each case. Without a break statement, the switch statement
 will continue executing the following expressions ("falling-through")
 until a break, or the end of the switch statement is reached.
 
-**Code Analysis 22-4 pickNumber(int x) function**
+**pickNumber(int x) function**
 
 .. code-block:: Arduino
 
@@ -307,7 +307,7 @@ displayed.
 
     }
 
-**Code Analysis 23-5 clearLEDs() function**
+**clearLEDs() function**
 
 .. code-block:: Arduino
 
@@ -334,7 +334,7 @@ displayed.
 Write all pins a-p to LOW level, let the 7-segment digital display go
 out.
 
-**Code Analysis 22-6 add() function**
+**add() function**
 
 .. code-block:: Arduino
 

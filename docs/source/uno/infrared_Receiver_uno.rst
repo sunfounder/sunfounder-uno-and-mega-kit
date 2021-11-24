@@ -1,3 +1,5 @@
+.. _receive_uno:
+
 Lesson 14 Infrared-Receiver
 ================================
 
@@ -16,6 +18,10 @@ Components
 .. image:: media_uno/uno18.png
     :align: center
 
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`IR Receiver Module`
 
 Schematic Diagram
 ---------------------
@@ -71,7 +77,7 @@ Code
 Code Analysis
 -----------------
 
-**Code Analysis** **16-1** **Initialize the infrared-receiver**
+**Initialize the infrared-receiver**
 
 .. code-block:: arduino
 
@@ -85,13 +91,13 @@ Code Analysis
 
     decode_results results; //The decoding result is placed in the result of the decode results structure.
 
-**Code Analysis** **16-2** **Enable infrared-receiver**
+**Enable infrared-receiver**
 
 .. code-block:: arduino
 
     irrecv.enableIRIn(); //Restart the receiver
 
-**Code Analysis** **16-3** **Receive and print the data**
+**Receive and print the data**
 
 .. code-block:: arduino
 
@@ -116,7 +122,7 @@ data ready, 1 if data ready. Results of decoding are stored in results
 
     delay(600);
 
-**Code Analysis** **16-4** **If the power button is pressed**
+**If the power button is pressed**
 
 .. code-block:: arduino
 

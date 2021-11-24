@@ -25,5 +25,11 @@ There are 103 or 104 label on the ceramic capacitors, which represent the capaci
 
 **Example**
 
+* :ref:`Lesson 4 Doorbell` (Mega Board Project)
+* :ref:`doorbell_uno` (R3 Board Project)
+* :ref:`7. Doorbell` (Scratch Project)
+* :ref:`15. GAME - Eat Apple` (Scratch Project)
+
+
 
 

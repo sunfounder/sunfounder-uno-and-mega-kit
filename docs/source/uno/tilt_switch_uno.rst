@@ -1,3 +1,5 @@
+.. _tilt_uno:
+
 Lesson 5 Tilt Switch
 =========================
 
@@ -13,15 +15,11 @@ Components
 .. image:: media_uno/uno07.png
     :align: center
 
-Component Introduction
---------------------------
 
-When the switch is tilted in a certain angle, the ball inside rolls down
-and touches the two contacts connected to the pins outside, thus
-triggering circuits. Otherwise the ball will stay away from the
-contacts, thus breaking the circuits.
-
-.. image:: media_uno/image75.jpeg
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Tilt Switch`
 
 
 Schematic Diagram

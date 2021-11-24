@@ -37,4 +37,9 @@ hexadecimal number.
 
 **Example**
 
+* :ref:`Lesson 20 Simple Creation-Stopwatch` (Mega Board Project)
+* :ref:`stopwatch_uno` (R3 Board Project)
+
+
+
 

@@ -18,63 +18,18 @@ Components
 .. image:: media_mega2560/mega31.png
     :align: center
 
-Experimental Principle
+* :ref:`SunFounder Mega Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Resistor`
+* :ref:`7-segment Display`
+* :ref:`74hc595`
+
+Schematic Diagram
 -------------------------
 
-74HC595
-^^^^^^^^^^^^
-
-The 74HC595 consists of an 8−bit shift register and a storage register
-with three−state parallel outputs. It converts serial input into
-parallel output so you can save IO ports of an MCU.
-
-When MR (pin10) is high level and OE (pin13) is low level, data is input
-in the rising edge of SHcp and goes to the memory register through the
-rising edge of SHcp. If the two clocks are connected together, the shift
-register is always one pulse earlier than the memory register. There is
-a serial shift input pin (Ds), a serial output pin (Q) and an
-asynchronous reset button (low level) in the memory register. The memory
-register outputs a Bus with a parallel 8-bit and in three states. When
-OE is enabled (low level), the data in memory register is output to the
-bus.
-
-.. image:: media_mega2560/image212.png
-   :width: 6.225in
-   :height: 3.15347in
-   :align: center
-
-**Pins of 74HC595 and their functions**:
-
-**Q0-Q7**: 8-bit parallel data output pins, able to control 8 LEDs or 8
-pins of 7-segment display directly.
-
-**Q7’**: Series output pin, connected to DS of another 74HC595 to
-connect multiple 74HC595s in series
-
-**MR**: Reset pin, active at low level; here it is directly connected to
-5V.
-
-**SHcp**: Time sequence input of shift register. On the rising edge, the
-data in shift register moves successively one bit, i.e. data in Q1 moves
-to Q2, and so forth. While on the falling edge, the data in shift
-register remain unchanged.
-
-**STcp**: Time sequence input of storage register. On the rising edge,
-data in the shift register moves into memory register.
-
-**OE**: Output enable pin, active at low level. Here connected to GND.
-
-**DS**: Serial data input pin
-
-**VCC**: Positive supply voltage
-
-**GND**: Ground
-
-Principle
-^^^^^^^^^^^^
-
 In the experiment MR (pin10) is connected to 5V (HIGH Level) and OE (pin
-13) to GND (LOW Level). Therefore, the data is input into the rising
+1)  to GND (LOW Level). Therefore, the data is input into the rising
 edge of SHcp and enters the memory register through the rising edge. We
 use the shiftout() function to output a 8-bit data to the shift register
 through DS. In the rising edge of the SHcp, the data in the shift
@@ -119,9 +74,6 @@ DP                    Q0
 ===================== =========== ================
 
 .. image:: media_mega2560/image214.png
-   :alt: 74HC595_bb
-   :width: 7.20069in
-   :height: 4.81597in
 
 **Step 2:** Open the code file.
 
@@ -132,8 +84,6 @@ DP                    Q0
 You should now see the 7-segment display from 0 to 9 and A to F.
 
 .. image:: media_mega2560/image215.jpeg
-   :width: 7.22431in
-   :height: 5.05486in
 
 Code
 --------
@@ -145,11 +95,9 @@ Code
 Code Analysis
 ----------------
 
-**Code Analysis** **20-1** **Set the array elements**
+**Set the array elements**
 
 .. image:: media_mega2560/image216.png
-   :width: 6.77222in
-   :height: 0.16389in
 
 This array stores the data of the 16 characters from 0 to F. 252 stands
 for 0, which you can calculate by yourself. To display 0, the segment g
@@ -165,7 +113,7 @@ Change the binary numbers into decimal ones:
 So that's the value for the number **0** to be displayed. You can
 calculate other characters similarly.
 
-**Code Analysis** **20-2** **Display 0-F in the 7-segment display**
+**Display 0-F in the 7-segment display**
 
 .. code-block:: Arduino
 

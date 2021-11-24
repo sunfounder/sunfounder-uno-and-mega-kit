@@ -18,26 +18,13 @@ Components
     :align: center
 
 
-Experimental Principle
+* :ref:`SunFounder Mega Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Servo`
+
+Schematic Diagram
 --------------------------
-
-Servo
-^^^^^^^^
-
-A servo is generally composed of the following parts: case, shaft, gear
-train, adjustable potentiometer, DC motor, and control circuit board.
-
-It works like this: The Mega 2560 board sends out PWM signals to the
-servo, and then the control circuit in the servo receives the signals
-through the signal pin and controls the motor inside to turn. As a
-result, the motor drives the gear chain and then motivates the shaft
-after deceleration. The shaft and adjustable potentiometer of the servo
-are connected together. When the shaft rotates, it drives the pot, so
-the pot outputs a voltage signal to the circuit board. Then the board
-determines the direction and speed of rotation based on the current
-position, so it can stop exactly at the right position as defined and
-hold there.
-
 The schematic diagram:
 
 .. image:: media_mega2560/mega22.png
@@ -75,20 +62,34 @@ Code
 Code Analysis
 -----------------
 
-**Code Analysis** **12-1** **Include a library**
+**Include a library**
 
-.. image:: media_mega2560/image155.png
+.. code-block:: Arduino
 
+    #include <Servo.h>
+
+    Servo myservo; //create servo object to control a servo
 
 With the *Servo.h* file included, you can call the functions in this
 file later. Servo is a built-in library in the Arduino IDE. You can find
-the Servo folder under the installation path *C:\\Program
-Files\\Arduino\\libraries*.
+the Servo folder under the installation path *C:\Program
+Files\Arduino\libraries*.
 
-**Code Analysis** **12-2** **Initialize the servo**
+**Initialize the servo**
 
-.. image:: media_mega2560/image156.png
+.. code-block:: Arduino
 
+    void setup()
+
+    {
+
+        myservo.attach(9); //attachs the servo on pin 9 to servo object
+
+        myservo.write(0); //back to 0 degrees
+
+        delay(1000); //wait for a second
+
+    }
 
 **myservo.attach():** Attach the Servo variable to a pin. Initialize the
 servo attach to pin9.
@@ -98,10 +99,36 @@ accordingly. On a standard servo, this will set the angle of the shaft
 (in degrees), moving the shaft to that orientation. Here let the servo
 stay in the 0 angle firstly.
 
-**Code Analysis** **12-3** **Servo rotate**
+**Servo rotate**
 
-.. image:: media_mega2560/image157.png
+.. code-block:: Arduino
 
+    void loop()
+
+    {
+
+        for (int i = 0; i <= 180; i++)
+
+        {
+
+            myservo.write(i); //write the i angle to the servo
+
+            delay(15); //delay 15ms
+
+        }
+
+        for (int i = 180; i >= 0; i--)
+
+        {
+
+            myservo.write(i); //write the i angle to the servo
+
+            delay(15); //delay 15ms
+
+        }
+
+    }
 
 Use 2 for() statement to write 0 - 180 to the servo, so that you can see
+the servo rotate from 0 to 180 angle,then turn back to 0.t you can see
 the servo rotate from 0 to 180 angle,then turn back to 0.

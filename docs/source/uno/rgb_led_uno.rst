@@ -1,3 +1,5 @@
+.. _rgb_uno:
+
 Lesson 7 RGB LED
 =====================
 
@@ -17,12 +19,14 @@ Components
 .. image:: media_uno/uno09.png
     :align: center
 
-
-Component Introduction
-----------------------------------
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Resistor`
+* :ref:`RGB LED`
 
 PWM
-^^^^^^^
+--------
 
 Pulse width modulation, or PWM, is a technique for getting analog
 results with digital means. Digital control is used to create a square
@@ -54,46 +58,6 @@ will be after being converted into voltage. Then the LED becomes dimmer
 accordingly. Therefore, we can control the brightness of the LED by
 controlling the PWM value.
 
-
-RGB LED
-^^^^^^^^^^
-
-RGB LEDs emit light in various colors. An RGB LED packages three LEDs of
-red, green, and blue into a transparent or semitransparent plastic
-shell. It can display various colors by changing the input voltage of
-the three pins and superimpose them, which, according to statistics, can
-create 16,777,216 different colors.
-
-.. image:: media_uno/image92.jpeg
-   :align: center
- 
-
-RGB LEDs can be categorized into common anode and common cathode ones.
-In this experiment, the latter is used. The common cathode, or CC, means
-to connect the cathodes of the three LEDs. After you connect it with GND
-and plug in the three pins, the LED will flash the corresponding color.
-
-.. image:: media_uno/uno10.png
-   :align: center
-
-An RGB LED has 4 pins: the longest one is GND; the others are Red, Green
-and Blue. Touch its plastic shell and you will find a cut. The pin
-closest to the cut is the first pin, marked as Red, then GND, Green and
-Blue in turn.
-
-.. image:: media_uno/image95.png
-   :align: center
-
-
-Or you can distinguish them in another way. As GND is the longest one
-and can be defined directly, you just need to confirm the other three
-pins. You can test it by giving them a small voltage. The forward
-voltage drop from the three pins to the GND are respectively 1.8V (red),
-2.5V (blue), and 2.3V (green). Thus, when you connect the same current
-limiting resistor with the three pins and supply them with the same
-voltage, the red one is the brightest, and then comes the green and the
-blue one. Therefore, you may need to add a current limiting resistor
-with different resistances to the three pins for these colors.
 
 
 Schematic Diagram
@@ -144,20 +108,20 @@ Code
 Code Analysis
 --------------------
 
-**Code Analysis** **9-1** **Set the color**
+**Set the color**
 
 Here use the *color()* function to set the color of the RGB LED. In the
 code, it is set to flash 7 different colors.
 
 You can use the paint tool on your computer to get the RGB value.
 
-1) Open the paint tool on your computer and click to Edit colors.
+1. Open the paint tool on your computer and click to Edit colors.
 
 .. image:: media_uno/image99.png
    :align: center
 
 
-1) Select one color, then you can see the RGB value of this color. Fill
+2. Select one color, then you can see the RGB value of this color. Fill
    them in the code.
 
 .. image:: media_uno/image100.png
@@ -198,7 +162,7 @@ You can use the paint tool on your computer to get the RGB value.
       ......
 
 
-**Code Analysis** **9-2** **color()function**
+**color()function**
 
 .. code-block:: arduino
 

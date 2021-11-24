@@ -60,6 +60,8 @@ After waiting for a while, the upload success message will appear.
 
 * Open and run the script directly
 
+Of course, if you want to open the script directly to run it, you can refer to :ref:`Download the Code` and we have uploaded all the code to github.
+
 You can click on **File** in the top right corner.
 
 .. image:: img/0_open.png
@@ -68,7 +70,7 @@ Choose **Open from Computer**.
 
 .. image:: img/0_dic.png
 
-Then go to the path of ``sunfounder-uno-and-mega-kit\scratch code``, and open **1. Stage Mode.sb3**.
+Then go to the path of ``sunfounder-uno-and-mega-kit\scratch code``, and open **1. Stage Mode.sb3**. Please ensure that you have downloaded the required code by referring to :ref:`Download the Code`.
 
 .. image:: img/0_stage.png
 
@@ -137,7 +139,7 @@ Choose **Open from Computer**.
 
 .. image:: img/0_dic.png
 
-Then go to the path of ``sunfounder-uno-and-mega-kit\scratch code``, and open **1. Upload Mode.sb3**.
+Then go to the path of ``sunfounder-uno-and-mega-kit\scratch code``, and open **1. Upload Mode.sb3**. Please ensure that you have downloaded the required code by referring to :ref:`Download the Code`.
 
 .. image:: img/0_stage.png
 

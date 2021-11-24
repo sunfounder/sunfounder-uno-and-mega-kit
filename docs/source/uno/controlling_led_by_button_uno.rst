@@ -1,3 +1,5 @@
+.. _button_uno:
+
 Lesson 3 Controlling LED by Button
 =========================================
 
@@ -17,27 +19,12 @@ Components
     :align: center
 
 
-Component Introduction
-------------------------------
-
-Button
-^^^^^^^^
-
-Buttons are a common component used to control electronic devices. They
-are usually used as switches to connect or break circuits. Although
-buttons come in a variety of sizes and shapes, the one used here is a
-6mm mini-button as shown in the following pictures.
-
-Pin 1 is connected to pin 2 and pin 3 to pin 4. So you just need to
-connect either of pin 1 and pin 2 to pin 3 or pin 4.
-
-.. image:: media_uno/uno05.png
-    :align: center
-
-Button Internal Structure Circuit Symbol
-
-Since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the
-button is pressed, the 4 pins are connected, thus closing the circuit.
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Resistor`
+* :ref:`Capacitor`
+* :ref:`Button`
 
 Schematic Diagram
 ------------------------
@@ -74,7 +61,6 @@ Experimental Procedures
 Now, press the button, and the LED on the Uno board will light up.
 
 .. image:: media_uno/image68.jpeg
-   :alt: 3
    :align: center
 
 
@@ -88,7 +74,7 @@ Code
 Code Analysis
 -------------------
 
-**Code Analysis 5-1 Define variables**
+**Define variables**
 
 .. code-block:: arduino
 
@@ -101,7 +87,7 @@ Code Analysis
 Connect the button to pin 12. LED has been connected to pin 13. Define a
 variable *buttonState* to restore the state of the button.
 
-**Code Analysis 5-2 Set the input and output status of the pins**
+**Set the input and output status of the pins**
 
 .. code-block:: arduino
 
@@ -113,7 +99,7 @@ We need to know the status of the button in this experiment, so here set
 the *buttonPin* as INPUT; to set HIGH/LOW of the LED, we set *LedPin* as
 OUTPUT.
 
-**Code Analysis 5-3** **Read the status of the button**
+**Read the status of the button**
 
 .. code-block:: arduino
 
@@ -125,7 +111,7 @@ button and store it in *buttonState*.
 **digitalRead (Pin)**: Reads the value from a specified digital pin,
 either HIGH or LOW.
 
-**Code Analysis 5-4 Turn on the LED when the button is pressed**
+**Turn on the LED when the button is pressed**
 
 .. code-block:: arduino
 
@@ -151,8 +137,8 @@ connected to 5V and the other end to pin 12, when the button is pressed,
 pin 12 is 5V (HIGH). And then determine with the *if*\ (conditional); if
 the conditional is true, then the LED will light up.
 
-*Else* means that when the if(conditional) is determined as false, run
-the code in *else*.
+``else`` means that when the if(conditional) is determined as false, run
+the code in ``else``.
 
 Experiment Summary
 -------------------------

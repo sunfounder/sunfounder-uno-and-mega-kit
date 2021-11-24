@@ -38,4 +38,7 @@ This diode is a semiconductor device that has a very high resistance up to the c
 
 **Example**
 
+* :ref:`Lesson 6 Relay` (Mega Board Project)
+* :ref:`relay_uno` (R3 Board Project)
+
 

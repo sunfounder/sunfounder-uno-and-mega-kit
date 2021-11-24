@@ -20,3 +20,7 @@ When pin EN is High level, if A is High, Y outputs high level; if A is Low, Y ou
 * `L293D Datasheet <https://www.ti.com/lit/ds/symlink/l293d.pdf?ts=1627004062301&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FL293D>`_
 
 **Example**
+
+* :ref:`Lesson 22 Simple Creation-Small Fan` (Mega Board Project)
+* :ref:`fan_uno` (R3 Board Project)
+* :ref:`13. Rotating Fan` (Scratch Project)

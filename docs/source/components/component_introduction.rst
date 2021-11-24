@@ -10,7 +10,10 @@ Below is the introduction to each component, which contains the operating princi
 .. toctree::
     :maxdepth: 1
 
+    component_uno
+    component_mega
     component_breadboard
+    component_wire
     component_resistor
     component_transistor
     component_capacitor

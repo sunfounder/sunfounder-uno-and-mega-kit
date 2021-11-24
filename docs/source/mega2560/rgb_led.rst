@@ -18,11 +18,15 @@ Components
     :align: center
 
 
-Experimental Principle
------------------------------
+* :ref:`SunFounder Mega Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Resistor`
+* :ref:`RGB LED`
+
 
 PWM
-^^^^^^^^^^^^
+------------
 
 Pulse width modulation, or PWM, is a technique for getting analog
 results with digital means. Digital control is used to create a square
@@ -54,48 +58,6 @@ will be after being converted into voltage. Then the LED becomes dimmer
 accordingly. Therefore, we can control the brightness of the LED by
 controlling the PWM value.
 
-RGB LED
-^^^^^^^^^^^^
-
-RGB LEDs emit light in various colors. An RGB LED packages three LEDs of
-red, green, and blue into a transparent or semitransparent plastic
-shell. It can display various colors by changing the input voltage of
-the three pins and superimpose them, which, according to statistics, can
-create 16,777,216 different colors.
-
-.. image:: media_mega2560/image111.jpeg
-    :align: center
-
-
-RGB LEDs can be categorized into common anode and common cathode ones.
-In this experiment, the latter is used. The common cathode, or CC, means
-to connect the cathodes of the three LEDs. After you connect it with GND
-and plug in the three pins, the LED will flash the corresponding color.
-
-.. image:: media_mega2560/mega37.png
-    :align: center
-
-An RGB LED has 4 pins: the longest one is GND; the others are Red, Green
-and Blue. Touch its plastic shell and you will find a cut. The pin
-closest to the cut is the first pin, marked as Red, then GND, Green and
-Blue in turn.
-
-.. image:: media_mega2560/image114.png
-    :align: center
-
-
-Or you can distinguish them in another way. As GND is the longest one
-and can be defined directly, you just need to confirm the other three
-pins. You can test it by giving them a small voltage. The forward
-voltage drop from the three pins to the GND are respectively 1.8V (red),
-2.5V (blue), and 2.3V (green). Thus, when you connect the same current
-limiting resistor with the three pins and supply them with the same
-voltage, the red one is the brightest, and then comes the green and the
-blue one. Therefore, you may need to add a current limiting resistor
-with different resistances to the three pins for these colors.
-
-Principle:
-^^^^^^^^^^^^^^^^^^^
 
 On the Mega2560 board, 2 to 13 and 44 to 46. Provide 8-bit PWM output
 with
@@ -108,7 +70,8 @@ The longest pin (GND) of the LED connects to the GND of the Mega 2560.
 When the three pins are given different PWM values, the RGB LED will
 display different colors.
 
-The schematic diagram:
+Schematic Diagram
+--------------------------
 
 .. image:: media_mega2560/mega15.png
     :align: center
@@ -144,31 +107,76 @@ Code
 Code Analysis
 ^^^^^^^^^^^^^^^^^^
 
-**Code Analysis** **9-1** **Set the color**
+**Set the color**
 
 Here use the *color()* function to set the color of the RGB LED. In the
 code, it is set to flash 7 different colors.
 
 You can use the paint tool on your computer to get the RGB value.
 
-1) Open the paint tool on your computer and click to Edit colors.
+1. Open the paint tool on your computer and click to Edit colors.
 
 .. image:: media_mega2560/image118.png
+   :align: center
 
 
-2) Select one color, then you can see the RGB value of this color. Fill
+2. Select one color, then you can see the RGB value of this color. Fill
    them in the code.
 
 .. image:: media_mega2560/image119.png
+   :align: center
+
+.. code-block:: arduino
+
+    void loop() // run over and over again
+
+    {
+
+      // Basic colors:
+
+      color(255, 0, 0); // turn the RGB LED red
+
+      delay(1000); // delay for 1 second
+
+      color(0,255, 0); // turn the RGB LED green
+
+      delay(1000); // delay for 1 second
+
+      color(0, 0, 255); // turn the RGB LED blue
+
+      delay(1000); // delay for 1 second
+
+      // Example blended colors:
+
+      color(255,0,252); // turn the RGB LED red
+
+      delay(1000); // delay for 1 second
+
+      color(237,109,0); // turn the RGB LED orange
+
+      delay(1000); // delay for 1 second
+
+      color(255,215,0); // turn the RGB LED yellow
+
+      ......
 
 
-.. image:: media_mega2560/image120.png
+**color()function**
 
+.. code-block:: arduino
 
-**Code Analysis** **9-2** **color()function**
+    void color (unsigned char red, unsigned char green, unsigned char blue)
+    // the color generating function
 
-.. image:: media_mega2560/image121.png
+    {
 
+      analogWrite(redPin, red);
+
+      analogWrite(greenPin, green);
+
+      analogWrite(bluePin, blue);
+
+    }
 
 Define three unsigned char variables, red, green and blue. Write
 their values to *redPin*, *greenPin* and *bluePin*. For example,

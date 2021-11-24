@@ -15,14 +15,16 @@ Components
 .. image:: media_mega2560/mega19.png
     :align: center
 
-Experimental Principle
------------------------
 
-A photo resistor or photocell is a light-controlled variable resistor.
-The resistance of a photo resistor decreases with increasing incident
-light intensity; in other words, it exhibits photo conductivity. A photo
-resistor can be applied in light-sensitive detector circuits, and light-
-and darkness-activated switching circuits.
+* :ref:`SunFounder Mega Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`LED`
+* :ref:`Resistor`
+* :ref:`Photoresistor`
+
+Schematic Diagram
+-----------------------
 
 In this experiment, we will use 8 Eds to show the light intensity. The
 higher the light intensity is, the more Eds will light up. When the
@@ -65,27 +67,44 @@ Code
 Code Analysis
 --------------------
 
-**Code Analysis** **11-1** **Set the variables**
+**Set the variables**
 
-.. image:: media_mega2560/image144.png
+.. code-block:: arduino
 
+    const int NbrLEDs = 8; // 8 leds
 
-The 8 Eds are connected to pin5-pin12, in this code, use a array to
+    const int ledPins[] = {2, 3, 4, 5, 6, 7, 8, 9}; // 8 leds attach to pin 5-12 respectively
+
+    const int photocellPin = A0; // photoresistor attach to A0
+
+    int sensorValue = 0; // value read from the sensor
+
+    int ledLevel = 0; // sensor value converted into LED 'bars'
+
+The 8 LEDs are connected to pin5-pin12, in this code, use a array to
 store the pins, ledPins[0] is equal to 5, ledPins[1] to 6 and so on.
 
-**Code Analysis** **11-2** **Set 8 pins to OUTPUT**
+**Set 8 pins to OUTPUT**
 
-.. image:: media_mega2560/image145.png
+.. code-block:: arduino
 
+    for (int led = 0; led < NbrLEDs; led++)
+
+    {
+
+        pinMode(ledPins[led], OUTPUT); // make all the LED pins outputs
+
+    }
 
 Using the for() statement set the 8 pins to OUTPUT. The variable led is
 added from 0 to 8, and the pinMode() function sets pin5 to pin12 to
 OUTPUT in turn.
 
-**Code Analysis** **11-3** **Read the analog value of the
-photoresistor**
+**Read the analog value of the photoresistor**
 
-.. image:: media_mega2560/image146.png
+.. code-block:: arduino
+
+    sensorValue = analogRead(photocellPin); // read the value of A0
 
 Read the analog value of the **photocellPin(A0**) and store to the
 variable **sensorValue.**
@@ -95,8 +114,11 @@ boards contain a multichannel, 10-bit analog to digital converter. This
 means that it will map input voltages between 0 and the operating
 voltage(5V or 3.3V) into integer values between 0 and 1023.
 
-.. image:: media_mega2560/image147.png
+.. code-block:: arduino
 
+    Serial.print("SensorValue: ");
+
+    Serial.println(sensorValue); // Print the analog value of the photoresistor
 
 Use the Serial.print()function to print the analog value of the
 photoresistor. You can see them on the Serial Monitor.
@@ -109,15 +131,18 @@ character. Characters and strings are sent as is.
 
 **Serial.println():** Thiscommand takes the same forms as
 Serial.print(), but it is followed by a carriage return character (ASCII
-13, or '\\r') and a newline character (ASCII 10, or '\\n').
-
-.. image:: media_mega2560/image148.png
+13, or '\r') and a newline character (ASCII 10, or '\n').
 
 
-**Code Analysis** **11-4** **Map the analog value to 8 LEDs**
+**Map the analog value to 8 LEDs**
 
-.. image:: media_mega2560/image149.png
+.. code-block:: arduino
 
+    ledLevel = map(sensorValue, 0, 1023, 0, NbrLEDs); // map to the number of LEDs
+
+    Serial.print("ledLevel: ");
+
+    Serial.println(ledLevel);
 
 The map() command is used to map 0-1023 to 0-NbrLEDs(8),
 (1023-0)/(8-0)=127.875
@@ -137,10 +162,31 @@ one range to another. That is, a value of *fromLow* would get mapped to
 one of *toLow*, and a value of *fromHigh* to one of *toHigh*, values
 in-between to values in-between, etc.
 
-**Code Analysis** **11-5** **Light up the LEDs**
+**Light up the LEDs**
 
-.. image:: media_mega2560/image150.png
+.. code-block:: arduino
 
+    for (int led = 0; led < NbrLEDs; led++)
+
+    {
+
+        if (led <= ledLevel ) //When led is smaller than ledLevel, run the following code.
+
+        {
+
+            digitalWrite(ledPins[led], HIGH); // turn on pins less than the level
+
+        }
+
+        else
+
+        {
+
+            digitalWrite(ledPins[led], LOW); // turn off pins higher than
+
+        }
+
+    }
 
 Light up the corresponding LEDs. Such as, when the ledLevel is 4, then
 light up the ledPins[0] to ledPins[4] and go out the ledPins[5] to

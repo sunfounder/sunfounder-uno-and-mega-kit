@@ -1,8 +1,6 @@
 SunFounder Mega2560/UNO Kit
 ===================================
 
-About the Mega/Uno Kit
------------------------
 
 With this kit, we will walk you through the know-how of using the
 SunFounder board in a hands-on way. Starting with the basics of
@@ -19,8 +17,16 @@ Here is the Email: cs@sunfounder.com.
    components_list
    components/component_introduction
    download_code
+
+.. toctree::
+   :maxdepth: 1
+
    install_and_introduce_arduino_ide
    add_libraries
+
+.. toctree::
+   :maxdepth: 2
+
    mega2560/for_mega2560_user
    uno/for_uno_user
 

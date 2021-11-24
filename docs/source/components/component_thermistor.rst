@@ -39,3 +39,9 @@ This relation is an empirical formula. It is accurate only when the temperature 
 
 **Example**
 
+* :ref:`Lesson 12 Thermistor` (Mega Board Project)
+* :ref:`thermistor` (R3 Board Project)
+* :ref:`9. Low Temperature Alarm` (Scratch Project)
+
+
+

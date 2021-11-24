@@ -1,3 +1,5 @@
+.. _photoresistor_uno:
+
 Lesson 9 Photo resistor
 =============================
 
@@ -15,19 +17,12 @@ Components
 .. image:: media_uno/uno13.png
     :align: center
 
-Component Introduction
----------------------------
-
-A photo resistor or photocell is a light-controlled variable resistor.
-The resistance of a photo resistor decreases with increasing incident
-light intensity; in other words, it exhibits photo conductivity. A photo
-resistor can be applied in light-sensitive detector circuits, and light-
-and darkness-activated switching circuits.
-
-In this experiment, we will use 8 LEDs to show the light intensity. The
-higher the light intensity is, the more LEDs will light up. When the
-light intensity is high enough, all the LEDs will be on. When there is
-no light, all the LEDs will go out.
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`LED`
+* :ref:`Resistor`
+* :ref:`Photoresistor`
 
 Schematic Diagram
 ---------------------
@@ -66,7 +61,7 @@ Code
 Code Analysis
 ------------------------
 
-**Code Analysis** **11-1** **Set the variables**
+**Set the variables**
 
 .. code-block:: arduino
 
@@ -83,7 +78,7 @@ Code Analysis
 The 8 LEDs are connected to pin5-pin12, in this code, use a array to
 store the pins, ledPins[0] is equal to 5, ledPins[1] to 6 and so on.
 
-**Code Analysis** **11-2** **Set 8 pins to OUTPUT**
+**Set 8 pins to OUTPUT**
 
 .. code-block:: arduino
 
@@ -99,8 +94,7 @@ Using the for() statement set the 8 pins to OUTPUT. The variable led is
 added from 0 to 8, and the pinMode() function sets pin5 to pin12 to
 OUTPUT in turn.
 
-**Code Analysis** **11-3** **Read the analog value of the
-photoresistor**
+**Read the analog value of the photoresistor**
 
 .. code-block:: arduino
 
@@ -134,7 +128,7 @@ Serial.print(), but it is followed by a carriage return character (ASCII
 13, or '\r') and a newline character (ASCII 10, or '\n').
 
 
-**Code Analysis** **11-4** **Map the analog value to 8 LEDs**
+**Map the analog value to 8 LEDs**
 
 .. code-block:: arduino
 
@@ -162,7 +156,7 @@ one range to another. That is, a value of *fromLow* would get mapped to
 one of *toLow*, and a value of *fromHigh* to one of *toHigh*, values
 in-between to values in-between, etc.
 
-**Code Analysis** **11-5** **Light up the LEDs**
+**Light up the LEDs**
 
 .. code-block:: arduino
 

@@ -1,3 +1,5 @@
+.. _joystick_uno:
+
 Lesson 16 Joystick PS2
 ===========================
 
@@ -14,6 +16,11 @@ Components
 
 .. image:: media_uno/uno20.png
     :align: center
+
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Joystick Module`
 
 Schematic Diagram
 ---------------------

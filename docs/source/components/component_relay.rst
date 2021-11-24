@@ -52,3 +52,6 @@ of a load circuit.
 
 **Example**
 
+* :ref:`Lesson 6 Relay` (Mega Board Project)
+* :ref:`relay_uno` (R3 Board Project)
+

@@ -1,3 +1,5 @@
+.. _thermistor:
+
 Lesson 12 Thermistor
 ==========================
 
@@ -17,19 +19,13 @@ Components
 .. image:: media_uno/uno16.png
     :align: center
 
-
-Component Introduction
-------------------------
-
-Thermistor
-^^^^^^^^^^^^
-
-Thermistor is a sensitive element, it has two types: Negative
-Temperature Coefficient (NTC) and Positive Temperature Coefficient
-(PTC), also NTC and PTC. Its resistance varies significantly with
-temperature. The resistance of PTC thermistor increases with higher
-temperature when that of NTC, decreases. In this experiment we use an
-NTC one.
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Resistor`
+* :ref:`Potentiometer`
+* :ref:`Thermistor`
+* :ref:`LCD1602`
 
 Schematic Diagram
 ------------------------
@@ -130,9 +126,6 @@ Now, you can see the current temperature displayed both in
 Celsius and Fahrenheit degrees on the LCD1602.
 
 .. image:: media_uno/image130.jpeg
-   :alt: 10.1
-   :width: 5.71042in
-   :height: 4.35625in
    :align: center
 
 Code
@@ -144,7 +137,7 @@ Code
 Code Analysis
 -------------------
 
-**Code Analysis** **14-1** **Set the variables**
+**Set the variables**
 
 .. code-block:: arduino
 
@@ -156,7 +149,7 @@ Code Analysis
 
 Define the beta coefficient as 4090, which is described in the datasheet of thermistor.
 
-**Code Analysis** **14-2** **Get the temperature**
+**Get the temperature**
 
 .. code-block:: arduino
 
@@ -171,7 +164,7 @@ Define the beta coefficient as 4090, which is described in the datasheet of ther
     float tempF = 1.8 * tempC + 32.0; 
     //define the temperature in Fahrenheit. As we know Fahrenheit equals to 1.8 * Celsius + 32.
 
-**Code Analysis** **14-3** **Display the temperature on LCD1602**
+**Display the temperature on LCD1602**
 
 .. code-block:: arduino
 

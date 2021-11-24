@@ -60,7 +60,7 @@ Now script the **Parrot** sprite, which is in flight and the flight altitude is 
 
 .. image:: img/15_parr2.png
 
-* If the ultrasonic detection distance is less than 10cm, let the y coordinate increase by 50, the **Parrot** sprite will fly upwards. Otherwise, the y-coordinate value is decreased by 20, **Parrot** will fall down.
+* If the ultrasonic detection distance is less than 10cm, let the y coordinate increase by 50, the **Parrot** sprite will fly upwards. Otherwise, the y-coordinate value is decreased by 40, **Parrot** will fall down.
 
 .. image:: img/15_parr3.png
 

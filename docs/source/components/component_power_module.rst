@@ -23,5 +23,3 @@ You can just plug it in the breadboard to supply power. It provides a voltage of
 * Dimension: 53mm x 33mm (L x W)
 
 
-**Example**
-

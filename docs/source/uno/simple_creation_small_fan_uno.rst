@@ -1,3 +1,5 @@
+.. _fan_uno:
+
 Lesson 22 Simple Creation-Small Fan
 ========================================
 
@@ -14,62 +16,14 @@ Components
 
 .. image:: media_uno/uno26.png
 
-
-
-
-Component Introduction
--------------------------------
-
-The maximum current of an Arduino I/O port is 20mA but the drive current
-of a motor is at least 70mA. Therefore, we cannot directly use the I/O
-port to drive the current; instead, we can use an L293D to drive the
-motor.
-
-L293D
-^^^^^^^^^^^^
-
-L293D is designed to provide bidirectional drive currents of up to 600mA
-at voltages from 4.5V to 36V. It's used to drive inductive loads such as
-relays, solenoids, DC and bipolar stepping motors, as well as other
-high-current/high-voltage loads in positive-supply applications.
-
-See the figure of pins below. L293D has two pins (Vcc1 and Vcc2) for
-power supply. Vcc2 is used to supply power for the motor, while Vcc1,
-for the chip. Since a small-sized DC motor is used here, connect both
-pins to +5V. If you use a higher power motor, you need to connect Vcc2
-to an external power supply. 
-
-.. image:: media_uno/image189.png
-   :alt: IMG_256
-   :width: 4.81736in
-   :height: 2.36389in
-   :align: center
-
-Pin EN is an enabling pin and works with High level. A stands for input
-and Y for output. When pin EN is High level, if A is High, Y outputs
-High level; if A is Low, Y outputs Low level. When pin EN is Low level,
-the L293D does not work. It just needs to drive one motor in this
-experiment, so here use one side of the L293D.
-
-**DC Motor**
-
-.. image:: media_uno/image187.png
-   :width: 3.6in
-   :height: 1.6875in
-   :align: center
-
-This is a 5V DC motor. Give the two terminals of the copper sheet one
-high and one low level, and the motor will rotate. For convenient
-purposes, you can weld the pins to it.
-
-Size: 25*20*15MM                       
-                           Free-run speed (3V): 13000RPM 
-
-Stall current (3V): 800 mA                                  
-Shaft diameter: 2 mm
-
-Operation Voltage: 1-6V                                     
-Free-run current (3V): 70 mA 
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Resistor`
+* :ref:`Capacitor`
+* :ref:`Button`
+* :ref:`L293D`
+* :ref:`DC Motor`
 
 
 Schematic Diagram
@@ -83,9 +37,6 @@ to pin 1Y and 2Y respectively. When pin 10 is set as High level and pin
 pin 10 is Low and pin 9 is High, it rotates in the opposite direction.
 
 .. image:: media_uno/image190.png
-   :alt: C:\Users\sunfounder\Desktop\kjk.png
-   :width: 6.05069in
-   :height: 4.23056in
    :align: center
 
 
@@ -95,8 +46,6 @@ Experimental Procedures
 **Step 1:** Build the circuit.
 
 .. image:: media_uno/image191.png
-   :width: 5.67778in
-   :height: 4.83333in
    :align: center
 
 **Step 2:** Open the code file.
@@ -109,9 +58,6 @@ The blade of the DC motor will begin rotating left and right, in a speed
 that varies accordingly.
 
 .. image:: media_uno/image192.jpeg
-   :alt: 21
-   :width: 7.04375in
-   :height: 4.61181in
    :align: center
 
 Code
@@ -124,7 +70,7 @@ Code
 Code Analysis
 --------------------
 
-**Code Analysis** **24-1** **Workflow of the Small Fan**
+**Workflow of the Small Fan**
 
 .. code-block:: arduino
 

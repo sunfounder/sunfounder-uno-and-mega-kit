@@ -19,3 +19,6 @@ Then the host receives the answer signal and begins to receive 40-bit humiture d
 * `DHT11 Datasheet <https://components101.com/sites/default/files/component_datasheet/DHT11-Temperature-Sensor.pdf>`_
 
 **Example**
+
+* :ref:`Lesson 15 Humiture Sensor` (Mega Board Project)
+* :ref:`humi_uno` (R3 Board Project)

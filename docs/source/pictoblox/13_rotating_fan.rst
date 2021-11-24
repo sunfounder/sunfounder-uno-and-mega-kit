@@ -29,7 +29,7 @@ Pin **EN** is an enable pin and only works with high level; **A** stands for inp
 
 Now build the circuit according to the following diagram.
 
-* The Enable pin 1,2EN of the L293D are connected to 5V already, so L293D is always in the working state. 
+* The Enable pin 1,2EN of the L293D are connected to 3.3V already, so L293D is always in the working state. 
 * Connect pin 1A and 2A to pin 9 and 10 of the control board respectively. 
 * The two pins of the motor are connected to pin 1Y and 2Y respectively. 
 * When pin 10 is set as High level and pin 9 as Low, the motor will start to rotate towards one direction. 

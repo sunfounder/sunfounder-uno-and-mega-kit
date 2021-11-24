@@ -93,3 +93,13 @@ and the permissible error is ± 1% (brown).
       - brown black black green brown 
 
 You can learn more about resistor from Wiki: `Resistor - Wikipedia <https://en.wikipedia.org/wiki/Resistor>`_.
+
+
+**Example**
+
+* :ref:`Lesson 1 Blinking LED` (Mega Board Project)
+* :ref:`Lesson 3 Controlling LED by Button` (Mega Board Project)
+* :ref:`blinking_uno` (R3 Board Project)
+* :ref:`button_uno` (R3 Board Project)
+* :ref:`15. GAME - Eat Apple` (Scratch Project)
+* :ref:`2. Table Lamp` (Scratch Project)

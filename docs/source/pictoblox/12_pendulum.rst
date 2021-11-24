@@ -18,7 +18,7 @@ A servo is a geared motor that can only rotate 180 degrees. It is
 controlled by sending electrical pulses from your circuit board. These pulses
 tell the servo what position it should move to.
 
-The servo has three wires: the brown wire is GND, the red one is VCC, and the orange one is the signal wire. The angle range is 0-180.
+The servo has three wires: the brown wire is GND, the red one is VCC (connect to 3.3V), and the orange one is the signal wire. The angle range is 0-180.
 
 Now build the circuit according to the diagram below.
 

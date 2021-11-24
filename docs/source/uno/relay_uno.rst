@@ -1,3 +1,5 @@
+.. _relay_uno:
+
 Lesson 6 Relay
 ===================
 
@@ -19,86 +21,15 @@ Components
 .. image:: media_uno/uno08.png
     :align: center
 
-Component Introduction
--------------------------------
+* :ref:`SunFounder R3 Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Resistor`
+* :ref:`Relay`
+* :ref:`Transistor`
+* :ref:`Diode`
+* :ref:`LED`
 
-Relay
-^^^^^^^
-
-There are 5 parts in every relay:
-
-1. **Electromagnet** – It consists of an iron core wounded by coil of
-wires. When electricity is passed through, it becomes magnetic.
-Therefore, it is called electromagnet.
-
-2. **Armature** – The movable magnetic strip is known as armature. When
-current flows through them, the coil is it energized thus producing a
-magnetic field which is used to make or break the normally open (N/O) or
-normally close (N/C) points. And the armature can be moved with direct
-current (DC) as well as alternating current (AC).
-
-3. **Spring** – When no currents flow through the coil on the
-electromagnet, the spring pulls the armature away so the circuit cannot
-be completed.
-
-1. Set of electrical **contacts** – There are two contact points:
-
-* Normally open – connected when the relay is activated, and disconnected when it is inactive.
-
-* Normally close – not connected when the relay is activated, and connected when it is inactive.
-
-5. **Molded** frame – Relays are covered with plastic for protection.
-
-Working of Relay
---------------------
-
-The working principle of relay is simple. When power is supplied to the
-relay, currents start flowing through the control coil; as a result, the
-electromagnet starts energizing. Then the armature is attracted to the
-coil, pulling down the moving contact together thus connecting with the
-normally open contacts. So the circuit with the load is energized. Then
-breaking the circuit would a similar case, as the moving contact will be
-pulled up to the normally closed contacts under the force of the spring.
-In this way, the switching on and off of the relay can control the state
-of a load circuit. 
-
-.. image:: media_uno/image84.jpeg
-
-
-
-Transistor
-^^^^^^^^^^^^^^^
-
-.. image:: media_uno/image85.jpeg
-   :align: center
-
-Transistor is a semiconductor device that controls current by
-current. It functions by amplifying weak signal to larger amplitude
-signal and is also used for non-contact switch. A transistor is a
-three-layer structure composed of P-type and N-type semiconductors. They
-form the three regions internally. The thinner in the middle is the base
-region; the other two are both N-type or P-type ones – the smaller
-region with intense majority carriers is the emitter region, when the
-other one is the collector region. This composition enables the
-transistor to be an amplifier.
-
-From these three regions, three poles are generated respectively, which
-are base (b), emitter (e), and collector (c). They form two P-N
-junctions, namely, the emitter junction and collection junction. The
-direction of the arrow in the transistor circuit symbol indicates that
-of the emitter junction. Based on the semiconductor type, transistors
-can be divided into two groups, the NPN and PNP ones. From the
-abbreviation, we can tell that the former is made of two N-type
-semiconductors and one P-type and that the latter is the opposite. See
-the figure below. 
-
-.. image:: media_uno/image86.png
-
-
-When a High level signal goes through an NPN transistor, it is
-energized. But a PNP one needs a Low level signal to manage it. Both
-types of transistor are frequently used for contactless switches, just
-like in this experiment.
 
 Schematic Diagram
 -----------------------

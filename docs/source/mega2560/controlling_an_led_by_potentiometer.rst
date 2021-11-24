@@ -14,51 +14,17 @@ Components
 .. image:: media_mega2560/mega16.png
     :align: center
 
-Experimental Principle
------------------------------
 
-Potentiometer
-^^^^^^^^^^^^^^^^^^^^^^^^
+* :ref:`SunFounder Mega Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`LED`
+* :ref:`Resistor`
+* :ref:`Potentiometer`
 
-Potentiometer is also a resistance component with 3 terminals and its
-resistance value can be adjusted according to some regular variation.
-Potentiometer usually consists of resistor and movable brush. When the
-brush is moving along the resistor, there is a certain resistance or
-voltage output depending on the displacement.
-
-.. image:: media_mega2560/mega17.png
-    :align: center
-
-The functions of the potentiometer in the circuit are as follows:
-
-1. Serving as a voltage divider
-
-..
-
-   Potentiometer is a continuously adjustable resistor. When you adjust
-   the shaft or sliding handle of the potentiometer, the movable contact
-   will slide on the resistor. At this point, a voltage can be output
-   depending on the voltage applied onto the potentiometer and the angle
-   the movable arm has rotated to or the travel it has made.
-
-2. Serving as a rheostat
-
-..
-
-   When the potentiometer is used as a rheostat, connect the middle pin
-   and one of the other 2 pins in the circuit. Thus you can get a
-   smoothly and continuously changed resistance value within the travel
-   of the moving contact.
-
-3. Serving as a current controller
-
-..
-
-   When the potentiometer acts as a current controller, the sliding
-   contact terminal must be connected as one of the output terminals.
 
 Serial Monitor
-^^^^^^^^^^^^^^^^^
+-----------------------
 
 Serial Monitor is used for communication between the Mega 2560 board and
 a computer or other devices. It is a built-in software in the Arduino
@@ -80,18 +46,8 @@ below:
 .. image:: media_mega2560/image126.png
     :align: center
 
-Analog V.S. Digital
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A linear potentiometer is an analog electronic component. So what’s the
-difference between an analog value and a digital one? Simply put,
-digital means on/off, high/low level with just two states, i.e. either 0
-or 1. But the data state of analog signals is linear, for example, from
-1 to 1000; the signal value changes over time instead of indicating an
-exact number. Analog signals include those of light intensity, humidity,
-temperature, and so on.
-
-**Principle:** In this experiment, the potentiometer is used as voltage
+In this experiment, the potentiometer is used as voltage
 divider, meaning connecting devices to all of its three pins. Connect
 the middle pin of the potentiometer to pin A0 and the other two pins to
 5V and GND respectively. Therefore, the voltage of the potentiometer is
@@ -101,7 +57,8 @@ AD converter in the control board. Through programming, we can use the
 converted digital value to control the brightness of the LED on the
 control board.
 
-The schematic diagram:
+Schematic Diagram
+------------------------
 
 .. image:: media_mega2560/mega18.png
     :align: center
@@ -158,21 +115,26 @@ Code
 Code Analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Code Analysis** **10-1** **Read the value from A0**
+**Read the value from A0**
 
-.. image:: media_mega2560/image132.png
+.. code-block:: arduino
 
-This line is to store the values A0 has read in the
-*inputValue* which has been defined before.
+    inputValue = analogRead(analogPin);//read the value from the potentiometer
+
+This line is to store the values A0 has read in the *inputValue* which
+has been defined before.
 
 **analog Read()** reads the value from the specified analog pin. This
 means that it will map input voltages between 0 and 5 volts into integer
 values between 0 and 1023.
 
-**Code Analysis** **10-2 Print values on Serial Monitor**
+**Print values on Serial Monitor**
 
-.. image:: media_mega2560/image133.png
+.. code-block:: arduino
 
+    Serial.print("Input: "); //print "Input"
+
+    Serial.println(inputValue); //print inputValue
 
 **Serial.print():**\ Prints data to the serial port as human-readable
 ASCII text. This command can take many forms. Numbers are printed using
@@ -181,13 +143,14 @@ digits, defaulting to two decimal places. Bytes are sent as a single
 character. Characters and strings are sent as is.
 
 **Serial.print():** Commandant takes the same forms as Serial.print(),
-but it is followed by a carriage return character (ASCII 13, or '\r')
-and a newline character (ASCII 10, or '\n').
+but it is followed by a carriage return character (ASCII 13, or '\\r')
+and a newline character (ASCII 10, or '\\n').
 
-**Code Analysis 10-3 Map the values**
+**Map the values**
 
-.. image:: media_mega2560/image134.png
+.. code-block:: arduino
 
+    outputValue = map(inputValue, 0, 1023, 0, 255); //Convert from 0-1023 proportional to the number of a number of from 0 to 255
 
 **map(value, Fromm, from High, to Low, thigh)** re-maps a number from
 one range to another. That is, a **value** of **Fromm** would get mapped
@@ -201,14 +164,17 @@ Display the output value in Serial Monitor in the same way. If you are
 not so clear about the *map()* functions, you can observe the data in
 the Serial Monitor and analyze it.
 
-.. image:: media_mega2560/image135.png
+.. code-block:: arduino
 
+    Serial.print("Output: "); //print "Output"
 
-**Code Analysis** **10-4** **Write the value of the potentiometer to
-LED**
+    Serial.println(outputValue); //print outputValue
 
-.. image:: media_mega2560/image136.png
+**Write the value of the potentiometer to LED**
 
+.. code-block:: arduino
+
+    analogWrite(ledPin, outputValue); //turn the LED on depending on the output value
 
 Write the output value to *led Pin* and you will see that the luminance
 of LED changes with your spinning of the potentiometer knob.
@@ -216,7 +182,7 @@ of LED changes with your spinning of the potentiometer knob.
 **analog Write()**: Writes an analog value (PWM wave) to a pin. It has
 nothing to do with an analog pin, but is just for PWM pins. You do not
 need to call the *incommode()* to set the pin as output before calling
-*analog Write()*.
+``analog Write()``.
 
 Experiment Summary
 ------------------------
@@ -226,6 +192,15 @@ use the potentiometer to control the time interval for the LED blinking.
 It is to use the value read from the potentiometer for delaying, as
 shown below. Have a try!
 
-.. image:: media_mega2560/image137.png
+.. code-block:: arduino
 
+    inputValue = analogRead(analogPin);
+
+    digitalWrite(ledPin, HIGH);
+
+    delay(inputValue);
+
+    digitalWrite(ledPin, LOW);
+
+    delay(inputValue);
 

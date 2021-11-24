@@ -38,4 +38,8 @@ trigger signal and the echo signal.
 
 **Example**
 
+* :ref:`Lesson 13 Ultrasonic` (Mega Board Project)
+* :ref:`ultrasonic_uno` (R3 Board Project)
+* :ref:`16. GAME - Flappy Parrot` (Scratch Project)
+
 

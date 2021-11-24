@@ -20,7 +20,16 @@ Components
 .. image:: media_mega2560/mega34.png
     :align: center
 
-Experimental Principle
+
+* :ref:`SunFounder Mega Board`
+* :ref:`Breadboard`
+* :ref:`Jumper Wires`
+* :ref:`Resistor`
+* :ref:`LED`
+* :ref:`Button`
+* :ref:`Buzzer`
+
+Schematic Diagram
 ---------------------------
 
 Button 1, 2 and 3 are answer buttons, and button 4 is the
@@ -40,9 +49,6 @@ Experimental Procedures
 **Step 1:**\ Build the circuit
 
 .. image:: media_mega2560/image233.png
-   :alt: Answer_Machine_bb
-   :width: 6.40625in
-   :height: 4.99792in
 
 **Step 2:** Open the code file.
 
@@ -55,9 +61,6 @@ will see the corresponding LED light up and the buzzer will beep. Then
 press button 4 again to reset before you press other buttons.
 
 .. image:: media_mega2560/image234.jpeg
-   :alt: \_MG_5361
-   :width: 7.26042in
-   :height: 4.12153in
 
 Code
 --------
@@ -77,7 +80,7 @@ Code Analysis
   beeps and lights the corresponding LED until button 4 is pressed
   again.
 
-**Code Analysis** **23-1** **loop() function**
+**loop() function**
 
 .. code-block:: Arduino
 
@@ -144,7 +147,7 @@ Code Analysis
     }
 
 
-**Code Analysis** **23-2** **Alarm() function**
+**Alarm() function**
 
 .. code-block:: Arduino
 

@@ -98,9 +98,15 @@ Next, in the [forever] block, four [if] blocks are used to determine various pos
 
 * If the Beetle sprite touches black (the black line on the **Maze** backdrop), the game ends and the script stops running.
 
+.. note::
+    
+    You need to click on the color area in the [Touch color] block, and then select the eyedropper tool to pick up the color of the black line on the stage. If you choose a black arbitrarily, this [Touch color] block will not work.
+
+
 .. image:: img/14_bee5.png
 
-* If Beetle touches red (apple), the backdrop will be switched to **Win**, which means the game succeeds and stops the script from running.
+* If Beetle touches red (Also use the straw tool to pick up the red color of the apple), the backdrop will be switched to **Win**, which means the game succeeds and stops the script from running.
+
 
 .. image:: img/14_bee4.png
 

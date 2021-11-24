@@ -25,6 +25,11 @@ Pins of 74HC595 and their functions:
 
 **Example**
 
+* :ref:`Lesson 18 74HC595` (Mega Board Project)
+* :ref:`Lesson 23 Simple Creation - Digital Dice` (Mega Board Project)
+* :ref:`74hc595_uno` (R3 Board Project)
+* :ref:`digital_dice_uno` (R3 Board Project)
+
 
 
 

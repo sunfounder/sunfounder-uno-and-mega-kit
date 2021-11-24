@@ -34,4 +34,10 @@ Therefore, the four-port connection is used here for better application.
 
 **Example**
 
+* :ref:`Lesson 11 LCD1602` (Mega Board Project)
+* :ref:`Lesson 15 Humiture Sensor` (Mega Board Project)
+* :ref:`lcd1602_uno` (R3 Board Project)
+* :ref:`humi_uno` (R3 Board Project)
+* :ref:`5. LCD1602` (Scratch Project)
+
 
