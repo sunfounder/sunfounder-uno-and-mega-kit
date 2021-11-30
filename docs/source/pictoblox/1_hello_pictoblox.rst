@@ -1,4 +1,4 @@
-1. First Project - Hello Pictoblox
+1. Quick guide to PictoBlox
 ====================================
 
 Now we start making our first project to learn the 2 modes of PictoBlox.
@@ -62,7 +62,7 @@ After waiting for a while, the upload success message will appear.
 
 Of course, if you want to open the script directly to run it, you can refer to :ref:`Download the Code` and we have uploaded all the code to github.
 
-You can click on **File** in the top right corner.
+You can click on **File** in the top right corner and then choose **Open**.
 
 .. image:: img/0_open.png
 
@@ -86,7 +86,7 @@ Click on the **Arduino Uno** palette.
 
 .. image:: img/1_arduino_uno.png
 
-The LEDs on the Arduino board are controlled by the digital pins (only 2 states HIGH or LOW) 13, so drag the [set digital pin out as]  block to the script area.
+The LED on the Arduino board is controlled by the digital pin 13 (only 2 states, HIGH or LOW), so drag the [set digital pin out as]  block to the script area.
 
 Since the default state of the LED is lit, now set pin 13 to LOW and click on this block and you will see the LED go off.
 

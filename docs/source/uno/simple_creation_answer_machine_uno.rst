@@ -61,8 +61,8 @@ will see the corresponding LED light up and the buzzer will beep. Then
 press button 4 again to reset before you press other buttons.
 
 .. image:: media_uno/image185.jpeg
-   :align: center
-   
+    :align: center
+
 Code
 --------
 

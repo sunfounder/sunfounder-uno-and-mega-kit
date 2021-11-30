@@ -20,12 +20,12 @@ When uploading code in Arduino IDE, it shows :avrdude: ser_open(): can't open de
 1) Check if you have selected the correct COM port.
 2) If you have PictoBlox open and the board is connected at the same time, you need to disconnect it in PictoBlox and re-upload it again on the Arduino IDE.
 
-3. How to work in PictoBlox' stage mode?
+3. How to work in PictoBlox' Stage Mode?
 ---------------------------------------------
 
 For a detailed tutorial, please refer to :ref:`Stage Mode`.
 
-4. How to work in PictoBlox' stage mode?
+4. How to work in PictoBlox' Upload mode?
 ---------------------------------------------
 
 For a detailed tutorial, please refer to :ref:`Upload Mode`.

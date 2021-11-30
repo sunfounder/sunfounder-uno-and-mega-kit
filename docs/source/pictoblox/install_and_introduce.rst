@@ -1,4 +1,4 @@
-Install and Use PictoBlox
+Install and Introduce PictoBlox
 ===============================
 
 Install PictoBlox
