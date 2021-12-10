@@ -151,7 +151,7 @@ and a newline character (ASCII 10, or '\\n').
 
     outputValue = map(inputValue, 0, 1023, 0, 255); //Convert from 0-1023 proportional to the number of a number of from 0 to 255
 
-**map(value, Fromm, from High, to Low, thigh)** re-maps a number from
+``map(value, fromLow, fromHigh, toLow, toHigh)`` re-maps a number from
 one range to another. That is, a **value** of **Fromm** would get mapped
 to one of **to Low**, and a value of **from High** to one of **thigh**,
 values in-between to values in-between, etc.

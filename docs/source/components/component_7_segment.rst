@@ -48,8 +48,8 @@ resistor to the cathode of the segment.
 
 **Example**
 
-* :ref:`Lesson 17 7-Segment Display` (Mega Board Project)
-* :ref:`Lesson 23 Simple Creation - Digital Dice` (Mega Board Project)
+* :ref:`7segmeng_mega` (Mega Board Project)
+* :ref:`digital_dice_mega` (Mega Board Project)
 * :ref:`7segmeng_uno` (R3 Board Project)
 * :ref:`digital_dice_uno` (R3 Board Project)
 

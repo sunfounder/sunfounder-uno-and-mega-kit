@@ -33,8 +33,7 @@ Connect one end of the buttons to pin 12 which connects with a pull-down
 resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a
 stable level when the button is working). Connect the other end of the
 resistor to GND and one of the pins at the other end of the button to
-5V. When the button is pressed, pin 12 is 5V (HIGH). Set the pin 12 as
-High level by programming and pin 13 (integrated with an LED) as High at
+5V. When the button is pressed, pin 12 is 5V (HIGH) and set pin 13 (integrated with an LED) as High at
 the same time. Then release the button (pin 12 changes to LOW) and pin
 13 is Low. So we will see the LED lights up and goes out alternately as
 the button is pressed and released.
@@ -111,7 +110,7 @@ button and store it in *buttonState*.
 **digitalRead (Pin)**: Reads the value from a specified digital pin,
 either HIGH or LOW.
 
-**Turn on the LED when the button is pressed**
+**Press the button to make the buzzer sound**
 
 .. code-block:: arduino
 

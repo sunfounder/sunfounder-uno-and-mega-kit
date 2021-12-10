@@ -151,7 +151,7 @@ The map() command is used to map 0-1023 to 0-NbrLEDs(8),
 
 If sensorValue is 560, then the ledLevel is 4.
 
-**map(value, fromLow, fromHigh, toLow, toHigh)** re-maps a number from
+``map(value, fromLow, fromHigh, toLow, toHigh)`` re-maps a number from
 one range to another. That is, a value of *fromLow* would get mapped to
 one of *toLow*, and a value of *fromHigh* to one of *toHigh*, values
 in-between to values in-between, etc.

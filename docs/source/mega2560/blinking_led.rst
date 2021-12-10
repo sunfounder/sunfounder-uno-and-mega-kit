@@ -1,3 +1,5 @@
+.. _blinking_mega:
+
 Lesson 1 Blinking LED
 ===========================
 

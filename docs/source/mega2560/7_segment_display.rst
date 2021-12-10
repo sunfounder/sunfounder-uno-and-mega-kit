@@ -1,3 +1,5 @@
+.. _7segmeng_mega:
+
 Lesson 17 7-Segment Display
 ===============================
 

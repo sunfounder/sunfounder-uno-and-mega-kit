@@ -49,7 +49,7 @@ Programming
 
 .. image:: img/19_dragon1.png
 
-* Set the size to 50% and the x,y coordinates to (150, 0).
+* Set the size to 50%.
 
 .. image:: img/19_dragon3.png
 
@@ -71,7 +71,11 @@ Programming
 
 
 
-* Then adjust the **dragon-c** costume of the **Dragon** sprite so that its center point should be at the tail of the fire. This will make the positions of the **Dragon** sprite and the **Lightning** sprite correct, and prevent **Lightning** from launching from the dragon's feet. (Correspondingly, **dragon-b** needs to make the head of the dragon coincide with the center point).
+* Then adjust the **dragon-c** costume of the **Dragon** sprite so that its center point should be at the tail of the fire. This will make the positions of the **Dragon** sprite and the **Lightning** sprite correct, and prevent **Lightning** from launching from the dragon's feet. 
+
+.. image:: img/19_dragon5.png
+
+* Correspondingly, **dragon-b** needs to make the head of the dragon coincide with the center point.
 
 .. image:: img/19_dragon5.png
 

@@ -119,7 +119,7 @@ it will when you call step().
 **rpms**: the speed at which the motor should turn in rotations per
 minute - a positive number (long)
 
-**setSpeed() function**
+**loop() function**
 
 .. code-block:: arduino
 
@@ -137,6 +137,9 @@ minute - a positive number (long)
 
       previous = val; //the value of potentiometer assignment to variable previous
     }
+
+The main program is to read the value of A0 first and then set the number of steps of stepper motor rotation according to the value of A0.
+
 
 **step(steps):** Turns the motor a specific number of steps, at a speed
 determined by the most recent call to setSpeed(). This function is

@@ -66,7 +66,10 @@ The value should be in this format: 1st Band 2nd Band 3rd Band x 10^Multiplier (
 So the resistance value of this resistor is 2(red) 2(red) 0(black) x 10^0(black) Ω = 220 Ω, 
 and the permissible error is ± 1% (brown). 
 
-.. list-table::Common resistor color band
+
+**Common resistor color band**
+
+.. list-table::
     :header-rows: 1
 
     * - Resistor 
@@ -97,8 +100,8 @@ You can learn more about resistor from Wiki: `Resistor - Wikipedia <https://en.w
 
 **Example**
 
-* :ref:`Lesson 1 Blinking LED` (Mega Board Project)
-* :ref:`Lesson 3 Controlling LED by Button` (Mega Board Project)
+* :ref:`blinking_mega` (Mega Board Project)
+* :ref:`button_mega` (Mega Board Project)
 * :ref:`blinking_uno` (R3 Board Project)
 * :ref:`button_uno` (R3 Board Project)
 * :ref:`15. GAME - Eat Apple` (Scratch Project)

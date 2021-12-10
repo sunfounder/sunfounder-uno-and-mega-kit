@@ -1,3 +1,5 @@
+.. _servo_mega:
+
 Lesson 10 Servo
 ==================
 
@@ -130,5 +132,4 @@ stay in the 0 angle firstly.
     }
 
 Use 2 for() statement to write 0 - 180 to the servo, so that you can see
-the servo rotate from 0 to 180 angle,then turn back to 0.t you can see
 the servo rotate from 0 to 180 angle,then turn back to 0.

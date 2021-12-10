@@ -47,13 +47,11 @@ Experimental Procedures
 
 .. Note::
     If you receive the following error, it is because you didn’t add a
-    library named NewPing, please refer to Lesson 2 Add libraries to add it.
+    library named NewPing, please refer to :ref:`Add Libraries`.
 
     .. image:: media_uno/image136.png
 
-Now, if you use a piece of paper to approach or keep it far away from
-the sensor. You will see the value displayed on the LCD changes, which
-indicates the distance between the paper and the ultrasonic sensor.
+Now, if you use a piece of paper to approach or keep it far away from the sensor. You will see the value displayed on the LCD changes, which indicates the distance between the paper and the ultrasonic sensor.
 
 .. image:: media_uno/image137.jpeg
    :align: center
@@ -87,9 +85,7 @@ Code Analysis
     NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); // NewPing setup of pins and maximum distance.
 
 Create a NewPing variable sonar. The basic format of NewPing is: NewPing
-(uint8_t trigger_pin, uint8_t echo_pin, int max_cm_distance). Here uint8
-comes up again. As we mentioned previously in lesson 8 of the RFID
-series, uint means an unsigned integer and 8 means 8 bits. So a value in
+(uint8_t trigger_pin, uint8_t echo_pin, int max_cm_distance). Here uint means an unsigned integer and 8 means 8 bits. So a value in
 the uint8 format here means an unsigned-char type value.
 
 **Convert the time to distance**
@@ -98,9 +94,7 @@ the uint8 format here means an unsigned-char type value.
 
     unsigned int uS = sonar.ping(); // Send ping, get ping time in microseconds (uS).
 
-ping() here is to calculate the time from pulse sending to receiving.
-Define a vairal uS and assign the time to it. Its unit should be
-microsecond (us).
+``ping()`` is used to calculate the time sent from the pulse to the reception. Define a variable ``Us`` to store the received time, which should be in microseconds (us).
 
 .. code-block:: arduino
 

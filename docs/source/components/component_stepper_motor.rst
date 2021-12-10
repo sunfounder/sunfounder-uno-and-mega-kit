@@ -80,5 +80,5 @@ provide particular timing sequences for the stepper motor.
 **Example**
 
 
-* :ref:`Lesson 19 Stepper Motor` (Mega Board Project)
+* :ref:`stepper_mega` (Mega Board Project)
 * :ref:`stepper_uno` (R3 Board Project)

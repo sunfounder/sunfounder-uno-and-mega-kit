@@ -90,7 +90,13 @@ The effect to be achieved by the **Fish** sprite is to move left and right on th
 .. image:: img/18_fish4.png
 
 
-* The **fish** sprite (of the clone) will not react when it passes the **Fishhook** sprite; when it touches the **FishhooK** sprite in the fishing state (turns red), it will be caught, at which point the score (variable score) +1, and it will also show a score animation (shrinks 40%, quickly moves to the position of the scoreboard and disappears). At the same time, a new fish is created (a new fish sprite clone) and the game continues.
+* The **fish** sprite (of the clone) will not react when it passes the **Fishhook** sprite; when it touches the **Fishhook** sprite in the fishing state (turns red), it will be caught, at which point the score (variable score) +1, and it will also show a score animation (shrinks 40%, quickly moves to the position of the scoreboard and disappears). At the same time, a new fish is created (a new fish sprite clone) and the game continues.
+
+.. note::
+    
+    You need to click on the color area in the [Touch color] block, and then select the eyedropper tool to pick up the red color of the **Fishhook** sprite on the stage. If you choose a color arbitrarily, this [Touch color] block will not work.
+
+
 
 .. image:: img/18_fish5.png
 

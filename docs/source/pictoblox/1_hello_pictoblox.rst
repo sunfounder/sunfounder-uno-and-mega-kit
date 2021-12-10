@@ -37,10 +37,11 @@ For example, choose **Arduino Uno**.
 
 A connection window will then pop up for you to select the port to connect to, and return to the home page when the connection is complete. If you break the connection during use, you can also click **Connect** to reconnect.
 
-At the same time, Arduino Uno related palettes, such as Arduino Uno, Actuators, etc., will appear in the **Block Palette**.
-
 .. image:: img/1_connect.png
 
+At the same time, Arduino Uno related palettes, such as Arduino Uno, Actuators, etc., will appear in the **Block Palette**.
+
+.. image:: img/1_arduino_uno.png
 
 **2. Upload Firmware**
 
@@ -118,10 +119,11 @@ For example, choose **Arduino Uno**.
 
 A connection window will then pop up for you to select the port to connect to, and return to the home page when the connection is complete. If you break the connection during use, you can also click **Connect** to reconnect.
 
+.. image:: img/1_connect.png
+
 At the same time, Arduino Uno related palettes, such as Arduino Uno, Actuators, etc., will appear in the **Block Palette**.
 
-
-.. image:: img/1_connect.png
+.. image:: img/1_arduino_uno.png
 
 After selecting Upload mode, the stage will switch to the original Arduino code area.
 
@@ -141,11 +143,11 @@ Choose **Open from Computer**.
 
 Then go to the path of ``sunfounder-uno-and-mega-kit\scratch code``, and open **1. Upload Mode.sb3**. Please ensure that you have downloaded the required code by referring to :ref:`Download the Code`.
 
-.. image:: img/0_stage.png
+.. image:: img/0_upload.png
 
 Finally, click the **Upload Code** button.
 
-.. image:: img/1_upload_digital.png
+.. image:: img/1_upload_code.png
 
 
 * Program step by step
@@ -178,3 +180,7 @@ In order to see the effect of continuous blinking LED, you need to use the [Wait
 * [forever]: from the **Control** palette, allows the script to keep running unless the power is off.
 
 .. image:: img/1_upload_more.png
+
+Finally, click the **Upload Code** button.
+
+.. image:: img/1_upload_code.png

@@ -1,4 +1,4 @@
-.. _thermistor:
+.. _thermistor_uno:
 
 Lesson 12 Thermistor
 ==========================
@@ -153,39 +153,33 @@ Define the beta coefficient as 4090, which is described in the datasheet of ther
 
 .. code-block:: arduino
 
-    long a = analogRead(analogPin); 
-    long a = analogRead(analogPin); 
-    //Read the resistance value of the thermistor to a via the signal from the analog pin. 
-    //Here use a long type to make the value of a to be a long integer.
+    void loop()
+    {
+        //read thermistor value
+        long a = analogRead(analogPin);
+        //the calculating formula of temperature
+        float tempC = beta / (log((1025.0 * 10 / a - 10) / 10) + beta / 298.0) - 273.0;
+        float tempF = 1.8 * tempC + 32.0;
 
-    float tempC = beta / (log((1025.0 * 10 / a - 10) / 10) + beta / 298.0) - 273.0; 
-    //The formula here is to calculate the temperature in Celsius, which we deduced previously.
-
-    float tempF = 1.8 * tempC + 32.0; 
-    //define the temperature in Fahrenheit. As we know Fahrenheit equals to 1.8 * Celsius + 32.
+The value of A0 (thermistor) is read, then the Celsius temperature is calculated by the formula, and then the Celsius temperature is converted to Fahrenheit temperature by the formula.
 
 **Display the temperature on LCD1602**
 
 .. code-block:: arduino
 
-    lcd.setCursor(0, 0); // set the cursor to column 0, line 0
+.. code-block:: Arduino
 
-    lcd.print("Temp: "); // Print a message of "Temp: "to the LCD.
-
-    lcd.print(tempC);
-
-    lcd.print(char(223)); //print the unit" ° "
-
-    lcd.print("C");
-
-    // (note: line 1 is the second row, since counting begins with 0):
-
-    lcd.setCursor(0, 1); // set the cursor to column 0, line 1
-
-    lcd.print("Fahr: ");
-
-    lcd.print(tempF); // Print a Fahrenheit temperature to the LCD.
-
-    lcd.print(" F"); // Print the unit of the Fahrenheit temperature to the LCD.
-
-    delay(200); // wait for 100 milliseconds
+        lcd.setCursor(0, 0); // set the cursor to column 0, line 0
+        lcd.print("Temp: ");// Print a message of "Temp: "to the LCD.
+        // Print a centigrade temperature to the LCD.
+        lcd.print(tempC);
+        // Print the unit of the centigrade temperature to the LCD.
+        lcd.print(char(223));//print the unit" ℃ "
+        lcd.print("C");
+        // (note: line 1 is the second row, since counting begins with 0):
+        lcd.setCursor(0, 1); // set the cursor to column 0, line 1
+        lcd.print("Fahr: ");
+        lcd.print(tempF);// Print a Fahrenheit temperature to the LCD.
+        lcd.print(" F"); // Print the unit of the Fahrenheit temperature to the LCD.
+        delay(200); //wait for 100 milliseconds
+    }

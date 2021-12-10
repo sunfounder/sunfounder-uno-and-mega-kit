@@ -56,16 +56,16 @@ out.
 
 .. Note::
 
-    1) There is a transparent plastic piece at the back of the remote
+    1. There is a transparent plastic piece at the back of the remote
     control to cut off the power and pull it out before you use the
     remote control.
 
-    1) Please gently press the button on the remote to avoid invalid data
+    1. Please gently press the button on the remote to avoid invalid data
     FFFFFFFF.
 
-    .. image:: media_uno/image142.png
+.. image:: media_uno/image142.png
 
-    .. image:: media_uno/image143.jpeg
+.. image:: media_uno/image143.jpeg
 
 Code 
 -------

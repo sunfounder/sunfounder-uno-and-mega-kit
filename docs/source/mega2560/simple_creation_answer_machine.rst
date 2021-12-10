@@ -1,3 +1,5 @@
+.. _answer_mega:
+
 Lesson 21 Simple Creation-Answer Machine
 =============================================
 

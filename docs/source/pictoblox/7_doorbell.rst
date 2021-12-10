@@ -45,7 +45,7 @@ Click the **Choose a Backdrop** button in the lower right corner.
 
 .. image:: img/7_backdrop.png
 
-Choose **Bedroom 2**.
+Choose **Bedroom 1**.
 
 .. image:: img/7_bedroom2.png
 

@@ -73,102 +73,29 @@ Code
 Code Analysis
 --------------------
 
-The code for this experiment may be a bit long. But the syntax is simple. Let's see.
-**Workflow:** Read the state of button 4, if button 4 is pressed, the LED on pin 10 is illuminated while reading the state of the remaining buttons. If one of the buttons is detected to be pressed, the buzzer beeps and lights the corresponding LED until button 4 is pressed again.
+The code for this experiment may be a bit long. But the syntax is very simple.
 
-**loop() function**
+This code uses 6 nested if statements.
 
-.. code-block:: arduino
-
-  b4State = digitalRead(button4);
-
-      //when button4 pressed
-
-      if(b4State == 0)
-
-      {
-
-         if(b4State == 0) 
-         /*confirm that the button4 is pressed. One pin of the button is connected to pin 9, 
-         the other pin is connected to GND, and when the button is pressed, pin 9 is pulled low.*/
-
-         {
-
-            flag = 1; //if so,flag is 1
-
-            digitalWrite(LED4, HIGH); //turn the host LED on
-
-            delay(200);
-
-         }
-
-      }
-
-      if(1 == flag)
-
-      {
-
-         //read the state of the state of buttons
-
-         b1State = digitalRead(button1);
-
-         b2State = digitalRead(button2);
-
-         b3State = digitalRead(button3);
-
-         //If the button1 press the first
-
-         if(b1State == 0)
-
-         {
-
-            flag = 0;
-
-            digitalWrite(LED4, LOW);
-
-            Alarm(); //buzzer sound
-
-            digitalWrite(LED1,HIGH); //turn the LED1 on only
-
-            digitalWrite(LED2,LOW);
-
-            digitalWrite(LED3,LOW);
-
-            while(digitalRead(button4)); //detect the button4,if pressed,out of the while loop
-
-         }
-
-         .......
-
-The code for this experiment may be a bit long. But the syntax is
-simple. Let's see.
-
-**Workflow:** Read the state of button 4, if button 4 is pressed, the
-LED on pin 10 is illuminated while reading the state of the remaining
-buttons. If one of the buttons is detected to be pressed, the buzzer
-beeps and lights the corresponding LED until button 4 is pressed
-again.
+* The first if statement is used to determine if button 4 is pressed.
+* The second if statement is used to determine again if button 4 is pressed, which is used to prevent false touches. If it is confirmed that it is pressed, the flag will be 1 and the LED will be lit.
+* The third if statement is used to determine the value of flag, if it is 1 (button 4 is pressed), the value of button 1, 2 and 3 are read at this time.
+* The fourth - six if statements are used to determine if buttons 1, 2, and 3 are pressed, and if they are pressed, then the LED is lit and the buzzer is sounded.
 
 **Alarm() function**
 
+Translated with www.DeepL.com/Translator (free version)
+
 .. code-block:: arduino
 
-  void Alarm()
+    void Alarm()
+    {
+    for(int i=0;i<100;i++){
+        digitalWrite(buzzerPin,HIGH); //the buzzer sound
+        delay(2);
+        digitalWrite(buzzerPin,LOW);  //without sound
+        delay(2);                     //when delay time changed,the frequency changed
+    }
+    }
 
-   {
-
-      for(int i=0;i<100;i++){
-
-         digitalWrite(buzzerPin,HIGH); //the buzzer sound
-
-         delay(2);
-
-         digitalWrite(buzzerPin,LOW); //without sound
-
-         delay(2); //when delay time changed,the frequency changed
-
-      }
-
-   }
-
-The alarm() function is to set the buzzer to beep.
+This function is used to set the length and frequency of the sound emitted by the buzzer.

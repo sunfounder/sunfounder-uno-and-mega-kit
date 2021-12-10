@@ -17,6 +17,6 @@ The principle is very simple. When the switch is tilted in a certain angle, the 
 
 **Example**
 
-* :ref:`Lesson 5 Tilt Switch` (Mega Board Project)
+* :ref:`tilt_mega` (Mega Board Project)
 * :ref:`tilt_uno` (R3 Board Project)
 * :ref:`8. Tumbler` (Scratch Project)

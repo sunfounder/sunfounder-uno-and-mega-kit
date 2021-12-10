@@ -1,3 +1,5 @@
+.. _rgb_mega:
+
 Lesson 7 RGB LED
 ==================
 

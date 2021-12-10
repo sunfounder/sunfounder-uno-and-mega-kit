@@ -6,7 +6,7 @@ Buzzer
 
 As a type of electronic buzzer with an integrated structure, buzzers, which are supplied by DC power, are widely used in computers, printers, photocopiers, alarms, electronic toys, automotive electronic devices, telephones, timers and other electronic products or voice devices. 
 
-Buzzers can be categorized as active and passive ones (see the following picture). Turn the buzzer so that its pins are facing up, and the buzzer with a green circuit board is a passive buzzer, while the one enclosed with a black tape is an active one.
+Buzzers can be categorized as active and passive ones. Turn the buzzer so that its pins are facing up, and the buzzer with a green circuit board is a passive buzzer, while the one enclosed with a black tape is an active one.
 
 The difference between an active buzzer and a passive buzzer: 
 
@@ -23,8 +23,8 @@ You can check the pins of the buzzer, the longer one is the anode and the shorte
 
 **Example**
 
-* :ref:`Lesson 4 Doorbell` (Mega Board Project)
-* :ref:`Lesson 21 Simple Creation-Answer Machine` (Mega Board Project)
+* :ref:`doorbell_mega` (Mega Board Project)
+* :ref:`answer_mega` (Mega Board Project)
 * :ref:`doorbell_uno` (R3 Board Project)
 * :ref:`answer_uno` (R3 Board Project)
 

@@ -1,3 +1,6 @@
+.. _relay_mega:
+
+
 Lesson 6 Relay
 ====================
 

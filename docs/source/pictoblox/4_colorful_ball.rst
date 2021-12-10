@@ -84,7 +84,7 @@ You can write codes to other sprites in the same way to make the RGB LEDs light 
 
 .. image:: img/4_green.png
 
-**6. Ball6 sprite (purple)**
+**6. Ball5 sprite (purple)**
 
 .. image:: img/4_purple.png
 

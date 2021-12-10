@@ -40,5 +40,5 @@ This is a Mini thin infrared wireless remote control with 21 function buttons an
 
 **Example**
 
-* :ref:`Lesson 14 Infrared-Receiver` (Mega Board Project)
+* :ref:`receive_mega` (Mega Board Project)
 * :ref:`receive_uno` (R3 Board Project)

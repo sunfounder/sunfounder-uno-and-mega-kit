@@ -1,3 +1,6 @@
+.. _humi_mega:
+
+
 Lesson 15 Humiture Sensor
 ============================
 

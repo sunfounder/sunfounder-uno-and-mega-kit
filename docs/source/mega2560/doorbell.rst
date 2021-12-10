@@ -1,3 +1,5 @@
+.. _doorbell_mega:
+
 Lesson 4 Doorbell
 ====================
 
@@ -68,7 +70,7 @@ Code Analysis
 
     const int buttonPin = 2; //the button connect to pin2
 
-    const int buzzerPin = 8; //the led connect to pin8
+    const int buzzerPin = 8; //the buzzer connect to pin8
 
     /**********************************/
 
@@ -107,7 +109,7 @@ button and store it in ``buttonState``.
 **digitalRead (Pin)**: Reads the value from a specified digital pin,
 either HIGH or LOW.
 
-**Turn on the LED when the button is pressed**
+**Press the button to make the buzzer sound**
 
 .. code-block:: Arduino
 

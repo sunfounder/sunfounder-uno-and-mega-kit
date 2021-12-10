@@ -11,8 +11,6 @@ The amount of stored electric charges is called capacitance. Because capacitors 
 
 According to material characteristics, capacitors can be divided into: aluminum electrolytic capacitors, film capacitors, tantalum capacitors, ceramic capacitors, super capacitors, etc.
 
-In this kit, ceramic capacitors and electrolytic capacitors are used. 
-
 * `Ceramic Capacitor - Wikipedia <https://en.wikipedia.org/wiki/Ceramic_capacitor>`_
 
 * `Electrolytic Capacitor - Wikipedia <https://en.wikipedia.org/wiki/Electrolytic_capacitor>`_
@@ -25,7 +23,7 @@ There are 103 or 104 label on the ceramic capacitors, which represent the capaci
 
 **Example**
 
-* :ref:`Lesson 4 Doorbell` (Mega Board Project)
+* :ref:`doorbell_mega` (Mega Board Project)
 * :ref:`doorbell_uno` (R3 Board Project)
 * :ref:`7. Doorbell` (Scratch Project)
 * :ref:`15. GAME - Eat Apple` (Scratch Project)

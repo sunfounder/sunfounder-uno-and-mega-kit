@@ -23,8 +23,8 @@ Here is the detailed introduction for the LED: `LED - Wikipedia <https://en.wiki
 
 **Example**
 
-* :ref:`Lesson 1 Blinking LED` (Mega Board Project)
-* :ref:`Lesson 8 Controlling an LED by Potentiometer` (Mega Board Project)
+* :ref:`blinking_mega` (Mega Board Project)
+* :ref:`potentiometer_mega` (Mega Board Project)
 * :ref:`blinking_uno` (R3 Board Project)
 * :ref:`potentiometer_uno` (R3 Board Project)
 * :ref:`2. Table Lamp` (Scratch Project)

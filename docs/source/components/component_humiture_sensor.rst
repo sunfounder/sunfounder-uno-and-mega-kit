@@ -20,5 +20,5 @@ Then the host receives the answer signal and begins to receive 40-bit humiture d
 
 **Example**
 
-* :ref:`Lesson 15 Humiture Sensor` (Mega Board Project)
+* :ref:`humi_mega` (Mega Board Project)
 * :ref:`humi_uno` (R3 Board Project)

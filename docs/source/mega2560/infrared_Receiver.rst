@@ -1,3 +1,5 @@
+.. _receive_mega:
+
 Lesson 14 Infrared-Receiver
 ============================
 
@@ -55,16 +57,16 @@ go out.
 
 .. Note::
 
-    1) There is a transparent plastic piece at the back of the remote
+    1. There is a transparent plastic piece at the back of the remote
     control to cut off the power and pull it out before you use the
     remote control.
 
-    1) Please gently press the button on the remote to avoid invalid data
+    2. Please gently press the button on the remote to avoid invalid data
     FFFFFFFF.
 
-    .. image:: media_mega2560/image189.png
+.. image:: media_mega2560/image189.png
     
-    .. image:: media_mega2560/image190.jpeg
+.. image:: media_mega2560/image190.jpeg
 
 Code
 --------

@@ -1,7 +1,7 @@
 Power Supply Module
 =====================
 
-When we need a large current to drive a component, which will severely interfere with the normal work of Raspberry Pi. Therefore, we separately supply power for the component by this module to make it run safely and steadily.
+When we need a large current to drive a component, which will severely interfere with the normal work of main board. Therefore, we separately supply power for the component by this module to make it run safely and steadily.
 
 You can just plug it in the breadboard to supply power. It provides a voltage of 3.3V and 5V, and you can connect either via a jumper cap included.
 

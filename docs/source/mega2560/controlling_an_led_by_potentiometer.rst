@@ -1,3 +1,6 @@
+.. _potentiometer_mega:
+
+
 Lesson 8 Controlling an LED by Potentiometer
 =================================================
 
@@ -136,15 +139,9 @@ values between 0 and 1023.
 
     Serial.println(inputValue); //print inputValue
 
-**Serial.print():**\ Prints data to the serial port as human-readable
-ASCII text. This command can take many forms. Numbers are printed using
-an ASCII character for each digit. Floats are similarly printed as ASCII
-digits, defaulting to two decimal places. Bytes are sent as a single
-character. Characters and strings are sent as is.
+* ``Serial.print()``: Prints data to the serial port as human-readable ASCII text. This command can take many forms. Numbers are printed using an ASCII character for each digit. Floats are similarly printed as ASCII digits, defaulting to two decimal places. Bytes are sent as a single character. Characters and strings are sent as is.
 
-**Serial.print():** Commandant takes the same forms as Serial.print(),
-but it is followed by a carriage return character (ASCII 13, or '\\r')
-and a newline character (ASCII 10, or '\\n').
+* ``Serial.println()``: Takes the same forms as Serial.print(), but it is followed by a carriage return character (ASCII 13, or '\\r') and a newline character (ASCII 10, or '\\n').
 
 **Map the values**
 
@@ -152,7 +149,7 @@ and a newline character (ASCII 10, or '\\n').
 
     outputValue = map(inputValue, 0, 1023, 0, 255); //Convert from 0-1023 proportional to the number of a number of from 0 to 255
 
-**map(value, Fromm, from High, to Low, thigh)** re-maps a number from
+``map(value, fromLow, fromHigh, toLow, toHigh)`` re-maps a number from
 one range to another. That is, a **value** of **Fromm** would get mapped
 to one of **to Low**, and a value of **from High** to one of **thigh**,
 values in-between to values in-between, etc.

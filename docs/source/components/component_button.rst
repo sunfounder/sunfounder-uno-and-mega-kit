@@ -5,8 +5,7 @@ Button
     :width: 400
     :align: center
 
-Buttons are a common component used to control electronic devices. They are usually used as switches to connect or break circuits. Although buttons come in a variety of sizes and shapes, the one used here is a 6mm mini-button as shown in the following pictures.
-Pin 1 is connected to pin 2 and pin 3 to pin 4. So you just need to connect either of pin 1 and pin 2 to pin 3 or pin 4.
+Buttons are a common component used to control electronic devices, they are usually used as switches to connect or break circuits.
 
 The following is the internal structure of a button. The symbol on the right below is usually used to represent a button in circuits. 
 
@@ -22,8 +21,8 @@ Since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pr
 
 **Example**
 
-* :ref:`Lesson 3 Controlling LED by Button` (Mega Board Project)
-* :ref:`Lesson 21 Simple Creation-Answer Machine` (Mega Board Project)
+* :ref:`button_mega` (Mega Board Project)
+* :ref:`answer_mega` (Mega Board Project)
 * :ref:`button_uno` (R3 Board Project)
 * :ref:`answer_uno` (R3 Board Project)
 * :ref:`7. Doorbell` (Scratch Project)

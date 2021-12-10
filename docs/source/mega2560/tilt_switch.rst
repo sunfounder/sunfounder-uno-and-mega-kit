@@ -1,3 +1,5 @@
+.. _tilt_mega:
+
 Lesson 5 Tilt Switch
 ========================
 

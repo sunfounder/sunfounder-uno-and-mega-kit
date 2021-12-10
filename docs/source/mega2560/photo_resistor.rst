@@ -1,3 +1,6 @@
+.. _photoresistor_mega:
+
+
 Lesson 9 Photo resistor
 ==========================
 
@@ -26,10 +29,10 @@ Components
 Schematic Diagram
 -----------------------
 
-In this experiment, we will use 8 Eds to show the light intensity. The
-higher the light intensity is, the more Eds will light up. When the
-light intensity is high enough, all the Eds will be on. When there is no
-light, all the Eds will go out.
+In this experiment, we will use 8 LEDs to show the light intensity. The
+higher the light intensity is, the more LEDs will light up. When the
+light intensity is high enough, all the LEDs will be on. When there is no
+light, all the LEDs will go out.
 
 The schematic diagram:
 
@@ -51,8 +54,8 @@ Experimental Procedures
 **Step 4:** Upload the sketch to the board.
 
 Now, shine some light on the photo resistor, and you will see several
-Eds light up. Shine more light and you will see more Eds light up. When
-you place it in a dark environment, all the Eds will go out.
+LEDs light up. Shine more light and you will see more LEDs light up. When
+you place it in a dark environment, all the LEDs will go out.
 
 .. image:: media_mega2560/image143.jpeg
     :align: center
@@ -157,7 +160,7 @@ The map() command is used to map 0-1023 to 0-NbrLEDs(8),
 
 If sensorValue is 560, then the ledLevel is 4.
 
-**map(value, fromLow, fromHigh, toLow, toHigh)** re-maps a number from
+``map(value, fromLow, fromHigh, toLow, toHigh)`` re-maps a number from
 one range to another. That is, a value of *fromLow* would get mapped to
 one of *toLow*, and a value of *fromHigh* to one of *toHigh*, values
 in-between to values in-between, etc.

@@ -1,3 +1,6 @@
+.. _fan_mega:
+
+
 Lesson 22 Simple Creation-Small Fan
 ====================================
 
@@ -75,122 +78,56 @@ Code
 
 Code Analysis
 --------------------
+This code nests five ``if`` statements to determine the button press status.
 
-**Workflow of the Small Fan**
+* The first if statement is used to determine if the button is pressed.
+* The second if statement is used to determine if 50ms has elapsed.
+* The third if statement is used to determine if the button has been pressed after 50ms, so as to avoid false touches.
+* The fourth if statement is used to record the number of button presses, adding 1 to ``stat`` for each press.
+* The fifth if statement is used to determine if the number of button presses is greater than 4. If so, ``stat`` is cleared to zero.
 
-.. code-block:: arduino
 
-    void loop() {
-
-      // read the state of the switch into a local variable:
-
-      int reading = digitalRead(buttonPin);
-
-      if (reading != lastButtonState)// If the button state is different from last time
-
-      {
-
-         lastDebounceTime = millis();// reset the debouncing timer
-
-      }
-
-      if ((millis() - lastDebounceTime) > debounceDelay) 
-      /* Determine whether the button has been pressed 
-      for over 50ms to prevent signal generated due to accidental touch.*/
-
-      {
-
-         if (reading != buttonState) 
-         /*If it’s over 50ms and *reading* does not equal to *buttonState*, 
-         it indicates the button state has changed.*/
-
-         {
-
-            buttonState = reading; // Store the state of button in buttonState
-
-            if (buttonState == HIGH) 
-            //If buttonState is high level, it means the button has been pressed.
-
-            {
-
-               digitalWrite(ledPin, HIGH); //turn on the LED
-
-               stat = stat + 1;
-
-               if(stat >= 4)// When stat>=4, set it as 0.
-
-               {
-
-                  stat = 0;
-
-               }
-
-            }
-
-            else /*else, turn off the LED. When you press the button, the LED will
-            light up and it goes out when you release the button.*/
-
-               digitalWrite(ledPin, LOW);
-
-         }
-
-      }
-
-      // The rotational speed is different when the button is pressed at different times.
-
-      switch(stat)
-
-      {
-
-      case 1:
-
-         clockwise(rank1);// When stat=1, set the rotate speed of the motor as rank1=150
-
-         break;
-
-      case 2:
-
-         clockwise(rank2);// When stat=2, set the rotate speed of the motor as rank1=200
-
-         break;
-
-      case 3:
-
-         clockwise(rank3);// When stat=3, set the rotate speed of the motor as rank1=250
-
-         break;
-
-      default:
-
-         clockwise(0);
-
-      }
-
-      // save the reading. Next time through the loop,
-
-      // it'll be the lastButtonState:
-
-      lastButtonState = reading;
-
-   }
-   
-**Code Analysis** **24-2** **clockwise() function**
+**switch() statement**
 
 .. code-block:: arduino
 
-    void clockwise(int Speed)
-
+    switch(stat)
     {
-
-      analogWrite(motorIn1,0);
-
-      analogWrite(motorIn2,Speed);
-
+    case 1:
+        clockwise(rank1);// When stat=1, set the rotate speed of the motor as rank1=150
+        break;
+    case 2:
+        clockwise(rank2);// When stat=2, set the rotate speed of the motor as rank1=200
+        break;
+    case 3:
+        clockwise(rank3);// When stat=3, set the rotate speed of the motor as rank1=250
+        break;
+    default:
+        clockwise(0);
     }
 
-This function is to set the rotational speed of the *motor*: write
-*Speed* to pin 9 and 0 to pin 10. The motor rotates towards a certain
-direction and the speed is the value of **Speed**.
+The ``switch`` statement, like the ``if`` statement, ``switch case`` allows the programmer to control the flow of the program with different code executed under various conditions. In particular, the switch statement compares the value of a variable with the value specified in the case statement. When a case statement is found whose value matches the value of a variable, the code in that case statement is run.
+If there is no ``break`` statement, the ``switch`` statement will continue to execute the following expression until ``break`` or until it reaches the end of the switch statement.
+
+In this part of the code.
+
+* If stat = 1, let the fan rotate at speed rank1(150).
+* If stat = 1, let the fan rotate at speed rank2(200).
+* If stat = 1, let the fan rotate at speed rank3(250).
+* If stat = 0, let the fan rotate at speed 0.
+
+
+**clockwise() function**
+
+.. code-block:: arduino
+
+    void clockwise(int Speed)//
+    {
+        analogWrite(motorIn1,0);
+        analogWrite(motorIn2,Speed);
+    }
+
+This function sets the speed of the motor: write ``Speed`` to pin 9 and 0 to pin 10. The motor rotates in a certain direction with the value of ``Speed``.
 
 Experiment Summary
 -----------------------

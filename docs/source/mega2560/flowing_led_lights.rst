@@ -1,3 +1,5 @@
+.. _flowing_mega:
+
 Lesson 2 Flowing LED Lights
 ===============================
 

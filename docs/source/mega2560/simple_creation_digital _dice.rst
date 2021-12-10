@@ -1,3 +1,5 @@
+.. _digital_dice_mega:
+
 Lesson 23 Simple Creation - Digital Dice
 =========================================
 

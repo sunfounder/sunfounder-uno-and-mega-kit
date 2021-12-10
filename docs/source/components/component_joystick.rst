@@ -20,7 +20,7 @@ The joystick also has a digital input that is actuated when the joystick is pres
 **Example**
 
 
-* :ref:`Lesson 16 Joystick PS2` (Mega Board Project)
+* :ref:`joystick_mega` (Mega Board Project)
 * :ref:`joystick_uno` (R3 Board Project)
 * :ref:`14. GMAE - Star-Crossed` (Scratch Project)
 * :ref:`19. GAME - Kill Dragon` (Scratch Project)

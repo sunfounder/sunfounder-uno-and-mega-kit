@@ -1,3 +1,6 @@
+.. _stopwatch_mega:
+
+
 Lesson 20 Simple Creation-Stopwatch
 =====================================
 

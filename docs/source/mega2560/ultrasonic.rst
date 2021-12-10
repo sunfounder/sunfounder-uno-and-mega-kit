@@ -1,3 +1,5 @@
+.. _ultrasonic_mega:
+
 Lesson 13 Ultrasonic
 =====================
 
@@ -48,22 +50,20 @@ Experimental Procedures
 
 .. Note::
     If you receive the following error, it is because you didn’t add a
-    library named NewPing, please refer to Lesson 2 Add libraries to add it.
+    library named NewPing, please refer to :ref:`Add Libraries`.
 
     .. image:: media_mega2560/image183.png
 
-    Now, if you use a piece of paper to approach or keep it far away from
-    the sensor. You will see the value displayed on the LCD changes, which
-    indicates the distance between the paper and the ultrasonic sensor.
+Now, if you use a piece of paper to approach or keep it far away from the sensor. You will see the value displayed on the LCD changes, which indicates the distance between the paper and the ultrasonic sensor.
 
-    .. image:: media_mega2560/image184.jpeg
+.. image:: media_mega2560/image184.jpeg
 
 Code
 -----------------------
 
 .. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/a1790e89-35a2-433d-b874-dd50ad4c7d67/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/6bd4821b-3e3d-4ad2-8fb1-b72965ebea57/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 Code Analysis
 ----------------
@@ -90,21 +90,20 @@ Code Analysis
     // NewPing setup of pins and maximum distance.
 
 Create a NewPing variable sonar. The basic format of NewPing is: NewPing
-(uint8_t trigger_pin, uint8_t echo_pin, int max_cm_distance). Here uint8
-comes up again. As we mentioned previously in lesson 8 of the RFID
-series, uint means an unsigned integer and 8 means 8 bits. So a value in
+(uint8_t trigger_pin, uint8_t echo_pin, int max_cm_distance). Here uint means an unsigned integer and 8 means 8 bits. So a value in
 the uint8 format here means an unsigned-char type value.
 
 **Convert the time to distance**
 
-unsigned int uS = sonar.ping(); // Send ping, get ping time in
-microseconds (uS).
+.. code-block:: arduino
 
-ping() here is to calculate the time from pulse sending to receiving.
-Define a vairal uS and assign the time to it. Its unit should be
-microsecond (us).
+    unsigned int uS = sonar.ping(); // Send ping, get ping time in microseconds (uS).
 
-int distance = uS / US_ROUNDTRIP_CM;
+``ping()`` is used to calculate the time sent from the pulse to the reception. Define a variable ``Us`` to store the received time, which should be in microseconds (us).
+
+.. code-block:: arduino
+
+    int distance = uS / US_ROUNDTRIP_CM;
 
 **uS / US_ROUNDTRIP_CM** is a formula to convert the time between ping
 sending and receiving into a distance. The unit is cm.
