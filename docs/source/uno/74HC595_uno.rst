@@ -1,0 +1,125 @@
+.. _74hc595_uno:
+
+第 18 课 74HC595
+=======================
+
+介绍
+------------------
+
+通常，有两种方式可以驱动单个 7 段数码管。一种方法是将其 8 个引脚直接连接到主板上的 8 个端口，我们之前已经这样做了。或者你可以将74HC595连接到主板的三个端口，然后将7段数码管连接到74HC595。
+
+在本实验中，我们将使用后者。这样，我们可以节省五个端口——考虑到主板的端口有限，这一点非常重要。现在让我们开始吧！
+
+
+所需器件
+----------------
+
+.. image:: media_uno/uno22.png
+    :align: center
+
+* :ref:`SunFounder R3板`
+* :ref:`面包板`
+* :ref:`跳线`
+* :ref:`电阻`
+* :ref:`7段数码管`
+* :ref:`74hc595`
+
+原理图
+--------------------
+
+在实验中，MR（引脚 10）连接到 5V（高电平），OE（引脚 1）连接到 GND（低电平）。因此，数据在SHcp的上升沿输入，通过上升沿进入内存寄存器。我们使用 ``shiftout()`` 函数通过 DS 输出一个 8 位的数据到移位寄存器。在SHcp的上升沿，移位寄存器中的数据一次连续移动一位，即Q1中的数据移动到Q2，以此类推。在 STcp 的上升沿，移位寄存器中的数据移动到内存寄存器中。
+
+所有数据将在 8 次后移动到内存寄存器。然后将内存寄存器中的数据输出到总线（Q0-Q7）。所以16个字符依次显示在7段数码管中。
+
+原理图如下所示：
+
+.. image:: media_uno/image164.png
+   :align: center
+
+
+实验步骤
+--------------------------------
+
+
+**第 1 步**：搭建电路。(注意芯片的槽口方向，应该是在左侧)
+
+===================== =========== ================
+7段数码管                74HC595     R3板 
+a                       Q7          
+b                       Q6          
+c                       Q5          
+d                       Q4          
+e                       Q3          
+f                       Q2          
+g                       Q1          
+DP                      Q0          
+                        VCC           5V
+                        DS            11
+                        CE            GND
+                        ST            12
+                        SH            8
+                        MR            5V
+                        Q7’           N/C
+                        GND           GND
+-                                     GND
+===================== =========== ================
+
+.. image:: media_uno/image165.png
+   :align: center
+
+**第 2 步**：打开代码文件 ``Lesson_18_74HC595.ino``。
+
+**第 3 步**：选择 **开发板** 和 **端口**。
+
+**第 4 步**：点击 **上传** 按钮来上传代码。
+
+你将看到7段数码管显示 0-9，A-F。
+
+.. image:: media_uno/image166.jpeg
+   :align: center
+
+代码
+--------
+
+.. raw:: html
+
+   <iframe src=https://create.arduino.cc/editor/sunfounder01/c5d79729-d6ad-4afb-b9ee-4ad962151caf/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+代码分析
+-----------------
+
+**设置数组和元素**
+
+.. code-block:: arduino
+
+    int datArray[16] = {252, 96, 218, 242, 102, 182, 190, 224, 254, 246, 238, 62, 156, 122, 158, 142};
+
+
+这个数组存放了从0到F的16个字符的数据，252代表0，可以自己计算。要显示0，7段数码管的g段（中间的）必须是低电平（暗）。
+
+由于g连接到74HC595的Q1，将Q1和DP（点）都设置为低电平，其余引脚为高电平。因此，Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0 的值为 1 1 1 1 1 1 0 0。
+
+将二进制数改为十进制数：1x2^7 + 1x2^6 + 1x2^5 + 1x2^4 + 1x2^3 + 1x2^2 + 0x2^1 + 1x2^0 =252
+
+这就是要显示的数字0的值。你可以类似地计算其他字符。
+
+**在7段数码管上显示0-F**
+
+.. code-block:: Arduino
+
+    for(int num = 0; num < 16; num++)
+    {
+        digitalWrite(STcp,LOW); //ground ST_CP and hold low for as long as you are transmitting
+        shiftOut(DS,SHcp,MSBFIRST,datArray[num]);
+        //return the latch pin high to signal chip that it 
+        //no longer needs to listen for information
+        digitalWrite(STcp,HIGH); //pull the ST_CPST_CP to save the data
+        delay(1000); //wait for a second
+    }
+
+将 ``STcp`` 设置为低电平，然后设置为高电平。它将产生一个的上升沿脉冲。
+
+``shiftOut()`` 用于逐位移出一个字节的数据，即将 ``dataArray[num]`` 中的一个字节数据移到 ``DS`` 引脚的移位寄存器中。 ``MSBFIRST`` 表示从高位移动。之后 ``digitalWrite（STCP，HIGH）`` 运行时，STCP将在上升沿。这时，移位寄存器中的数据就会被移到内存寄存器中。
+
+8 次后，一个字节的数据将被传送到内存寄存器中。然后将内存寄存器的数据输出到总线（Q0-Q7）。你将看到一个字符显示在 7 段数码管上，然后延迟1000ms。在该行之后，返回 ``for()``。如此循环直到16次后，7段数码管中的所有字符都一一显示出来。
+
