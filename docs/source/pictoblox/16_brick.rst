@@ -1,4 +1,4 @@
-17. GAME - Breakout Clone
+16. GAME - Breakout Clone
 ============================
 
 Here we use the potentiometer to play a Breakout Clone game.

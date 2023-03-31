@@ -23,7 +23,6 @@ When a pulse is sent to a servo that is less than 1.5 ms, the servo rotates to a
 
 * :ref:`servo_mega` (Mega Board Project)
 * :ref:`servo_uno` (R3 Board Project)
-* :ref:`12. Pendulum` (Scratch Project)
 
 
 

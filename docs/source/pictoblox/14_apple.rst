@@ -1,4 +1,4 @@
-15. GAME - Eat Apple
+14. GAME - Eat Apple
 ==============================
 
 In this project, we play a game that uses button to control Beetle to eat apple.

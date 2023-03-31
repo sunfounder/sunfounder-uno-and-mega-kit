@@ -1,4 +1,4 @@
-16. GAME - Flappy Parrot
+15. GAME - Flappy Parrot
 ==============================
 
 Here we use the ultrasonic module to play a flappy parrot game.

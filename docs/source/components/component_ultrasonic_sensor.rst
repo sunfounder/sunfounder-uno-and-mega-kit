@@ -40,6 +40,6 @@ trigger signal and the echo signal.
 
 * :ref:`ultrasonic_mega` (Mega Board Project)
 * :ref:`ultrasonic_uno` (R3 Board Project)
-* :ref:`16. GAME - Flappy Parrot` (Scratch Project)
+* :ref:`15. GAME - Flappy Parrot` (Scratch Project)
 
 

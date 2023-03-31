@@ -31,4 +31,4 @@ This continuous reversal essentially converts the DC power from the battery to A
 
 * :ref:`fan_mega` (Mega Board Project)
 * :ref:`fan_uno` (R3 Board Project)
-* :ref:`13. Rotating Fan` (Scratch Project)
+* :ref:`12. Rotating Fan` (Scratch Project)

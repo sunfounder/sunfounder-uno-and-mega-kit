@@ -1,4 +1,4 @@
-19. GAME - Kill Dragon
+18. GAME - Kill Dragon
 ============================
 
 Here, we use the joystick to play a game of dragon killing.

@@ -1,4 +1,4 @@
-13. Rotating Fan
+12. Rotating Fan
 ========================
 
 In this project, we will make a spinning star sprite and fan.

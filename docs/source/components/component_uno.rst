@@ -33,7 +33,7 @@ SunFounder R3 board is a microcontroller board based on the ATmega328P (`datashe
 * LENGTH: 68.6 mm
 * WIDTH: 53.4 mm
 * WEIGHT: 25 g
-* I2C Port: A4(SDA), A5(SCL)
+* Port: A4(SDA), A5(SCL)
 
 
 **What's More**

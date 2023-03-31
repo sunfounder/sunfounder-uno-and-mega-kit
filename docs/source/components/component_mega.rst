@@ -32,7 +32,7 @@ The SunFounder Mega Board is a microcontroller board based on the ATmega2560 (`d
 * LENGTH: 101.52 mm
 * WIDTH: 53.3 mm
 * WEIGHT: 37 g
-* I2C Port: A4(SDA), A5(SCL); 20(SDA), 21(SCL)
+* Port: A4(SDA), A5(SCL); 20(SDA), 21(SCL)
 
 **What's More**
 

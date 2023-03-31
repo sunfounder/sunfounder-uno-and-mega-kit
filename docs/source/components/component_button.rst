@@ -26,6 +26,6 @@ Since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pr
 * :ref:`button_uno` (R3 Board Project)
 * :ref:`answer_uno` (R3 Board Project)
 * :ref:`7. Doorbell` (Scratch Project)
-* :ref:`15. GAME - Eat Apple` (Scratch Project)
+* :ref:`14. GAME - Eat Apple` (Scratch Project)
 
 

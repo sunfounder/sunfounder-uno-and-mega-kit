@@ -26,7 +26,7 @@ There are 103 or 104 label on the ceramic capacitors, which represent the capaci
 * :ref:`doorbell_mega` (Mega Board Project)
 * :ref:`doorbell_uno` (R3 Board Project)
 * :ref:`7. Doorbell` (Scratch Project)
-* :ref:`15. GAME - Eat Apple` (Scratch Project)
+* :ref:`14. GAME - Eat Apple` (Scratch Project)
 
 
 

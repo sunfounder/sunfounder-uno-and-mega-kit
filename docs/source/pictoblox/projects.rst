@@ -32,11 +32,10 @@ But the 11th project reads the temperature and humidity values in Upload mode, s
     9_temperature
     10_alarm_clock
     11_dht11
-    12_pendulum
-    13_rotating_fan
-    14_rocket
-    15_apple
-    16_parrot
-    17_brick
-    18_fish
-    19_dragon
+    12_rotating_fan
+    13_rocket
+    14_apple
+    15_parrot
+    16_brick
+    17_fish
+    18_dragon

@@ -104,5 +104,5 @@ You can learn more about resistor from Wiki: `Resistor - Wikipedia <https://en.w
 * :ref:`button_mega` (Mega Board Project)
 * :ref:`blinking_uno` (R3 Board Project)
 * :ref:`button_uno` (R3 Board Project)
-* :ref:`15. GAME - Eat Apple` (Scratch Project)
+* :ref:`14. GAME - Eat Apple` (Scratch Project)
 * :ref:`2. Table Lamp` (Scratch Project)

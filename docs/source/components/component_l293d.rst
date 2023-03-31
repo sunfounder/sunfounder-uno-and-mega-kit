@@ -23,4 +23,4 @@ When pin EN is High level, if A is High, Y outputs high level; if A is Low, Y ou
 
 * :ref:`fan_mega` (Mega Board Project)
 * :ref:`fan_uno` (R3 Board Project)
-* :ref:`13. Rotating Fan` (Scratch Project)
+* :ref:`12. Rotating Fan` (Scratch Project)

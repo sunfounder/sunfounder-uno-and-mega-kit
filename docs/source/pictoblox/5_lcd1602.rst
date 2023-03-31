@@ -3,7 +3,7 @@
 
 LCD1602 can be used to display 2x16 characters, now we let it display the corresponding characters with the character sprites on the stage.
 
-When you click the Hello on the stage one by one, they will have different animation effects and the characters will be displayed on the LCD1602 at the same time.
+You need to click on the green flag to initialize the LCD1602, and then click on the individual character sprites on the stage to display them on the LCD1602.
 
 .. image:: img/5_hello.png
 
@@ -101,3 +101,9 @@ When the **O** sprite is clicked, it repeats the hide and show process 3 times, 
 * [Hide] & [Show]: make the sprite hide and show.
 
 .. image:: img/5_o.png
+
+**7. Initialize the LCD1602**
+
+After clicking the green flag, set the pins of this LCD1602 and clear the last content in backdrop.
+
+.. image:: img/lcd1602_init.png

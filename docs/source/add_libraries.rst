@@ -35,7 +35,7 @@ Library**.
 .. image:: img/image27.png
    :align: center
 
-**Step 2**: Find *SunFounder Mega Kit\Library*, Click **Open**.
+**Step 2**: Find ``SunFounder Mega Kit\Library``, click **Open**.
 
 .. image:: img/image28.png
    :align: center
@@ -64,12 +64,12 @@ below.
 .. image:: img/image30.png
    :align: center
 
-**Step 2**: Copy all Libraries in the **Library** folder.
+**Step 2**: Copy all Libraries in the ``Library`` folder.
 
 .. image:: img/image31.png
    :align: center
 
-**Step 3**: Go to the path above and you will see there is a *libraries*
+**Step 3**: Go to the path above and you will see there is a ``libraries``
 folder, click to open it.
 
 .. image:: img/image32.png
@@ -92,7 +92,7 @@ Libraries**
 .. image:: img/image34.png
    :align: center
 
-**Step2:** Input a library name to search it, such as dht, you can
+**Step2:** Input a library name to search it, such as ``dht``, you can
 choose the latest version to install.
 
 .. image:: img/image35.png

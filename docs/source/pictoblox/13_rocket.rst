@@ -1,4 +1,4 @@
-14. GAME - Star-Crossed
+13. GAME - Star-Crossed
 ==========================
 
 In the next projects, we will play some fun mini-games in PictoBlox.
