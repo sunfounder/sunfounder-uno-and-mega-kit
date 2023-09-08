@@ -51,7 +51,7 @@ would measure 2 milliseconds each.
     :align: center
 
 
-A call to analogWrite() is on a scale of 0 - 255, such that
+A call to analogWrite() is on a scale of 0 - 255, such that
 analogWrite(255) requests a 100% duty cycle (always on), and
 analogWrite(127) is a 50% duty cycle (on half the time) for example.
 
@@ -63,7 +63,7 @@ controlling the PWM value.
 
 On the Mega2560 board, 2 to 13 and 44 to 46. Provide 8-bit PWM output
 with
-the `analogWrite() <https://www.arduino.cc/en/Reference/AnalogWrite>`__ function.
+the `analogWrite() <https://www.arduino.cc/en/Reference/AnalogWrite>`__ function.
 You can connect any of these pins.Here we input a value between 0 and
 255 to the three pins of the RGB LED to make it display different
 colors. After connecting the pins of R, G, and B to a current limiting
@@ -111,7 +111,7 @@ Code Analysis
 
 **Set the color**
 
-Here use the *color()* function to set the color of the RGB LED. In the
+Here use the ``color()`` function to set the color of the RGB LED. In the
 code, it is set to flash 7 different colors.
 
 You can use the paint tool on your computer to get the RGB value.
@@ -181,11 +181,11 @@ You can use the paint tool on your computer to get the RGB value.
     }
 
 Define three unsigned char variables, red, green and blue. Write
-their values to *redPin*, *greenPin* and *bluePin*. For example,
-color(128,0,128) is to write 128 to *redPin*, 0 to *greenPin* and 128 to
-*bluePin*. Then the result is the LED flashing purple.
+their values to ``redPin``, ``greenPin`` and ``bluePin``. For example,
+color(128,0,128) is to write 128 to ``redPin``, 0 to ``greenPin`` and 128 to
+``bluePin``. Then the result is the LED flashing purple.
 
 **analogWrite()**: Writes an analog value (PWM wave) to a pin. It has
 nothing to do with an analog pin, but is just for PWM pins. You do not
-need to call the *pinMode()* to set the pin as output before calling
-*analogWrite()*.
+need to call the ``pinMode()`` to set the pin as output before calling
+``analogWrite()``.

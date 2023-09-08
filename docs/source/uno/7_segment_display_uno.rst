@@ -8,8 +8,8 @@ Introduction
 
 A 7-segment display is a device that can display numerals and letters.
 It's made up of seven LEDs connected in parallel. Different
-letters/numbers can be shown by connecting pins on the display to the
-power source and enabling the related pins, thus turning on the
+letters/numbers can be shown by connecting pins on the display to the
+power source and enabling the related pins, thus turning on the
 corresponding LED segments. In this lesson let's learn how to display
 specific characters on it.
 
@@ -30,7 +30,7 @@ Schematic Diagram
 ------------------------
 
 In this experiment, connect each of pin a-g of the 7-Segment Display to
-one 220ohm current limiting resistor respectively and then to pin 4–11.
+one 220ohm current limiting resistor respectively and then to pin 4-11.
 GND connects to GND. By programming, we can set one or several of
 pin4-11 as High level to light up the corresponding LED(s).
 
@@ -41,7 +41,7 @@ pin4-11 as High level to light up the corresponding LED(s).
 Experimental Procedures
 -------------------------
 
-**Step 1:** Build the circuit (here a common cathode 7-segment display
+**Step 1:** Build the circuit (here a common cathode 7-segment display
 is used)
 
 The wiring between the 7-segment display and the Uno board :
@@ -107,7 +107,7 @@ simple. Let's take a look.
 
 
 Calling these functions into the loop() is to let the 7-Segment display
-0-F. The functions are shown below. Take *digital_2()* for example:
+0-F. The functions are shown below. Take ``digital_2()`` for example:
 
 **Detailed analysis of digital_2()**
 
@@ -138,10 +138,10 @@ First we need to know how it looks like when display the numeral **2**
 on the 7-Segment display. It's actually the segments a, b, d, e and g
 are power on, which generates the display of **2**. In programming, pins
 connected to these segments are set High level when c and f are Low
-level. Here we use a *for()* statement to set these pins as High level
-respectively (the braces after *for()* are deleted as there is only one
+level. Here we use a ``for()`` statement to set these pins as High level
+respectively (the braces after ``for()`` are deleted as there is only one
 line). Connect pin dp to pin 4; it's already defined as LOW in
-*setup()*.
+``setup()``.
 
 After running this part, the 7-segment will display **2**. Similarly,
 the display of other characters are the same. Since the letters b and d

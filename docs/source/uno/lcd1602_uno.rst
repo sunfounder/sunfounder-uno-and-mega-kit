@@ -33,7 +33,7 @@ Schematic Diagram
 
 Connect K to GND and A to 3.3 V, and then the backlight of the LCD1602
 will be turned on. Connect VSS to GND and the LCD1602 to the power
-source. Connect VO to the middle pin of the potentiometer – with it you
+source. Connect VO to the middle pin of the potentiometer - with it you
 can adjust the contrast of the screen display. Connect RS to D4 and R/W
 pin to GND, which means then you can write characters to the LCD1602.
 Connect E to pin6 and the characters displayed on the LCD1602 are
@@ -86,7 +86,7 @@ Code Analysis
 
     #include <LiquidCrystal.h>// include the library code
 
-With the *LiquidCrystal.h* file included, you can call the functions in
+With the ``LiquidCrystal.h`` file included, you can call the functions in
 this file later.
 
 LiquidCrystal is a built-in library in the Arduino IDE. You can find the
@@ -97,12 +97,12 @@ Files\Arduino\libraries*.
 
    
 
-There is an example in the *examples* folder. The src folder contains
-the major part of the library: *LiquidCrystal.cpp* (execution file, with
+There is an example in the ``examples`` folder. The src folder contains
+the major part of the library: ``LiquidCrystal.cpp`` (execution file, with
 function implementation, variable definition, etc.) and LiquidCrystal.h
 (header file, including function statement, Macro definition, struct
 definition, etc.). If you want to explore how a function is implemented,
-you can look up in the file *LiquidCrystal.cpp*.
+you can look up in the file ``LiquidCrystal.cpp``.
 
 **Displayed characters**
 
@@ -112,11 +112,11 @@ you can look up in the file *LiquidCrystal.cpp*.
 
     char array2[]="hello, world! "; //the string to print on the LCD
 
-These are two character type arrays: *arry1[]* and *array2[]*. The
+These are two character type arrays: ``arry1[]`` and ``array2[]``. The
 contents in the quotation marks ”xxx” are their elements, including 26
-characters in total (spaces counted). *array1[0]* stands for the first
-element in the array, which is a space, and *array1[2]* means the second
-element *S* and so on. So *array1[25]* is the last element (here it's
+characters in total (spaces counted). ``array1[0]`` stands for the first
+element in the array, which is a space, and ``array1[2]`` means the second
+element ``S`` and so on. So ``array1[25]`` is the last element (here it's
 also a space).
 
 **Define the pins of LCD1602**
@@ -125,11 +125,11 @@ also a space).
 
     LiquidCrystal lcd(4, 6, 10, 11, 12, 13);
 
-Define a variable *lcd* of LiquidCrystal type. Here use *lcd* to
-represent *LiquidCrystal* in the following code.
+Define a variable ``lcd`` of LiquidCrystal type. Here use ``lcd`` to
+represent ``LiquidCrystal`` in the following code.
 
-The basic format of the *LiquidCrysral()* function is: LiquidCrystal
-(rs, enable, d4, d5, d6, d7). You can check the *LiquidCrystal.cpp* file
+The basic format of the ``LiquidCrysral()`` function is: LiquidCrystal
+(rs, enable, d4, d5, d6, d7). You can check the ``LiquidCrystal.cpp`` file
 for details.
 
 So this line defines that pin RS is connected to pin 4, the enable pin
@@ -176,7 +176,7 @@ After 26 loops, all the elements in ``array1[]`` have been displayed.
 
     lcd.clear(); //Clears the LCD screen.
 
-Clear the screen with *lcd.clear()* so it won't influence the display
+Clear the screen with ``lcd.clear()`` so it won't influence the display
 next time.
 
 .. code-block:: arduino

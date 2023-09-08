@@ -15,7 +15,7 @@ An LED has two pins. The longer one is the anode, and shorter one, the cathode. 
 
 The formula of the resistance value is as follows:
 
-    R = (Vsupply – VD)/I
+    R = (Vsupply - VD)/I
 
 **R** stands for the resistance value of the current limiting resistor, **Vsupply** for voltage supply, **VD** for voltage drop and **I** for the working current of the LED.
 

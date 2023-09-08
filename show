@@ -49,7 +49,7 @@ def main():
 	else:
 		notice()
 
-if __name__ == "__main__":
+if __name_ == "__main__":
 	try:
 		main()
 	finally:

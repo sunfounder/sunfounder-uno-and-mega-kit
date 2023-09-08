@@ -11,7 +11,7 @@ As we may know, relay is a device which is used to provide connection
 between two or more points or devices in response to the input signal
 applied. In other words, relays provide isolation between the controller
 and the device as devices may work on AC as well as on DC. However, they
-receive signals from a microcontroller which works on DC hence 
+receive signals from a microcontroller which works on DC hence 
 requiring a relay to bridge the gap. Relay is extremely useful when you
 need to control a large amount of current or voltage with small
 electrical signal.

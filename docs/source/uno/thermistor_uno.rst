@@ -47,23 +47,23 @@ measured under 25 degree Celsius.
 
 Here is the relation between the resistance and temperature change:
 
-**R\ T =R\ N exp\ B(1/TK – 1/TN)**   
+**R\ T =R\ N exp\ B(1/TK - 1/TN)**   
 
 **R\ T**\ :sub:`:` resistance of the NTC thermistor when the temperature
-is **T\ K**. 
+is **T\ K**. 
 
 **R\ N:** resistance of the NTC thermistor under the rated temperature
-which is T\ :sub:`N`. 
+which is T\ :sub:`N`. 
 
-**T\ K** is a Kelvin temperature and the unit is K.   
+**T\ K** is a Kelvin temperature and the unit is K.   
 
 **T\ N** is a rated Kelvin temperature; the unit is K, also.
 
 And, beta, here is the material constant of NTC thermistor, also called
-heat sensitivity index.  
+heat sensitivity index.  
 
 exp is short for exponential, an exponential with the base number e,
-which is a natural number and equals 2.7 approximately.    
+which is a natural number and equals 2.7 approximately.    
 
 Note that this relation is an empirical formula. It is accurate only
 when the temperature and resistance are within the effective range.
@@ -71,14 +71,14 @@ when the temperature and resistance are within the effective range.
 Since T\ :sub:`K` =T+273, T is Celsius temperature, the relation between
 resistance and temperature change can be transformed into this:
 
-**R =R\ o exp\ B[1/(T+273) – 1/(To+273)]**
+**R =R\ o exp\ B[1/(T+273) - 1/(To+273)]**
 
 B, short for beta, is a constant. Here it is 4090. **R\ o** is 10k ohms
 and **T\ o** is 25 degrees Celsius. The data can be found in the
 datasheet of thermistor. Again, the above relation can be transformed
 into one to evaluate temperature:
 
-**T= B/[ ln(R/ 10) + (B/ 298) ] – 273** (So **ln** here means natural
+**T= B/[ ln(R/ 10) + (B/ 298) ] - 273** (So **ln** here means natural
 logarithm, a logarithm to the base e)
 
 If we use a resistor with fixed resistance as 10k ohms, we can calculate
@@ -97,14 +97,14 @@ a.
 
 **V=a/205**
 
-Then replace V in the relation *R* = (5 x *10k /V)* - 10k with the
+Then replace V in the relation ``R`` = (5 x ``10k /V)`` - 10k with the
 expression, and we can get this: R=1025 x 10k/a-10k.
 
-Finally replace R in the formula here T= B/[ ln(R/ 10) + (B/ 298) ] –
+Finally replace R in the formula here T= B/[ ln(R/ 10) + (B/ 298) ] -
 273, which is formed just now. Then we at last get the relation for
 temperature as this:
 
-**T =B/[ ln{[ 1025 X 10/a) - 10]/10} 十(B/298)] – 273**
+**T =B/[ ln{[ 1025 X 10/a) - 10]/10} 十(B/298)] - 273**
 
 
 Experimental Procedures
@@ -123,7 +123,7 @@ Experimental Procedures
 
 
 Now, you can see the current temperature displayed both in
-Celsius and Fahrenheit degrees on the LCD1602.
+Celsius and Fahrenheit degrees on the LCD1602.
 
 .. image:: media_uno/image130.jpeg
    :align: center

@@ -39,7 +39,7 @@ reset button. If button 1 is pressed first, the buzzer will beep, the
 corresponding LED will light up and all the other LEDs will go out. If
 you want to start another round, press button 4 to reset.
 
-The schematic diagram：
+The schematic diagram: 
 
 .. image:: media_mega2560/image232.png
     :align: center

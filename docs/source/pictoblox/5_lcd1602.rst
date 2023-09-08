@@ -21,7 +21,7 @@ Build the Circuit
 
 * Connect **K** to GND and **A** to 3.3 V, and then the backlight of the LCD1602 will be turned on. 
 * Connect **VSS** to GND and the LCD1602 to the power source. 
-* Connect **VO** to the middle pin of the potentiometer – with it you can adjust the contrast of the screen display. 
+* Connect **VO** to the middle pin of the potentiometer - with it you can adjust the contrast of the screen display. 
 * Connect **RS** to D4 and R/W pin to GND, which means then you can write characters to the LCD1602. 
 * Connect **E** to pin6 and the characters displayed on the LCD1602 are controlled by D4-D7. For programming, it is optimized by calling function libraries.
 

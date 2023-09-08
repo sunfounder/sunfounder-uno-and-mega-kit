@@ -39,7 +39,7 @@ pressed again, the process will repeat.
 Experimental Procedures
 ---------------------------
 
-**Step 1:** Build the circuit.
+**Step 1:** Build the circuit.
 
 .. image:: media_uno/image196.png
 
@@ -164,7 +164,7 @@ If yes, run the code below.
 
     }
 
-This function is to display the number in *dataArray[]* on the 7-segment
+This function is to display the number in ``dataArray[]`` on the 7-segment
 display.
 
 

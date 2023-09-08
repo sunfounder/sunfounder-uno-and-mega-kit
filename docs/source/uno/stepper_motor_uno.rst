@@ -102,7 +102,7 @@ attached to your Arduino board.
 
 **steps:** The number of steps in one revolution of your motor. If your
 motor gives the number of degrees per step, divide that number into 360
-to get the number of steps (e.g. 360 / 3.6 gives 100 steps). (*int*).
+to get the number of steps (e.g. 360 / 3.6 gives 100 steps). (``int``).
 
 **Code Analysis** **21-2** **setSpeed() function**
 

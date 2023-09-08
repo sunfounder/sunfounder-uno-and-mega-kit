@@ -7,7 +7,7 @@ Lesson 2 Flowing LED Lights
 Introduction
 ----------------
 
-In this lesson, we will conduct a simple yet interesting experiment –
+In this lesson, we will conduct a simple yet interesting experiment -
 using LEDs to create flowing LED lights. As the name suggests, these
 eight LEDs in a row successively light up and dim one after another,
 just like flowing water.
@@ -40,7 +40,7 @@ lights.
 Experimental Procedures
 ---------------------------
 
-**Step 1:** Build the circuit.
+**Step 1:** Build the circuit.
 
 **Step 2:** Open the code file.
 
@@ -91,7 +91,7 @@ Code Analysis
 **for (initialization; condition; increment) { //statement(s); }:** The
 for statement is used to repeat a block of statements enclosed in curly
 braces.The **initialization** happens first and exactly once. Each time
-through the loop, the **condition** is tested; if it’s true, the
+through the loop, the **condition** is tested; if it's true, the
 statement block, and the **increment** is executed, then the
 **condition** is tested again. When the **condition** becomes false, the
 loop ends.

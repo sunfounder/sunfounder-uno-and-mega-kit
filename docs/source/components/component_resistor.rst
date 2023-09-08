@@ -1,3 +1,5 @@
+.. _cpn_resistor:
+
 Resistor
 ============
 
@@ -56,7 +58,7 @@ The tip is that the gap between the 4th and 5th band will be comparatively large
 Therefore, you can observe the gap between the two chromatic bands at one end of the resistor; 
 if it's larger than any other band gaps, then you can read from the opposite side. 
 
-Let’s see how to read the resistance value of a 5-band resistor as shown below.
+Let's see how to read the resistance value of a 5-band resistor as shown below.
 
 .. image:: img/220ohm.jpg
     :width: 500

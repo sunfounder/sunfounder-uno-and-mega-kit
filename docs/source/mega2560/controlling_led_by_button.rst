@@ -39,7 +39,7 @@ the same time. Then release the button (pin 12 changes to LOW) and pin
 13 is Low. So we will see the LED lights up and goes out alternately as
 the button is pressed and released.
 
-The schematic diagram：
+The schematic diagram: 
 
 .. image:: media_mega2560/mega07.png
     :align: center
@@ -85,7 +85,7 @@ Code Analysis
     int buttonState = 0; // variable for reading the pushbutton status
 
 Connect the button to pin 12. LED has been connected to pin 13. Define a
-variable *buttonState* to restore the state of the button.
+variable ``buttonState`` to restore the state of the button.
 
 **Set the input and output status of the pins**
 
@@ -96,7 +96,7 @@ variable *buttonState* to restore the state of the button.
     pinMode(ledPin, OUTPUT); //initialize the led pin as output
 
 We need to know the status of the button in this experiment, so here set
-the *buttonPin* as INPUT; to set HIGH/LOW of the LED, we set *LedPin* as
+the ``buttonPin`` as INPUT; to set HIGH/LOW of the LED, we set ``LedPin`` as
 OUTPUT.
 
 **Read the status of the button**
@@ -106,10 +106,10 @@ OUTPUT.
     buttonState = digitalRead(buttonPin);
 
 buttonPin(Pin12) is a digital pin; here is to read the value of the
-button and store it in *buttonState*.
+button and store it in ``buttonState``.
 
 **digitalRead (Pin)**: Reads the value from a specified digital pin,
-either HIGH or LOW.
+either HIGH or LOW.
 
 **Press the button to make the buzzer sound**
 
@@ -131,7 +131,7 @@ either HIGH or LOW.
 
     }
 
-In this part, when the **buttonState** is High level, write *ledPin* as
+In this part, when the **buttonState** is High level, write ``ledPin`` as
 High and the LED will be turned on. As one end of the button has been
 connected to 5V and the other end to pin 12, when the button is pressed,
 pin 12 is 5V (HIGH). And then determine with the ``if (conditional)``; if

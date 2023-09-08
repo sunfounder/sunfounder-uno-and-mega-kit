@@ -8,25 +8,16 @@ electronics, you'll learn through building several creative projects.
 Including a selection of the most common and useful electronic
 components, this kit will help you "control" the physical world.
 
-If you want to learn another projects which we don’t have, please feel free to send Email and we will update to our online tutorials as soon as possible, any suggestions are welcomed.
-Here is the Email: cs@sunfounder.com.
+If you want to learn another projects which we don't have, please feel free to send Email and we will update to our online tutorials as soon as possible, any suggestions are welcomed.
+Here is the Email: service@sunfounder.com.
 
 .. toctree::
    :maxdepth: 2
 
+   About this Kit <self>
    components_list
    components/component_introduction
-   download_code
-
-.. toctree::
-   :maxdepth: 1
-
-   install_and_introduce_arduino_ide
-   add_libraries
-
-.. toctree::
-   :maxdepth: 2
-
+   arduino_start/get_start
    mega2560/for_mega2560_user
    uno/for_uno_user
 

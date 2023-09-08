@@ -6,7 +6,7 @@ Lesson 2 Flowing LED Lights
 Introduction
 -----------------
 
-In this lesson, we will conduct a simple yet interesting experiment –
+In this lesson, we will conduct a simple yet interesting experiment -
 using LEDs to create flowing LED lights. As the name suggests, these
 eight LEDs in a row successively light up and dim one after another,
 just like flowing water.
@@ -44,7 +44,7 @@ The schematic diagram:
 Experimental Procedures
 ------------------------------
 
-**Step 1:** Build the circuit
+**Step 1:** Build the circuit
 
 .. image:: media_mega2560/image65.png
     :align: center
@@ -92,12 +92,12 @@ Code Analysis
 
     }
 
-**for (initialization; condition; increment) { //statement(s); }:** The
+``for (initialization; condition; increment) { //statement(s); }:`` The
 for statement is used to repeat a block of statements enclosed in curly
-braces.The **initialization** happens first and exactly once. Each time
-through the loop, the **condition** is tested; if it’s true, the
-statement block, and the **increment** is executed, then the
-**condition** is tested again. When the **condition** becomes false, the
+braces.The ``initialization`` happens first and exactly once. Each time
+through the loop, the ``condition`` is tested; if it's true, the
+statement block, and the ``increment`` is executed, then the
+``condition`` is tested again. When the ``condition`` becomes false, the
 loop ends.
 
 **Set flowing led lights**
@@ -107,27 +107,23 @@ Use the for() statement to set pin2-pin9 to a high level inturn.
 .. code-block:: arduino
 
     for (int a = 2; a <= 9; a++)
-
+    
     {
-
+    
         digitalWrite(a, HIGH); //turn this led on
-
+    
         delay(100); //wait for 100 ms
-
+    
     }
-
+    
 Then let the 8 LEDs go out from pin9 to pin2 in turn.
 
 .. code-block:: arduino
 
-    for (int a = 9; a <= 2; a--)
-
-    {
-
-        digitalWrite(a, LOW); //turn this led on
-
-        delay(100); //wait for 100 ms
-
+    for (int a = 9; a <= 2; a--)    
+    {   
+        digitalWrite(a, LOW); //turn this led on    
+        delay(100); //wait for 100 ms   
     }
 
 Finally, use the same way to turn on the 8 LEDs from pin9 to pin2 in
@@ -135,24 +131,15 @@ turn and let them go out in turn.
 
 .. code-block:: arduino
 
-    for (int a = 9; a <= 2; a--)
-
-    {
-
-        digitalWrite(a, HIGH); //turn this led on
-
-        delay(100); //wait for 100 ms
-
-    }
-
-    for (int a = 2; a <= 9; a++)
-
-    {
-
-        digitalWrite(a, LOW); //turn this led on
-
-        delay(100); //wait for 100 ms
-
+    for (int a = 9; a <= 2; a--)    
+    {   
+        digitalWrite(a, HIGH); //turn this led on   
+        delay(100); //wait for 100 ms   
+    }   
+    for (int a = 2; a <= 9; a++)    
+    {   
+        digitalWrite(a, LOW); //turn this led on    
+        delay(100); //wait for 100 ms   
     }
 
 

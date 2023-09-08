@@ -15,6 +15,12 @@ Quick Links:
 
 <a id="update"></a>
 ## Update:
+
+2019-08-28:
+ - Main modifications to install Arduino IDE, related usage tutorials, and library installation.
+ - Add .yaml file.
+ - Modify conf.py file.
+
 2019-08-28:
  - New Release
 

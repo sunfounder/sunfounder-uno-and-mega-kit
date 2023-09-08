@@ -43,7 +43,7 @@ pin 10 is Low and pin 9 is High, it rotates in the opposite direction.
 Experimental Procedures
 ---------------------------
 
-**Step 1:** Build the circuit.
+**Step 1:** Build the circuit.
 
 .. image:: media_uno/image191.png
    :align: center

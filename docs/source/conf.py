@@ -17,9 +17,10 @@
 
 # -- Project information -----------------------------------------------------
 import sphinx_rtd_theme
+import time  
 
 project = 'SunFounder uno-and-mega-kit'
-copyright = '2021, SunFounder'
+copyright = f'{time.localtime().tm_year}, SunFounder'
 author = 'www.sunfounder.com'
 
 
@@ -87,3 +88,33 @@ language = 'en' # Before running make html, set the language.
 locale_dirs = ['locale/'] # .po files for other languages are placed in the locale/ folder.
 
 gettext_compact = False # Support for generating the contents of the folders inside source/ into other languages.
+
+
+# open link in a new window
+
+rst_epilog = """
+
+
+.. |link_download_arduino| raw:: html
+
+    <a href="https://www.arduino.cc/en/software#future-version-of-the-arduino-ide" target="_blank">Arduino IDE 2.0.0 Page</a>
+
+
+.. |link_ascii| raw:: html
+
+    <a href="https://www.asciitable.com/" target="_blank">ASCII table of characters</a>
+
+.. |link_video_scott| raw:: html
+
+    <a href="https://www.circuitbasics.com/ultimate-guide-to-the-arduino/" target="_blank">Ultimate Guide to Arduino</a>
+
+.. |link_video_roboja| raw:: html
+
+    <a href="https://www.youtube.com/playlist?list=PLHvJ4bw0xno5CYSnnLbPzdJYw7vXoNORj" target="_blank">Video Tutorials for Car Projects</a>
+
+.. |link_video_roboja_iot| raw:: html
+
+    <a href="hhttps://www.youtube.com/watch?v=qE1bkgziGXg&list=PLHvJ4bw0xno7Cjq3eRMIZo5YBNrL6NKgw&index=31" target="_blank">Video Tutorials for Car Projects</a>
+
+
+"""

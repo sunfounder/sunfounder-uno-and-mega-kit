@@ -49,7 +49,7 @@ Experimental Procedures
 **Step 4:** Upload the sketch to the board.
 
 .. Note::
-    If you receive the following error, it is because you didn’t add a
+    If you receive the following error, it is because you didn't add a
     library named NewPing, please refer to :ref:`Add Libraries`.
 
     .. image:: media_mega2560/image183.png

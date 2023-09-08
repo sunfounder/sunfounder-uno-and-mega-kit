@@ -34,7 +34,7 @@ current gets through the current limiting resistor to the anode of the
 LED. And since the cathode of the LED is connected to GND, the LED will
 light up. When pin 9 outputs low level, the LED goes out.
 
-The schematic diagram：
+The schematic diagram: 
 
 .. image:: media_mega2560/image53.png
     :align: center
@@ -53,20 +53,19 @@ Then plug the board into the computer with a 5V USB cable.
     :align: center
 
 
-**Step 2**: Open the Lesson_1_Blinking_LED.ino code file in the path of
-*SunFounder Mega Kit\\Code\\Lesson_1_Blinking_LED*
+**Step 2**: Open the ``Lesson_1_Blinking_LED.ino`` code file in the path of
+``SunFounder Mega Kit/Code/Lesson_1_Blinking_LED``
 
 **Step 3:** Select the Board and Port
 
 Before uploading the code, you need to select the **Board** and
-**Port**. Click **Tools** ->\ **Board** and select **Arduino/Genuino
+**Port**. Click **Tools** -> **Board** and select **Arduino/Genuino
 Mega or Mega 2560**.
 
 .. image:: media_mega2560/image55.png
     :align: center
 
-
-Then select **Tools** ->\ **Port**. Your port should be different from
+Then select **Tools** -> **Port**. Your port should be different from
 mine.
 
 .. image:: media_mega2560/image56.png
@@ -110,20 +109,20 @@ Code Analysis
     const int ledPin = 9; //the number of the LED pin
 
 You should define every variable before using in case of making
-mistakes. This line defines a constant variable *ledPin* for the pin 9.
-In the following code, *ledPin* stands for pin 9. You can also directly
+mistakes. This line defines a constant variable ``ledPin`` for the pin 9.
+In the following code, ``ledPin`` stands for pin 9. You can also directly
 use pin 9 instead.
 
 **setup() function**
 
-A typical Arduino program consists of two subprograms: *setup()* for
+A typical Arduino program consists of two subprograms: ``setup()`` for
 initialization and loop() which contains the main body of the program.
 
-The *setup()* function is usually used to initialize the digital pins
+The ``setup()`` function is usually used to initialize the digital pins
 and set them as input or output as well as the baud rate of the serial
 communication.
 
-The *loop()* function contains what the MCU will run circularly. It will
+The ``loop()`` function contains what the MCU will run circularly. It will
 not stop unless something happens like power outages.
 
 .. code-block:: arduino
@@ -136,9 +135,9 @@ not stop unless something happens like power outages.
 
     }
 
-The setup() function here sets the *ledPin* as OUTPUT.
+The setup() function here sets the ``ledPin`` as OUTPUT.
 
-**pinMode(Pin)**: Configures the specified pin to behave either as an
+``pinMode(Pin)``: Configures the specified pin to behave either as an
 input or an output.
 
 The void before the setup means that this function will not return a
@@ -163,16 +162,16 @@ function. Otherwise there will be errors in compiling.
 
     }
 
-This program is to set *ledPin* as HIGH to turn on the LED, with a delay
-of 500ms. Set *ledPin* as LOW to turn the LED off and also delay 500ms.
+This program is to set ``ledPin`` as HIGH to turn on the LED, with a delay
+of 500ms. Set ``ledPin`` as LOW to turn the LED off and also delay 500ms.
 The MCU will run this program repeatedly and you will see that the LED
 brightens for 500ms and then dims for 500ms. This on/off alternation
 will not stop until the control board runs out of energy.
 
-**digitWrite**\ (Pin): Write
-a `HIGH <https://www.arduino.cc/en/Reference/Constants>`__ or
-a `LOW <https://www.arduino.cc/en/Reference/Constants>`__ value to a
-digital pin. When this pin has been set as output in *pinModel()*, its
+``digitWrite (Pin)``: Write
+a `HIGH <https://www.arduino.cc/en/Reference/Constants>`_ or
+a `LOW <https://www.arduino.cc/en/Reference/Constants>`_ value to a
+digital pin. When this pin has been set as output in ``pinModel()``, its
 voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V
 boards) for HIGH, 0V (ground) for LOW.
 
@@ -180,6 +179,6 @@ Experiment Summary
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Through this experiment, you have learned how to turn on an LED. You can
-also change the blinking frequency of the LED by changing the *num*
-value in the delay function *delay (num)*. For example, change it to
-**delay (250)** and you will find that the LED blinks more quickly.
+also change the blinking frequency of the LED by changing the ``num``
+value in the delay function ``delay (num)``. For example, change it to
+``delay (250)`` and you will find that the LED blinks more quickly.

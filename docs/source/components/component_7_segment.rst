@@ -1,7 +1,7 @@
 7-segment Display
 ======================
 A 7-segment display is an 8-shaped component which packages 7 LEDs. Each
-LED is called a segment – when energized, one segment forms part of a
+LED is called a segment - when energized, one segment forms part of a
 numeral (both decimal and hexadecimal) to be displayed. An additional
 8th LED is sometimes used within the same package thus allowing the
 indication of a decimal point (DP) when two or more 7-segment displays
@@ -35,7 +35,7 @@ resistor to forward bias the anode of the segment.
 .. image:: img/image203.jpeg
    :align: center
 
-**Common Anode 7-Segment Display**
+**Common Anode 7-Segment Display**
 
 In a common anode display, the anodes of all the LED segments are
 connected to the logic "1". Then an individual segment (a-g) is

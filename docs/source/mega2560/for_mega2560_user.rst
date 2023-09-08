@@ -1,5 +1,10 @@
 For Mega2560 User
 ============================
+Here is the complete code package for this Kit. You can click on the following link to download it:
+
+* :download:`SunFounder Uno Mega Kit Code<https://github.com/sunfounder/sunfounder-uno-and-mega-kit/archive/refs/heads/master.zip>`
+
+Once the download is complete, unzip the file and open the relevant example code or project files in the corresponding software. This will allow you to browse and utilize all the code and resources provided by the kit.
 
 
 .. toctree::

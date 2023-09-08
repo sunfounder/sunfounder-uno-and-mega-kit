@@ -73,7 +73,7 @@ Code Analysis
 
     Servo myservo; //create servo object to control a servo
 
-With the *Servo.h* file included, you can call the functions in this
+With the ``Servo.h`` file included, you can call the functions in this
 file later. Servo is a built-in library in the Arduino IDE. You can find
 the Servo folder under the installation path *C:\Program
 Files\Arduino\libraries*.

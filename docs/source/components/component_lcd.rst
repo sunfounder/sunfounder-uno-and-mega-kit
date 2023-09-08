@@ -25,7 +25,7 @@ Therefore, the four-port connection is used here for better application.
 * **VSS:** connected to ground
 * **VDD:** connected to a +5V power supply
 * **VO:** to adjust the contrast
-* **RS:** A register select pin that controls where in the LCD’s memory you are writing data to. You can select either the data register, which holds what goes on the screen, or an instruction register, which is where the LCD’s controller looks for instructions on what to do next.
+* **RS:** A register select pin that controls where in the LCD's memory you are writing data to. You can select either the data register, which holds what goes on the screen, or an instruction register, which is where the LCD's controller looks for instructions on what to do next.
 * **R/W:** A Read/Write pin to select between reading and writing mode
 * **E:** An enabling pin that reads the information when High level (1) is received. The instructions are run when the signal changes from High level to Low level.
 * **D0-D7:** to read and write data

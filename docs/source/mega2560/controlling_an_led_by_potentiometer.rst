@@ -7,7 +7,7 @@ Lesson 8 Controlling an LED by Potentiometer
 Introduction
 -----------------------
 
-In this lesson, let’s see how to change the luminance of an LED by a
+In this lesson, let's see how to change the luminance of an LED by a
 potentiometer, and receive the data of the potentiometer in Serial
 Monitor to see its value change.
 
@@ -124,7 +124,7 @@ Code Analysis
 
     inputValue = analogRead(analogPin);//read the value from the potentiometer
 
-This line is to store the values A0 has read in the *inputValue* which
+This line is to store the values A0 has read in the ``inputValue`` which
 has been defined before.
 
 **analog Read()** reads the value from the specified analog pin. This
@@ -150,15 +150,15 @@ values between 0 and 1023.
     outputValue = map(inputValue, 0, 1023, 0, 255); //Convert from 0-1023 proportional to the number of a number of from 0 to 255
 
 ``map(value, fromLow, fromHigh, toLow, toHigh)`` re-maps a number from
-one range to another. That is, a **value** of **Fromm** would get mapped
-to one of **to Low**, and a value of **from High** to one of **thigh**,
+one range to another. That is, a **value** of **Fromm** would get mapped
+to one of **to Low**, and a value of **from High** to one of **thigh**,
 values in-between to values in-between, etc.
 
-As the range of *led Pin* (pin 9) is 0-255, we need to map 0-1023 with
+As the range of ``led Pin`` (pin 9) is 0-255, we need to map 0-1023 with
 0-255.
 
 Display the output value in Serial Monitor in the same way. If you are
-not so clear about the *map()* functions, you can observe the data in
+not so clear about the ``map()`` functions, you can observe the data in
 the Serial Monitor and analyze it.
 
 .. code-block:: arduino
@@ -173,12 +173,12 @@ the Serial Monitor and analyze it.
 
     analogWrite(ledPin, outputValue); //turn the LED on depending on the output value
 
-Write the output value to *led Pin* and you will see that the luminance
+Write the output value to ``led Pin`` and you will see that the luminance
 of LED changes with your spinning of the potentiometer knob.
 
 **analog Write()**: Writes an analog value (PWM wave) to a pin. It has
 nothing to do with an analog pin, but is just for PWM pins. You do not
-need to call the *incommode()* to set the pin as output before calling
+need to call the ``incommode()`` to set the pin as output before calling
 ``analog Write()``.
 
 Experiment Summary

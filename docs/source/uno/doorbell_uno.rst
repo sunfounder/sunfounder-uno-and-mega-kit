@@ -78,7 +78,7 @@ Code Analysis
     int buttonState = 0; //variable for reading the pushbutton status
 
 Connect the button to pin 2 and buzzer to pin 8. Define a variable
-*buttonState* to restore the state of the button.
+``buttonState`` to restore the state of the button.
 
 **Set the input and output status of the pins**
 
@@ -95,8 +95,8 @@ Connect the button to pin 2 and buzzer to pin 8. Define a variable
     }
 
 We need to know the status of the button in this experiment, so here set
-the *buttonPin* as INPUT; to set HIGH/LOW of the buzzer, we set
-*buzzerPin* as OUTPUT.
+the ``buttonPin`` as INPUT; to set HIGH/LOW of the buzzer, we set
+``buzzerPin`` as OUTPUT.
 
 **Read the status of the button**
 
@@ -108,7 +108,7 @@ buttonPin(Pin2) is a digital pin; here is to read the value of the
 button and store it in ``buttonState``.
 
 **digitalRead (Pin)**: Reads the value from a specified digital pin,
-either HIGH or LOW.
+either HIGH or LOW.
 
 **Press the button to make the buzzer sound**
 

@@ -55,7 +55,7 @@ The schematic diagram:
 Experimental Procedures
 -------------------------------
 
-**Step 1:** Build the circuit
+**Step 1:** Build the circuit
 
 .. image:: media_mega2560/image240.png
 

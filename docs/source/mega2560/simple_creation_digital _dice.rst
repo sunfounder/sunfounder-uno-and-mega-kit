@@ -42,7 +42,7 @@ The schematic diagram:
 Experimental Procedures
 ------------------------------
 
-**Step 1:** Build the circuit
+**Step 1:** Build the circuit
 
 .. image:: media_mega2560/image211.png
    :align: center
@@ -169,5 +169,5 @@ If yes, run the code below.
 
     }
 
-This function is to display the number in *dataArray[]* on the 7-segment
+This function is to display the number in ``dataArray[]`` on the 7-segment
 display.

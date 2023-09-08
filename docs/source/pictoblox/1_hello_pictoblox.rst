@@ -45,7 +45,7 @@ At the same time, Arduino Uno related palettes, such as Arduino Uno, Actuators, 
 
 **2. Upload Firmware**
 
-Since we’re going to work in the Stage mode, we must upload the firmware to the board. It will ensure real-time communication between the board and the computer. Uploading the firmware it is a one-time process. To do so, click on the Upload Firmware button.
+Since we're going to work in the Stage mode, we must upload the firmware to the board. It will ensure real-time communication between the board and the computer. Uploading the firmware it is a one-time process. To do so, click on the Upload Firmware button.
 
 After waiting for a while, the upload success message will appear.
 

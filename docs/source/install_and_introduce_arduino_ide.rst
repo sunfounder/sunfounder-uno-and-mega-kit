@@ -23,7 +23,7 @@ and FAQ.pdf <https://github.com/sunfounder/sunfounder-uno-and-mega-kit/blob/mast
 The code in this kit is written based on Arduino, so you need to install
 the IDE first. Skip it if you have done this.
 
-Now go to `arduino.cc <http://www.arduino.cc>`__ and click SOFTWARE ->
+Now go to `arduino.cc <http://www.arduino.cc>`_ and click SOFTWARE ->
 DOWNLOADs. on the page, check the software list on the right side.
 
 .. image:: img/image14.png
@@ -60,7 +60,7 @@ Then click Install.
    :align: center
 
 **Step 5:** Meanwhile, it will prompts install the needed drivers,
-please select the ‘Always trust software from “Arduino LLC” ’. After the
+please select the ‘Always trust software from “Arduino LLC” '. After the
 installation is done, click **Close**.
 
 .. Note::
@@ -163,10 +163,10 @@ editing operations like Cut, Copy, Paste, Find, and so on, with their
 corresponding shortcuts.
 
 9. **Sketch**: Includes operations like Verify, Upload, Add files, etc.
-More important function is Include Library – where you can add
+More important function is Include Library - where you can add
 libraries.
 
-10. **Tool**: Includes some tools – the most frequently used Board (the
+10. **Tool**: Includes some tools - the most frequently used Board (the
 board you use) and Port (the port your board is at). Every time you want
 to upload the code, you need to select or check them.
 

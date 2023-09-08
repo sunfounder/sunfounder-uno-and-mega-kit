@@ -25,7 +25,7 @@ schematic diagram of a four-phase reactive stepper motor:
 .. image:: img/image219.jpeg
    :align: center
 
-In the figure, in the middle of the motor is a rotor – a gear-shaped
+In the figure, in the middle of the motor is a rotor - a gear-shaped
 permanent magnet. Around the rotor, 0 to 5 are teeth. Then more outside,
 there are 8 magnetic poles, with each two opposite ones connected by
 coil winding. So they form four pairs from A to D, which is called a

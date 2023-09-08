@@ -11,7 +11,7 @@ way is to connect its 8 pins directly to eight ports on the Uno board,
 which we have done previously. Or you can connect the 74HC595 to three
 ports of the UNO board and then the 7-segment display to the 74HC595. In
 this experiment, we will use the latter. By this way, we can save five
-ports – considering the Uno board’s limited ports, this is very
+ports - considering the Uno board's limited ports, this is very
 important. Now let's get started!
 
 Components
@@ -68,7 +68,7 @@ DP        Q0
 \         ST          12
 \         SH          8
 \         MR          5V
-\         Q7’         N/C
+\         Q7'         N/C
 \         GND         GND
 -                     GND
 ========= =========== ===========
@@ -139,20 +139,20 @@ calculate other characters similarly.
 
     }
 
-Set *STcp* as low level first and then high level. It will generate a
+Set ``STcp`` as low level first and then high level. It will generate a
 rising edge pulse of STcp.
 
 **shiftOut()** is used to shift out a byte of data one bit at a time,
-which means to shift a byte of data in *dataArray[num]* to the shifting
-register with the DS pin. *MSBFIRST* means to move from high bits.
+which means to shift a byte of data in ``dataArray[num]`` to the shifting
+register with the DS pin. ``MSBFIRST`` means to move from high bits.
 
-After *digitalWrite(STcp,HIGH)* is run, the STcp will be at the rising
+After ``digitalWrite(STcp,HIGH)`` is run, the STcp will be at the rising
 edge. At this time, the data in the shift register will be moved to the
 memory register.
 
 A byte of data will be transferred into the memory register after 8
 times. Then the data of memory register is output to the bus (Q0-Q7).
 You will see a character is displayed on the 7-segment. Then delay for
-1000ms. After that line, go back to *for()*. The loop repeats until all
+1000ms. After that line, go back to ``for()``. The loop repeats until all
 the characters are displayed in the 7-segment display one by one after
 16 times.

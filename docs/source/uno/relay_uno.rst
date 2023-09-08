@@ -46,7 +46,7 @@ When pin 8 is given a Low level, the LED will stay dim.
 .. image:: media_uno/image87.png
 
 
-**Function of the freewheeling diode**: When the voltage input changes
+**Function of the freewheeling diode**: When the voltage input changes
 from High (5V) to Low (0V), the transistor changes from saturation
 (three working conditions: amplification, saturation, and cut-off) to
 cut-off, the current in the coil suddenly has no way to flow through. At

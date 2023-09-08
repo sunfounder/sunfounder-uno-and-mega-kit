@@ -6,7 +6,7 @@ DC Motor
 
 This is a 3V DC motor. When you give a high level and a low level to each of the 2 terminals, it will rotate.
 
-* **Size**: 25*20*15MM
+* **Size**: 25x20x15MM
 * **Operation Voltage**: 1-6V
 * **Free-run Current** (3V): 70m
 * **A Free-run Speed** (3V): 13000RPM
