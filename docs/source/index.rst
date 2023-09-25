@@ -14,11 +14,12 @@ SunFounder Mega2560/UNO Kit
 
 如果您想学习我们没有的其他项目，请随时发送电子邮件，我们将尽快更新我们的在线教程，欢迎任何建议。
 
-这是电子邮件：cs@sunfounder.com 
+这是电子邮件：service@sunfounder.com。 
 
 .. toctree::
    :maxdepth: 2
 
+   About this Kit <self>
    components_list
    components/component_introduction
 

@@ -17,9 +17,10 @@
 
 # -- Project information -----------------------------------------------------
 import sphinx_rtd_theme
+import time  ###
 
 project = 'SunFounder uno-and-mega-kit'
-copyright = '2021, SunFounder'
+copyright = f'{time.localtime().tm_year}, SunFounder'  ###
 author = 'www.sunfounder.com'
 
 
@@ -53,6 +54,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 html_js_files = [
     'https://ezblock.cc/readDocFile/topHead.js',
+    './lang.js', # new
 ]
 html_css_files = [
     'https://ezblock.cc/readDocFile/topHead.css',
