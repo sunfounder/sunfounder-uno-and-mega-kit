@@ -19,7 +19,7 @@ LEDs to make a quiz buzzer system.
 Components
 -------------
 
-.. image:: media_mega2560/mega34.png
+.. image:: img/mega34.png
     :align: center
 
 
@@ -41,7 +41,7 @@ you want to start another round, press button 4 to reset.
 
 The schematic diagram: 
 
-.. image:: media_mega2560/image232.png
+.. image:: img/image232.png
     :align: center
 
 
@@ -50,7 +50,7 @@ Experimental Procedures
 
 **Step 1:**\ Build the circuit
 
-.. image:: media_mega2560/image233.png
+.. image:: img/image233.png
 
 **Step 2:** Open the code file.
 
@@ -62,7 +62,7 @@ Now, first press button 4 to start. If you press button 1 first, you
 will see the corresponding LED light up and the buzzer will beep. Then
 press button 4 again to reset before you press other buttons.
 
-.. image:: media_mega2560/image234.jpeg
+.. image:: img/image234.jpeg
 
 Code
 --------

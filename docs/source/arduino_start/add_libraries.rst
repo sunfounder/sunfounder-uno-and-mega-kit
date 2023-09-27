@@ -1,53 +1,32 @@
 
+.. _add_libraries_ar:
+
 How to add libraries? (Important)
 ======================================
 
-Download the Code
-------------------------------
-
-Download the relevant code from the link below.
-
-* :download:`SunFounder Uno Mega Kit Code <https://github.com/sunfounder/sunfounder-uno-and-mega-kit/archive/refs/heads/master.zip>`
+A library is a collection of pre-written code or functions that extend the capabilities of the Arduino IDE. Libraries provide ready-to-use code for various functionalities, allowing you to save time and effort in coding complex features.
 
 
-* Or check out the code at `SunFounder Uno Mega Kit - GitHub <https://github.com/sunfounder/sunfounder-uno-and-mega-kit>`_
+Many libraries are available directly through the Arduino Library Manager. You can access the Library Manager by following these steps:
 
-.. _add_libraries_ar:
+#. In the **Library Manager**, you can search for the desired library by name or browse through different categories.
 
-Add libraries
-----------------------
-A library, gathering some function definitions and header files, usually
-contains two files: .h (header file, including function statement, Macro
-definition, constructor definition, etc.) and .cpp (execution file, with
-function implementation, variable definition, and so on). When you need
-to use a function in some library, you just need to add a header file
-(e.g. #include <dht.h>), and then call that function. This can make your
-code more concise. If you don't want to use the library, you can also
-write that function definition directly. Though as a result, the code
-will be long and inconvenient to read.
+   .. note::
 
-Some libraries are already built in the Arduino IDE, when some others
-may need to be added. So now let's see how to add them.
+      In projects where library installation is required, there will be prompts indicating which libraries to install. Follow the instructions provided, such as "The DHT sensor library library is used here, you can install it from the Library Manager." Simply install the recommended libraries as prompted.
 
+   .. image:: img/install_lib3.png
 
-#. Open the Arduino IDE and go to **Sketch** -> **Include Library** -> **Add .ZIP Library**.
+#. Once you find the library you want to install, click on it and then click the **Install** button.
 
-   .. image:: img/a2dp_add_zip.png
+   .. image:: img/install_lib2.png
 
-#. Navigate to the directory where the library files are located, such as the ``sunfounder-uno-and-mega-kit\SunFounder Mega Kit\Library`` folder, and select the desired library file, like ``Dht.zip``. Then, click **Open**.
-
-   .. image:: img/a2dp_choose.png
-
-#. After a short while, you will receive a notification indicating a successful installation.
-
-   .. image:: img/a2dp_success.png
-
-#. Repeat the same process to add the other libraries.
+#. The Arduino IDE will automatically download and install the library for you.
 
 
 .. note::
 
-   The libraries installed can be found in the default library directory of the Arduino IDE, which is usually located at ``C:\Users\xxx\Documents\Arduino\libraries``.
+   The libraries installed using either of the above methods can be found in the default library directory of the Arduino IDE, which is usually located at ``C:\Users\xxx\Documents\Arduino\libraries``.
 
    If your library directory is different, you can check it by going to **File** -> **Preferences**.
 

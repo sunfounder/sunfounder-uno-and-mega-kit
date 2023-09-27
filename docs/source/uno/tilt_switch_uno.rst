@@ -12,7 +12,7 @@ used to detect inclinations of a small angle.
 Components
 --------------
 
-.. image:: media_uno/uno07.png
+.. image:: img/uno07.png
     :align: center
 
 
@@ -25,7 +25,7 @@ Components
 Schematic Diagram
 ---------------------
 
-.. image:: media_uno/image76.png
+.. image:: img/image76.png
 
 
 Experimental Procedures
@@ -33,7 +33,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit.
 
-.. image:: media_uno/image77.png
+.. image:: img/image77.png
 
 
 **Step 2:** Open the code file.
@@ -45,7 +45,7 @@ Experimental Procedures
 Now, tilt the switch, and the LED attached to pin 13 on Uno board will
 light up.
 
-.. image:: media_uno/image78.jpeg
+.. image:: img/image78.jpeg
 
 
 Code

@@ -6,7 +6,11 @@ The following projects are written in order of programming difficulty, so we rec
 
 In each project, there are very detailed steps to teach you how to build the circuit and how to program it step by step to achieve the final result.
 
-Of course, if you want to open the script directly to run it, you can refer to :ref:`Download the Code` and we have uploaded all the code to github.
+Of course, you can also first download the complete code package and then open the corresponding script in PictoBlox to run it.
+
+Here is the complete code package for this Kit.
+
+* :download:`SunFounder Uno Mega Kit Code<https://github.com/sunfounder/sunfounder-uno-and-mega-kit/archive/refs/heads/master.zip>`
 
 Once the download is complete, unzip it. Refer to :ref:`Stage Mode` to run individual scripts directly.
 

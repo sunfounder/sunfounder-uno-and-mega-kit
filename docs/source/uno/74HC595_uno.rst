@@ -17,7 +17,7 @@ important. Now let's get started!
 Components
 ----------------
 
-.. image:: media_uno/uno22.png
+.. image:: img/uno22.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -42,7 +42,7 @@ memory register after 8 times. Then the data in the memory register is
 output to the bus (Q0-Q7). So the 16 characters are displayed in the
 7-segment in turn.
 
-.. image:: media_uno/image164.png
+.. image:: img/image164.png
    :align: center
 
 
@@ -73,7 +73,7 @@ DP        Q0
 -                     GND
 ========= =========== ===========
 
-.. image:: media_uno/image165.png
+.. image:: img/image165.png
    :align: center
 
 **Step 2:** Open the code file.
@@ -84,7 +84,7 @@ DP        Q0
 
 You should now see the 7-segment display from 0 to 9 and A to F.
 
-.. image:: media_uno/image166.jpeg
+.. image:: img/image166.jpeg
    :align: center
 
 Code

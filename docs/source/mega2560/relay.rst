@@ -19,7 +19,7 @@ electrical signal.
 Components
 ------------------
 
-.. image:: media_mega2560/mega12.png
+.. image:: img/mega12.png
     :align: center
 
     
@@ -46,7 +46,7 @@ given to pin 8, the transistor is energized, thus making the coil of the
 relay conductive. Then its normally open contact is closed, and the LED
 will light up. When pin 8 is given a Low level, the LED will stay dim.
 
-.. image:: media_mega2560/mega13.png
+.. image:: img/mega13.png
 
 **Function of the freewheeling diode**
 
@@ -70,7 +70,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit
 
-.. image:: media_mega2560/image106.png
+.. image:: img/image106.png
 
 **Step 2:** Open the code file.
 
@@ -83,7 +83,7 @@ light up; send a low one, and it will open and the LED will go out. In
 addition, you can hear a tick-tock caused by breaking the normally close
 contact and closing the normally open one.
 
-.. image:: media_mega2560/image107.jpeg
+.. image:: img/image107.jpeg
 
 Code
 --------

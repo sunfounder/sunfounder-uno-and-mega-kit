@@ -16,7 +16,7 @@ outer environment.
 Components
 -------------------
 
-.. image:: media_uno/uno16.png
+.. image:: img/uno16.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -30,7 +30,7 @@ Components
 Schematic Diagram
 ------------------------
 
-.. image:: media_uno/image128.png
+.. image:: img/image128.png
 
 
 The principle is that the resistance of the NTC thermistor changes with
@@ -118,14 +118,14 @@ Experimental Procedures
 
 **Step 4:** Upload the sketch to the board.
 
-.. image:: media_uno/image129.png
+.. image:: img/image129.png
 
 
 
 Now, you can see the current temperature displayed both in
 Celsius and Fahrenheit degrees on the LCD1602.
 
-.. image:: media_uno/image130.jpeg
+.. image:: img/image130.jpeg
    :align: center
 
 Code

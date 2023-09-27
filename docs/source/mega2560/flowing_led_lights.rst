@@ -14,7 +14,7 @@ just like flowing water.
 Components
 ----------------------
 
-.. image:: media_mega2560/mega04.png
+.. image:: img/mega04.png
     :align: center
 
 * :ref:`SunFounder Mega Board`
@@ -35,7 +35,7 @@ lights.
 
 The schematic diagram:
 
-.. image:: media_mega2560/image64.png
+.. image:: img/image64.png
     :align: center
 
 
@@ -46,7 +46,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit
 
-.. image:: media_mega2560/image65.png
+.. image:: img/image65.png
     :align: center
 
 **Step 2:** Open the code file.
@@ -61,7 +61,7 @@ at pin 9 to the one at pin 2. After that, the LEDs will light up from
 the LED at pin 9 to that at pin 2 and dim from the LED at pin 2 to that
 at pin 9. This whole process will repeat until the circuit is power off.
 
-.. image:: media_mega2560/image66.jpeg
+.. image:: img/image66.jpeg
     :align: center
 
 Code

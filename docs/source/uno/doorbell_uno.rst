@@ -13,7 +13,7 @@ to build a simple doorbell.
 Components
 ---------------
 
-.. image:: media_uno/uno06.png
+.. image:: img/uno06.png
     :align: center
 
 
@@ -28,7 +28,7 @@ Components
 Schematic Diagram
 -----------------------
 
-.. image:: media_uno/image71.png
+.. image:: img/image71.png
    :align: center
    
 
@@ -39,7 +39,7 @@ Experimental Procedures
 **Step 1:** Build the circuit (Long pins of buzzer is the Anode and the
 short pin is Cathode).
 
-.. image:: media_uno/image72.png
+.. image:: img/image72.png
     :align: center
 
 
@@ -51,7 +51,7 @@ short pin is Cathode).
 
 Now, you should hear the buzzer beep.
 
-.. image:: media_uno/image73.jpeg
+.. image:: img/image73.jpeg
    :align: center
 
 

@@ -18,7 +18,7 @@ electrical signal.
 Components
 ----------------
 
-.. image:: media_uno/uno08.png
+.. image:: img/uno08.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -43,7 +43,7 @@ transistor is energized, thus making the coil of the relay conductive.
 Then its normally open contact is closed, and the LED will light up.
 When pin 8 is given a Low level, the LED will stay dim.
 
-.. image:: media_uno/image87.png
+.. image:: img/image87.png
 
 
 **Function of the freewheeling diode**: When the voltage input changes
@@ -68,7 +68,7 @@ Experimental Procedures
 
 **Step 1:**\ Build the circuit
 
-.. image:: media_uno/image88.png
+.. image:: img/image88.png
 
 
 **Step 2:** Open the code file.
@@ -82,7 +82,7 @@ light up; send a low one, and it will open and the LED will go out. In
 addition, you can hear a tick-tock caused by breaking the normally close
 contact and closing the normally open one.
 
-.. image:: media_uno/image89.jpeg
+.. image:: img/image89.jpeg
 
 
 Code

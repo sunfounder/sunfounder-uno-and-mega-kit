@@ -14,7 +14,7 @@ how the ultrasonic wave detects the distance.
 Components
 -----------------
 
-.. image:: media_uno/uno17.png
+.. image:: img/uno17.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -28,7 +28,7 @@ Components
 Schematic Diagram
 --------------------------
 
-.. image:: media_uno/image134.png
+.. image:: img/image134.png
 
 
 Experimental Procedures
@@ -36,7 +36,7 @@ Experimental Procedures
 
 **Step 1**: Build the circuit.
 
-.. image:: media_uno/image135.png
+.. image:: img/image135.png
    :align: center
 
 **Step 2:** Open the code file.
@@ -45,15 +45,10 @@ Experimental Procedures
 
 **Step 4:** Upload the sketch to the board.
 
-.. Note::
-    If you receive the following error, it is because you didn't add a
-    library named NewPing, please refer to :ref:`Add Libraries`.
-
-    .. image:: media_uno/image136.png
 
 Now, if you use a piece of paper to approach or keep it far away from the sensor. You will see the value displayed on the LCD changes, which indicates the distance between the paper and the ultrasonic sensor.
 
-.. image:: media_uno/image137.jpeg
+.. image:: img/image137.jpeg
    :align: center
 
 Code
@@ -66,59 +61,71 @@ Code
 Code Analysis
 ------------------------
 
-**Initialize the ultrasonic sensor and LCD1602**
+**1. Initialize the ultrasonic sensor and LCD1602**
 
 .. code-block:: arduino
 
-    #include <LiquidCrystal.h> // use #include to define the header file.
+    #include <LiquidCrystal.h>
 
-    #include <NewPing.h> // use #include to define the header file.
+    LiquidCrystal lcd(4, 6, 10, 11, 12, 13);  //lcd(RS,E,D4,D5,D6,D7)
 
-    LiquidCrystal lcd(4, 6, 10, 11, 12, 13); //lcd(RS,E,D4,D5,D6,D7)
+    const int trigPin = 2;  //  trig pin on the ultrasonic sensor attach to pin2 .
+    const int echoPin = 3;  //  echo pin on the ultrasonic sensor attach to pin3.
 
-    #define TRIGGER_PIN 2 // trig pin on the ultrasonic sensor attach to pin2.
+    void setup() {
+    lcd.begin(16, 2);  // set the position of the characters on the LCD as Line 2, Column 16
+    Serial.begin(9600);
+    pinMode(echoPin, INPUT);
+    pinMode(trigPin, OUTPUT);
+    }
 
-    #define ECHO_PIN 3 // echo pin on the ultrasonic sensor attach to pin3.
-
-    #define MAX_DISTANCE 400 // Maximum distance we want to ping for (in centimeters). Maximum sensor distance is rated at 400-500cm.
-
-    NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); // NewPing setup of pins and maximum distance.
-
-Create a NewPing variable sonar. The basic format of NewPing is: NewPing
-(uint8_t trigger_pin, uint8_t echo_pin, int max_cm_distance). Here uint means an unsigned integer and 8 means 8 bits. So a value in
-the uint8 format here means an unsigned-char type value.
-
-**Convert the time to distance**
+**2. Display the distance on the LCD1602**
 
 .. code-block:: arduino
 
-    unsigned int uS = sonar.ping(); // Send ping, get ping time in microseconds (uS).
+    void loop() {
+        float distance = readSensorData();
+        //Serial.println(distance); //Print the distance on the serial monitor
+        lcd.setCursor(0, 0);         //Place the cursor at Line 1, Column 1. From here the characters are to be displayed
+        lcd.print("Distance:");      ////Print Distance: on the LCD
+        lcd.setCursor(0, 1);         //Set the cursor at Line 1, Column 0
+        lcd.print("             ");  //Here is to leave some spaces after the characters so as to clear the previous characters that may still remain.
+        lcd.setCursor(9, 1);         //Set the cursor at Line 1, Column 9.
+        lcd.print(distance);         // print on the LCD the value of the distance converted from the time between ping sending and receiving.
+        lcd.setCursor(12, 1);        //Set the cursor at Line 1, Column 12.
+        lcd.print("cm");             //print the unit "cm"
+    }
 
-``ping()`` is used to calculate the time sent from the pulse to the reception. Define a variable ``Us`` to store the received time, which should be in microseconds (us).
+**3. Convert the time to distance**
 
-.. code-block:: arduino
+    .. code-block:: arduino
 
-    int distance = uS / US_ROUNDTRIP_CM;
+        float readSensorData(){// ...}
 
-**uS / US_ROUNDTRIP_CM** is a formula to convert the time between ping
-sending and receiving into a distance. The unit is cm.
+    PING is triggered by a HIGH pulse of 2 or more microseconds. (Give a
+    short LOW pulse beforehand to ensure a clean HIGH pulse.)
 
-**Display the distance on the LCE1602**
+    .. code-block:: arduino
 
-.. code-block:: arduino
+        digitalWrite(trigPin, LOW); 
+        delayMicroseconds(2);
+        digitalWrite(trigPin, HIGH); 
+        delayMicroseconds(10);
+        digitalWrite(trigPin, LOW); 
 
-   lcd.setCursor(0, 0); //Place the cursor at Line 1, Column 1. From here the characters are to be displayed
+    The echo pin is used to read signal from PING, a HIGH pulse whose
+    duration is the time (in microseconds) from the sending of the ping to
+    the reception of echo of the object.
 
-   lcd.print("Distance:"); //Print Distance: on the LCD
+    .. code-block:: arduino
 
-   lcd.setCursor(0, 1); //Set the cursor at Line 1, Column 0
+        microsecond=pulseIn(echoPin, HIGH);
 
-   lcd.print(" "); //Here is to leave some spaces after the characters so as to clear the previous characters that may still remain
+    The speed of sound is 340 m/s or 29 microseconds per centimeter.
 
-   lcd.setCursor(9, 1); //Set the cursor at Line 1, Column 9
+    This gives the distance travelled by the ping, outbound and return, so
+    we divide by 2 to get the distance of the obstacle.
 
-   lcd.print(distance); //print on the LCD the value of the distance converted from the time between ping sending and receiving
+    .. code-block:: arduino
 
-   lcd.setCursor(12, 1); //Set the cursor at Line 1, Column 12
-
-   lcd.print("cm"); //print the unit "cm"
+        float distance = microsecond / 29.00 / 2;  

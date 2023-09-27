@@ -15,7 +15,7 @@ an external device. Since the board itself has an LED (connected to Pin
 Components
 ---------------
 
-.. image:: media_uno/uno04.png
+.. image:: img/uno04.png
     :align: center
 
 
@@ -38,7 +38,7 @@ the same time. Then release the button (pin 12 changes to LOW) and pin
 13 is Low. So we will see the LED lights up and goes out alternately as
 the button is pressed and released.
 
-.. image:: media_uno/image66.png
+.. image:: img/image66.png
     :align: center
 
 
@@ -47,7 +47,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit.
 
-.. image:: media_uno/image67.png
+.. image:: img/image67.png
     :align: center
 
 
@@ -59,7 +59,7 @@ Experimental Procedures
 
 Now, press the button, and the LED on the Uno board will light up.
 
-.. image:: media_uno/image68.jpeg
+.. image:: img/image68.jpeg
    :align: center
 
 

@@ -17,7 +17,7 @@ is very important. Now let's get started!
 Components
 --------------
 
-.. image:: media_mega2560/mega31.png
+.. image:: img/mega31.png
     :align: center
 
 * :ref:`SunFounder Mega Board`
@@ -44,7 +44,7 @@ output to the bus (Q0-Q7). So the 16 characters are displayed in the
 
 The schematic diagram:
 
-.. image:: media_mega2560/image213.png
+.. image:: img/image213.png
     :align: center
 
 
@@ -75,7 +75,7 @@ DP                    Q0
 -                                 GND
 ===================== =========== ================
 
-.. image:: media_mega2560/image214.png
+.. image:: img/image214.png
 
 **Step 2:** Open the code file.
 
@@ -85,7 +85,7 @@ DP                    Q0
 
 You should now see the 7-segment display from 0 to 9 and A to F.
 
-.. image:: media_mega2560/image215.jpeg
+.. image:: img/image215.jpeg
 
 Code
 --------
@@ -99,7 +99,7 @@ Code Analysis
 
 **Set the array elements**
 
-.. image:: media_mega2560/image216.png
+.. image:: img/image216.png
 
 This array stores the data of the 16 characters from 0 to F. 252 stands
 for 0, which you can calculate by yourself. To display 0, the segment g

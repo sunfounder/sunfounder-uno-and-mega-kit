@@ -19,7 +19,7 @@ LEDs to make a quiz buzzer system.
 Components
 ---------------
 
-.. image:: media_uno/uno25.png
+.. image:: img/uno25.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -38,7 +38,7 @@ If button 1 is pressed first, the buzzer will beep, the corresponding
 LED will light up and all the other LEDs will go out. If you want to
 start another round, press button 4 to reset.
 
-.. image:: media_uno/image183.png
+.. image:: img/image183.png
 
 
 
@@ -47,7 +47,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit.
 
-.. image:: media_uno/image184.png
+.. image:: img/image184.png
 
 
 **Step 2:** Open the code file.
@@ -60,7 +60,7 @@ Now, first press button 4 to start. If you press button 1 first, you
 will see the corresponding LED light up and the buzzer will beep. Then
 press button 4 again to reset before you press other buttons.
 
-.. image:: media_uno/image185.jpeg
+.. image:: img/image185.jpeg
     :align: center
 
 Code
@@ -84,7 +84,6 @@ This code uses 6 nested if statements.
 
 **Alarm() function**
 
-Translated with www.DeepL.com/Translator (free version)
 
 .. code-block:: arduino
 

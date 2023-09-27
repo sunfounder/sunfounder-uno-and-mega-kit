@@ -12,7 +12,7 @@ used to detect inclinations of a small angle.
 Components
 -------------
 
-.. image:: media_mega2560/mega10.png
+.. image:: img/mega10.png
     :align: center
 
 
@@ -26,7 +26,7 @@ Schematic Diagram
 
 The schematic diagram:
 
-.. image:: media_mega2560/mega11.png
+.. image:: img/mega11.png
     :align: center
 
 Experimental Procedures
@@ -34,7 +34,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit
 
-.. image:: media_mega2560/image96.png
+.. image:: img/image96.png
 
 **Step 2:** Open the code file.
 
@@ -45,7 +45,7 @@ Experimental Procedures
 Now, tilt the switch, and the LED attached to pin 13 on Mega 2560 board
 will light up.
 
-.. image:: media_mega2560/image97.jpeg
+.. image:: img/image97.jpeg
 
 Code
 --------

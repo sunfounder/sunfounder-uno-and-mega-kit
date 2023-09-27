@@ -16,7 +16,7 @@ specific characters on it.
 Components
 ----------------
 
-.. image:: media_uno/uno21.png
+.. image:: img/uno21.png
     :align: center
 
 
@@ -34,7 +34,7 @@ one 220ohm current limiting resistor respectively and then to pin 4-11.
 GND connects to GND. By programming, we can set one or several of
 pin4-11 as High level to light up the corresponding LED(s).
 
-.. image:: media_uno/image158.png
+.. image:: img/image158.png
    :align: center
 
 
@@ -59,7 +59,7 @@ dp        4
 “ - “     GND
 ========= =========
 
-.. image:: media_uno/image159.png
+.. image:: img/image159.png
 
 **Step 2:** Open the code file.
 
@@ -70,7 +70,7 @@ dp        4
 You should now see the 7-segment display from 0 to 9 and then A to F,
 back and forth.
 
-.. image:: media_uno/image160.jpeg
+.. image:: img/image160.jpeg
    :align: center
 
 
@@ -131,7 +131,7 @@ Calling these functions into the loop() is to let the 7-Segment display
 
    }
 
-.. image:: media_uno/image161.jpeg
+.. image:: img/image161.jpeg
    :align: center
 
 First we need to know how it looks like when display the numeral **2**

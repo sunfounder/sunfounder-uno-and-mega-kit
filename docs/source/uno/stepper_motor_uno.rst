@@ -16,7 +16,7 @@ specific sequence, precisely moving it forward or backward in small
 Components
 -------------
 
-.. image:: media_uno/uno23.png
+.. image:: img/uno23.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -28,7 +28,7 @@ Components
 Schematic Diagram
 ---------------------
 
-.. image:: media_uno/image172.png
+.. image:: img/image172.png
 
 
 
@@ -50,7 +50,7 @@ GND                  GND
 VCC                  5v
 ==================== ===
 
-.. image:: media_uno/image173.png
+.. image:: img/image173.png
    :align: center
 
 **Step 2:** Open the code file.
@@ -62,7 +62,7 @@ VCC                  5v
 Now, You can see the rotating shaft of the stepping motor rotating with
 the turning of the knob of the potentiometer.
 
-.. image:: media_uno/image174.jpeg
+.. image:: img/image174.jpeg
    :align: center
 
 Code

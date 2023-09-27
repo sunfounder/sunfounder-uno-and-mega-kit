@@ -15,7 +15,7 @@ decreases; if it gets lower, the resistance increases.
 Components
 -----------------
 
-.. image:: media_mega2560/mega19.png
+.. image:: img/mega19.png
     :align: center
 
 
@@ -36,7 +36,7 @@ light, all the LEDs will go out.
 
 The schematic diagram:
 
-.. image:: media_mega2560/mega20.png
+.. image:: img/mega20.png
     :align: center
 
 Experimental Procedures
@@ -44,7 +44,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit
 
-.. image:: media_mega2560/image142.png
+.. image:: img/image142.png
     :align: center
 
 **Step 2:** Open the code file.
@@ -57,7 +57,7 @@ Now, shine some light on the photo resistor, and you will see several
 LEDs light up. Shine more light and you will see more LEDs light up. When
 you place it in a dark environment, all the LEDs will go out.
 
-.. image:: media_mega2560/image143.jpeg
+.. image:: img/image143.jpeg
     :align: center
 
 Code

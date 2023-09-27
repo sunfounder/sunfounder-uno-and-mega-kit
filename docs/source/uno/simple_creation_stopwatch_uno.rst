@@ -12,7 +12,7 @@ stopwatch.
 Components
 -----------------
 
-.. image:: media_uno/uno24.png
+.. image:: img/uno24.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -36,12 +36,12 @@ too fast for us to notice interval.
 The schematic diagram of the 4-digit 7-segment display is as shown
 below:
 
-.. image:: media_uno/image176.png
+.. image:: img/image176.png
     :width: 400
     :align: center
 
 
-.. image:: media_uno/image177.png
+.. image:: img/image177.png
 
 
 
@@ -66,7 +66,7 @@ D3                        11
 D4                        10
 ========================= =========
 
-.. image:: media_uno/image178.png
+.. image:: img/image178.png
 
    
 
@@ -79,7 +79,7 @@ D4                        10
 Now, you can see the number increases by one per second on the 4-digit
 7-segment display.
 
-.. image:: media_uno/image179.jpeg
+.. image:: img/image179.jpeg
    :align: center
 
 Code
@@ -92,272 +92,136 @@ Code
 Code Analysis
 -------------------
 
-That's all for the code. It is long enough, so let me sum it up.
+In essence, this code uses the principle of multiplexing to display a 4-digit number on a 7-segment display. By rapidly switching between digits and displaying one digit at a time, it gives the illusion of all digits being displayed concurrently. 
+The stopwatch functionality is achieved by using the built-in ``millis()`` function to track time and increment the displayed number every second.
 
-Setup: Set all the pins of the LED display as output. Set Timer1 as 0.1
-second. Run the following functions. So add() will be called when it's
-0.1 second; but before 0.1 second passes, add() is not called yet. Then
-use a loop() function. The 4 LEDs are displayed as 0000. Wait for a
-while. 0.1 second later, indicating count=10, call the function add().
-then n++=1; because 1<10000, it will not restore to 0. Run loop() and
-the LEDs will be displayed as 0001. 0.1 second later, n increases by 1,
-n++=2, and the display will become 0002, and then 0003, and on and on,
-till 9999. n increases by 1 every second, and the number displayed
-increases accordingly, until n=10000 and n is 0 again. Then the counting
-starts from 0.
+#. Variable and Constant Definitions:
 
-**Initialize the timer**
+    .. code-block:: arduino
 
-Timer1.initialize(100000); // set a timer of length 100000 microseconds
-(or 0.1 sec - or 10Hz => the led will blink 5 times, 5 cycles of
-on-and-off, per second)
+        int segmentPins[] = {2, 3, 4, 5, 6, 7, 8, 9};
+        int digitPins[] = {13, 12, 11, 10};
 
-.. code-block:: arduino
+        long n = 0; // Variable to store the current stopwatch number
+        int del = 5; // Delay time (in milliseconds) to keep each digit illuminated
+        unsigned long previousMillis = 0; // Store the last time the stopwatch incremented
+        const long interval = 1000; // One-second interval (in milliseconds)
 
-    Timer1.attachInterrupt( add ); // attach the service routine here
 
-The sentence attachInterrupt(ISR) is to attach an ISR function to call
-when there is an interrupt. ISR stands for interrupt service routine.
-Here we use an add routine.
+    * ``segmentPins`` and ``digitPins`` arrays define the pins that are connected to the segments and the digits of the 7-segment display, respectively.
+    * ``n`` is a long variable that keeps track of the current stopwatch number, starting from 0 and incrementing.
+    * ``del`` is a delay time to maintain the display of the current digit before transitioning to the next one.
+    * ``previousMillis`` and ``interval`` are related to timing to decide when to increment the stopwatch.
 
-**Loop function**
+#. 7-Segment Patterns for Numbers:
 
-.. code-block:: arduino
+    The 2D array numbers defines how each of the numbers 0-9 is represented on a common-cathode 7-segment display. Each sub-array has 8 values (either HIGH or LOW), corresponding to the 7 segments and a decimal point. This pattern helps in driving the appropriate segments for each number.
 
-    void loop()
+    .. code-block:: arduino
 
-    {
+        byte numbers[10][8] = {
+            {HIGH, HIGH, HIGH, HIGH, HIGH, HIGH, LOW, LOW},  // 0
+            {LOW, HIGH, HIGH, LOW, LOW, LOW, LOW, LOW},      // 1
+            {HIGH, HIGH, LOW, HIGH, HIGH, LOW, HIGH, LOW},   // 2
+            {HIGH, HIGH, HIGH, HIGH, LOW, LOW, HIGH, LOW},   // 3
+            {LOW, HIGH, HIGH, LOW, LOW, HIGH, HIGH, LOW},    // 4
+            {HIGH, LOW, HIGH, HIGH, LOW, HIGH, HIGH, LOW},   // 5
+            {HIGH, LOW, HIGH, HIGH, HIGH, HIGH, HIGH, LOW},  // 6
+            {HIGH, HIGH, HIGH, LOW, LOW, LOW, LOW, LOW},     // 7
+            {HIGH, HIGH, HIGH, HIGH, HIGH, HIGH, HIGH, LOW}, // 8
+            {HIGH, HIGH, HIGH, HIGH, LOW, HIGH, HIGH, LOW}   // 9
+        }; 
 
-        clearLEDs();//clear the 7-segment display screen
+#. Setup Function:
 
-        pickDigit(0);//Light up 7-segment display d1
+    .. code-block:: arduino
 
-        pickNumber((n/1000));// get the value of thousand
-
-        delay(del);//delay 5ms
-
-        clearLEDs();//clear the 7-segment display screen
-
-        pickDigit(1);//Light up 7-segment display d2
-
-        pickNumber((n%1000)/100);// get the value of hundred
-
-        delay(del);//delay 5ms
-
-        clearLEDs();//clear the 7-segment display screen
-
-        pickDigit(2);//Light up 7-segment display d3
-
-        pickNumber(n%100/10);//get the value of ten
-
-        delay(del);//delay 5ms
-
-        clearLEDs();//clear the 7-segment display screen
-
-        pickDigit(3);//Light up 7-segment display d4
-
-        pickNumber(n%10);//Get the value of single digit
-
-        delay(del);//delay 5ms
-
-    }
-
-The loop function is used to let four segment display to display the
-single digit, ten, one hundred and thousand of a value.
-
-Such as n=1345, (1345/1000)=1, (1345%1000)/100)=3, ((1345%100)/10)=4, (n%10)=5.
-
-**pickDigit(int x) function**
-
-.. code-block:: arduino
-
-    void pickDigit(int x) //light up a 7-segment display
-
-    {
-
-        //The 7-segment LED display is a common-cathode one. So also use
-        digitalWrite to set d1 as high and the LED will go out
-
-        digitalWrite(d1, HIGH);
-
-        digitalWrite(d2, HIGH);
-
-        digitalWrite(d3, HIGH);
-
-        digitalWrite(d4, HIGH);
-
-        switch(x)
-
-        {
-
-        case 0:
-
-            digitalWrite(d1, LOW);//Light d1 up
-
-            break;
-
-        case 1:
-
-            digitalWrite(d2, LOW); //Light d2 up
-
-            break;
-
-        case 2:
-
-            digitalWrite(d3, LOW); //Light d3 up
-
-            break;
-
-        default:
-
-            digitalWrite(d4, LOW); //Light d4 up
-
-            break;
-
+        void setup() {
+            // Configure all segment and digit pins as OUTPUT
+            for (int i = 0; i < 8; i++) {
+                pinMode(segmentPins[i], OUTPUT);
+            }
+            for (int i = 0; i < 4; i++) {
+                pinMode(digitPins[i], OUTPUT);
+                digitalWrite(digitPins[i], HIGH); // Initially turn off all digits (for common-cathode displays, HIGH is OFF)
+            }
         }
 
-    }
+    * All segment and digit pins are set to OUTPUT mode since they will drive the segments and digits of the display.
+    * Initially, all the digits are turned off, denoted by writing HIGH for a common-cathode display.
 
-The 4 digital 7 segment is a common cathode one, set all the d1,d2,d3,d4
-to HIGH to let them go out.
+#. Main Loop:
 
-If x is equals to 0, then run case0 let d1 to LOW level to light first 7
-segment up.
+    .. code-block:: arduino
 
-**switch...case:** Like if statements, switch case controls the flow of
-programs by allowing programmers to specify different code that should
-be executed in various conditions. In particular, a switch statement
-compares the value of a variable to the values specified in case
-statements. When a case statement is found whose value matches that of
-the variable, the code in that case statement is run.
-
-The break keyword exits the switch statement, and is typically used at
-the end of each case. Without a break statement, the switch statement
-will continue executing the following expressions ("falling-through")
-until a break, or the end of the switch statement is reached.
-
-**pickNumber(int x) function**
-
-.. code-block:: arduino
-
-    switch(x)
-
-    {
-
-    default:
-
-        zero();
-
-        break;
-
-    case 1:
-
-        one();
-
-        break;
-
-    case 2:
-
-        two();
-
-        break;
-
-    case 3:
-
-        three();
-
-        .......
-
-The function is to control the LED to display numbers. Call zero(),
-one() until the nine() function to display 0-9 numbers.
-
-Use zero() as an example:
-
-The function void zero is to control the high/low level of LED. Use
-digitalWrite to set a to f as high, g as low. Based on the pin diagram
-just mentioned, when a to f is high and g is low, the number 0 will be
-displayed.
-
-.. code-block:: arduino
-
-    void zero() //the 7-segment led display 0
-
-    {
-
-        digitalWrite(a, HIGH);
-
-        digitalWrite(b, HIGH);
-
-        digitalWrite(c, HIGH);
-
-        digitalWrite(d, HIGH);
-
-        digitalWrite(e, HIGH);
-
-        digitalWrite(f, HIGH);
-
-        digitalWrite(g, LOW);
-
-    }
-
-**clearLEDs() function**
-
-.. code-block:: arduino
-
-    void clearLEDs() //clear the 7-segment display screen
-
-    {
-
-        digitalWrite(a, LOW);
-
-        digitalWrite(b, LOW);
-
-        digitalWrite(c, LOW);
-
-        digitalWrite(d, LOW);
-
-        digitalWrite(e, LOW);
-
-        digitalWrite(f, LOW);
-
-        digitalWrite(g, LOW);
-
-    }
-
-Write all pins a-p to LOW level, let the 7-segment digital display go
-out.
-
-**add() function**
-
-.. code-block:: arduino
-
-    void add()
-
-    {
-
-        // Toggle LED
-
-        count ++; 
-        /* The original value of count is 0. count++=1; 
-        keep the counting till 10, because one LED can display a maximum of 9.*/
-
-        if(count == 10) 
-        // If count=10, which is 1 second, the following statement will be run.
-
-        {
-
-            count = 0; //which means count from 0
-
-            n ++; //then n++=1
-
-            if(n == 10000) //When n=10000,
-
-            {
-
-                n = 0; //n restores to 0.
-
+        void loop() {
+            // Check if a second has passed since the last increment
+            if (millis() - previousMillis >= interval) {
+                previousMillis += interval; // Update the last increment time
+                n = (n + 1) % 10000; // Increment the stopwatch number and wrap around at 9999
             }
 
+            displayNumber(n); // Display the current stopwatch number on the 7-segment display
         }
 
-    }
+    * This section checks if the interval (which is set to 1000ms or 1 second) has passed since the last increment of the stopwatch. If so, it increments the number.
+    * The number is then displayed on the 7-segment using the displayNumber() function.
+
+#. ``displayNumber()`` Function:
+
+    .. code-block:: arduino
+
+        // Function to display a 4-digit number on the 7-segment display
+        void displayNumber(long num) {
+            for (int digit = 0; digit < 4; digit++) {
+                clearLEDs(); // Turn off all segments and digits
+                pickDigit(digit); // Activate the current digit
+                int value = (num / (int)pow(10, 3 - digit)) % 10; // Extract the specific digit from the number
+                pickNumber(value); // Illuminate the segments to display the digit
+                delay(del); // Keep the digit illuminated for a short time
+            }
+        }
+
+    * This function breaks down the 4-digit number into individual digits and displays each digit one at a time in rapid succession. This creates the illusion of all digits being displayed simultaneously due to persistence of vision.
+    * For each digit, the function first clears all LEDs, selects the appropriate digit using ``pickDigit()``, and then displays the number on that digit using ``pickNumber()``.
+    * The ``delay (del)`` ensures each digit is visible for a short time before transitioning to the next.
+
+#. ``pickDigit()`` Function:
+
+    This function is responsible for selecting (or turning on) one of the four digits on the 7-segment display. This is achieved by setting the corresponding digit pin to LOW.
+
+    .. code-block:: arduino
+
+        void pickDigit(int x) {
+            digitalWrite(digitPins[x], LOW); // Turn ON the selected digit (for common-cathode displays, LOW is ON)
+        }
+
+
+#. ``pickNumber()`` Function:
+
+    Given a single number (0-9), this function drives the 7-segment display's segments to show that number. It uses the previously defined ``numbers`` array to know which segments to turn on/off.
+
+    .. code-block:: arduino
+
+        void pickNumber(int x) {
+            for (int i = 0; i < 8; i++) {
+                digitalWrite(segmentPins[i], numbers[x][i]); // Set each segment according to the pattern for the given number
+            }
+        }
+
+
+#. ``clearLEDs()`` Function:
+
+    As the name suggests, this function turns off all segments and digits. It's used to ensure that only one digit is active at a time during the multiplexing process in the ``displayNumber()`` function.
+
+    .. code-block:: arduino
+
+        void clearLEDs() {
+            for (int i = 0; i < 8; i++) {
+                digitalWrite(segmentPins[i], LOW); // Turn off all segments
+            }
+            for (int i = 0; i < 4; i++) {
+                digitalWrite(digitPins[i], HIGH); // Turn off all digits
+            }
+        }
+

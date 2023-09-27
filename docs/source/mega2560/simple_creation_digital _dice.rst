@@ -13,7 +13,7 @@ display and a button together to create a simple digital dice.
 Components
 --------------
 
-.. image:: media_mega2560/mega36.png
+.. image:: img/mega36.png
     :align: center
 
 
@@ -36,7 +36,7 @@ pressed again, the process will repeat.
 
 The schematic diagram:
 
-.. image:: media_mega2560/image252.png
+.. image:: img/image252.png
     :align: center
 
 Experimental Procedures
@@ -44,10 +44,10 @@ Experimental Procedures
 
 **Step 1:** Build the circuit
 
-.. image:: media_mega2560/image211.png
+.. image:: img/image211.png
    :align: center
 
-.. image:: media_mega2560/image253.png
+.. image:: img/image253.png
    :align: center
 
 **Step 2:** Open the code file.
@@ -60,7 +60,7 @@ You can now see the 7-segment display jump between numbers from 1 to 6.
 Press the button, and the jumping will slow down until it stops three
 seconds later. Press the button again, and the process will repeat.
 
-.. image:: media_mega2560/image254.jpeg
+.. image:: img/image254.jpeg
 
 Code
 --------

@@ -13,7 +13,7 @@ Monitor to see its value change.
 Components
 ----------------
 
-.. image:: media_uno/uno11.png
+.. image:: img/uno11.png
     :align: center
 
 
@@ -33,7 +33,7 @@ environment and you can click the button on the upper right corner to
 open it. You can send and receive data via the serial port on the
 control board and control the board by input from the keyboard.
 
-.. image:: media_uno/image104.png
+.. image:: img/image104.png
    :align: center
 
 Here, the Serial Monitor serves as a transfer station for communication
@@ -42,7 +42,7 @@ data to the Serial Monitor, and then the data is read by the Uno board.
 Finally, the Uno will perform related operations. Click the icon at the
 top right corner and a window will pop up as shown below:
 
-   .. image:: media_uno/image105.png
+   .. image:: img/image105.png
 
 
 
@@ -60,7 +60,7 @@ converter in the control board. Through programming, we can use the
 converted digital value to control the brightness of the LED on the
 control board.
 
-.. image:: media_uno/image107.png
+.. image:: img/image107.png
    :align: center
 
 Experimental Procedures
@@ -68,7 +68,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit.
 
-.. image:: media_uno/image108.png
+.. image:: img/image108.png
 
    
 
@@ -83,7 +83,7 @@ Experimental Procedures
 Find the Serial.begin() code to see what baud rate is set, here is 9600.
 Then click the top right corner icon to open the Serial Monitor.
 
-.. image:: media_uno/image109.png
+.. image:: img/image109.png
 
 
 **Step 6:** Set the baud rate to 9600.
@@ -91,7 +91,7 @@ Then click the top right corner icon to open the Serial Monitor.
 The default baud rate for serial monitors is 9600, and if the code is
 also set to 9600, there is no need to change the baud rate bar.
 
-.. image:: media_uno/image110.png
+.. image:: img/image110.png
 
 
 Spin the shaft of the potentiometer and you should see the luminance of
@@ -101,7 +101,7 @@ If you want to check the corresponding value changes, open the Serial
 Monitor and the data in the window will change with your spinning of the
 potentiometer knob.
 
-.. image:: media_uno/image111.jpeg
+.. image:: img/image111.jpeg
    :align: center
 
 Code 

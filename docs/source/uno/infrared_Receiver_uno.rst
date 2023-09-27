@@ -15,7 +15,7 @@ infrared transmission.
 Components
 ----------------
 
-.. image:: media_uno/uno18.png
+.. image:: img/uno18.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -26,12 +26,7 @@ Components
 Schematic Diagram
 ---------------------
 
-Control a certain key (for example, Power key) via a remote controller
-by programming. When you press the key, infrared rays will be emitted
-from the remote controller and received by the infrared receiver, and
-the LED on the Uno board will light up.
-
-.. image:: media_uno/image140.png
+.. image:: img/image140.png
     :align: center
 
 
@@ -41,7 +36,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit.
 
-.. image:: media_uno/image141.png
+.. image:: img/image141.png
 
 
 **Step 2:** Open the code file.
@@ -50,22 +45,21 @@ Experimental Procedures
 
 **Step 4:** Upload the sketch to the board.
 
-Now, press Power on the remote control and the LED attached to pin 13 on
-the Uno board will light up. If you press other keys, the LED will go
-out.
+After uploading the codes, you can see that the current value of the pressed button of IR Remote Controller displays on the serial monitor.
+
+.. note::
+
+    * The ``IRremote`` library is used here, you can install it from the **Library Manager**.
+
+        .. image:: img/lib_irremote.png
+            :align: center
 
 .. Note::
 
-    1. There is a transparent plastic piece at the back of the remote
-    control to cut off the power and pull it out before you use the
-    remote control.
+    * There is a transparent plastic piece at the back of the remote control to cut off the power and pull it out before you use the remote control.
 
-    1. Please gently press the button on the remote to avoid invalid data
-    FFFFFFFF.
+    * Please gently press the button on the remote to avoid invalid data FFFFFFFF.
 
-.. image:: media_uno/image142.png
-
-.. image:: media_uno/image143.jpeg
 
 Code 
 -------
@@ -77,76 +71,48 @@ Code
 Code Analysis
 -----------------
 
-**Initialize the infrared-receiver**
+This code is designed to work with an infrared (IR) remote control using the ``IRremote`` library. Here's the breakdown:
 
-.. code-block:: arduino
+#. Include Libraries: This includes the IRremote library, which provides functions to work with IR remote controls.
 
-    #include <IRremote.h>
+    .. code-block:: arduino
 
-    const int irReceiverPin = 2; //the infrared-receiver attact to pin2
+        #include <IRremote.h>
 
-    const int ledPin = 13; //built-in LED
+#. Defines the Arduino pin to which the IR sensor's signal pin is connected and declares a variable to store the last decoded IR value.
 
-    IRrecv irrecv(irReceiverPin); //Initialize the infrared-receiver
+    .. code-block:: arduino
 
-    decode_results results; //The decoding result is placed in the result of the decode results structure.
+        const int IR_RECEIVE_PIN = 11;  // Define the pin number for the IR Sensor
+        String lastDecodedValue = "";  // Variable to store the last decoded value
 
-**Enable infrared-receiver**
+#. Initializes serial communication at a baud rate of 9600. Initializes the IR receiver on the specified pin (``IR_RECEIVE_PIN``) and enables LED feedback (if applicable).
 
-.. code-block:: arduino
+    .. code-block:: arduino
 
-    irrecv.enableIRIn(); //Restart the receiver
+        void setup() {
+            Serial.begin(9600);                                     // Start serial communication at 9600 baud rate
+            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver
+        }
 
-**Receive and print the data**
+#. The loop runs continuously to process incoming IR remote signals.
 
-.. code-block:: arduino
+    .. code-block:: arduino
 
-    if (irrecv.decode(&results)) { //If receive a data
-
-**decode(&results):** Decodes the received IR message, returns 0 if no
-data ready, 1 if data ready. Results of decoding are stored in results
-
-.. code-block:: arduino
-
-        Serial.print("irCode: "); //print "irCode: " on the serial monitor
-
-        Serial.print(results.value, HEX); //print the signal on serial monitor in hexadecimal
-
-        Serial.print(", bits: ");
-
-        Serial.println(results.bits); // Print the data bits
-
-        irrecv.resume(); //Receive next data
-
-    }
-
-    delay(600);
-
-**If the power button is pressed**
-
-.. code-block:: arduino
-
-    if(results.value == 0xFFA25D) // if the power button on the remote control is pressed
-
-The 0xFFA25D is the code of the power button on the remote control, if
-you want to define other button, you can read the code of every button
-from the serial monitor.
-
-.. image:: media_uno/image142.png
-   :align: center
-
-.. code-block:: arduino
-
-    {
-
-        digitalWrite(ledPin,HIGH); //Turn on the LED
-
-    }
-
-    else
-
-    {
-
-        digitalWrite(ledPin,LOW); //else turn of the LED
-
-    }
+        void loop() {
+            if (IrReceiver.decode()) {
+                String decodedValue = decodeKeyValue(IrReceiver.decodedIRData.command);
+                if (decodedValue != "ERROR" && decodedValue != lastDecodedValue) {
+                    Serial.println(decodedValue);
+                    lastDecodedValue = decodedValue;  // Update the last decoded value
+                }
+                IrReceiver.resume();  // Enable receiving of the next value
+            }
+        }
+    
+    * Checks if an IR signal is received and successfully decoded.
+    * Decodes the IR command and stores it in ``decodedValue`` using a custom ``decodeKeyValue()`` function.
+    * Checks if the decoded value is not an error and is different from the last decoded value.
+    * Prints the decoded IR value to the serial monitor.
+    * Updates the ``lastDecodedValue`` with the new decoded value.
+    * Resumes IR signal reception for the next signal.

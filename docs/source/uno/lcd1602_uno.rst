@@ -18,7 +18,7 @@ characters in each. Now let's check more details!
 Components
 ----------------
 
-.. image:: media_uno/uno15.png
+.. image:: img/uno15.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -40,7 +40,7 @@ Connect E to pin6 and the characters displayed on the LCD1602 are
 controlled by D4-D7. For programming, it is optimized by calling
 function libraries.
 
-.. image:: media_uno/image123.png
+.. image:: img/image123.png
 
 
 
@@ -56,7 +56,7 @@ Experimental Procedures
 
 **Step 4:** Upload the sketch to the board.
 
-.. image:: media_uno/image124.png
+.. image:: img/image124.png
    :align: center
 
 
@@ -67,7 +67,7 @@ Experimental Procedures
 You should now see the characters "**SunFounder**" and "**hello,
 world**" rolling on the LCD.
 
-.. image:: media_uno/image125.jpeg
+.. image:: img/image125.jpeg
    :align: center
 
 Code
@@ -93,7 +93,7 @@ LiquidCrystal is a built-in library in the Arduino IDE. You can find the
 LiquidCrystal folder under the installation path *C:\Program
 Files\Arduino\libraries*.
 
-.. image:: media_uno/image126.png
+.. image:: img/image126.png
 
    
 

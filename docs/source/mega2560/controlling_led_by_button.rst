@@ -17,7 +17,7 @@ convenience.
 Components
 ----------------
 
-.. image:: media_mega2560/mega05.png
+.. image:: img/mega05.png
 
 
 * :ref:`SunFounder Mega Board`
@@ -41,7 +41,7 @@ the button is pressed and released.
 
 The schematic diagram: 
 
-.. image:: media_mega2560/mega07.png
+.. image:: img/mega07.png
     :align: center
 
 
@@ -51,7 +51,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit
 
-.. image:: media_mega2560/image79.png
+.. image:: img/image79.png
 
 
 **Step 2:** Open the code file.
@@ -62,7 +62,7 @@ Experimental Procedures
 
 Now, press the button, and the LED on the mega2560 board will light up.
 
-.. image:: media_mega2560/image80.jpeg
+.. image:: img/image80.jpeg
 
 Code
 --------

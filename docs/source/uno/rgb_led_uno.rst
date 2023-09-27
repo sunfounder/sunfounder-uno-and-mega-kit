@@ -16,7 +16,7 @@ different colors.
 Components
 -----------------
 
-.. image:: media_uno/uno09.png
+.. image:: img/uno09.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -45,7 +45,7 @@ This duration or period is the inverse of the PWM frequency. In other
 words, with Arduino's PWM frequency at about 500Hz, the green lines
 would measure 2 milliseconds each.
 
-.. image:: media_uno/image91.jpeg
+.. image:: img/image91.jpeg
    :align: center
 
 
@@ -73,7 +73,7 @@ The longest pin (GND) of the LED connects to the GND of the Uno. When
 the three pins are given different PWM values, the RGB LED will display
 different colors.
 
-.. image:: media_uno/image96.png
+.. image:: img/image96.png
    :align: center
 
 
@@ -82,7 +82,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit.
 
-.. image:: media_uno/image97.png
+.. image:: img/image97.png
    :align: center
 
 **Step 2:** Open the code file.
@@ -94,7 +94,7 @@ Experimental Procedures
 Here you should see the RGB LED flash circularly red, green, and blue
 first, then red, orange, yellow, green, blue, indigo, and purple.
 
-.. image:: media_uno/image98.jpeg
+.. image:: img/image98.jpeg
    :align: center
 
 
@@ -117,14 +117,14 @@ You can use the paint tool on your computer to get the RGB value.
 
 1. Open the paint tool on your computer and click to Edit colors.
 
-.. image:: media_uno/image99.png
+.. image:: img/image99.png
    :align: center
 
 
 2. Select one color, then you can see the RGB value of this color. Fill
    them in the code.
 
-.. image:: media_uno/image100.png
+.. image:: img/image100.png
    :align: center
 
 .. code-block:: arduino

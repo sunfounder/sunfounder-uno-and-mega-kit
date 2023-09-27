@@ -16,7 +16,7 @@ the orange one is signal line.
 Components
 ---------------
 
-.. image:: media_mega2560/mega21.png
+.. image:: img/mega21.png
     :align: center
 
 
@@ -29,7 +29,7 @@ Schematic Diagram
 --------------------------
 The schematic diagram:
 
-.. image:: media_mega2560/mega22.png
+.. image:: img/mega22.png
     :align: center
 
 Experimental Procedures
@@ -38,7 +38,7 @@ Experimental Procedures
 **Step 1:** Build the circuit (Brown to GND, Red to VCC, Orange to pin 9
 of the control board)
 
-.. image:: media_mega2560/image153.png
+.. image:: img/image153.png
     :align: center
 
 **Step 2:** Open the code file.
@@ -51,7 +51,7 @@ Now, you can see the rocker arm of the servo rotate and stop at 90
 degrees (15 degrees each time). And then it rotates in the opposite
 direction.
 
-.. image:: media_mega2560/image154.jpeg
+.. image:: img/image154.jpeg
     :align: center
 
 Code

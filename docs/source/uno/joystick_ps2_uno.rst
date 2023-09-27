@@ -14,7 +14,7 @@ PS2 is used here.
 Components
 -------------------------
 
-.. image:: media_uno/uno20.png
+.. image:: img/uno20.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -33,7 +33,7 @@ condition.
 In this experiment, we use the Uno board to detect the moving direction
 of the Joystick knob and pressing of the button.
 
-.. image:: media_uno/image151.png
+.. image:: img/image151.png
 
 
 
@@ -43,7 +43,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit.
 
-.. image:: media_uno/image152.png
+.. image:: img/image152.png
 
 
 **Step 2:** Open the code file.
@@ -56,7 +56,7 @@ Now, push the rocker and the coordinates of X and Y axes displayed on
 Serial Monitor will change accordingly; press the button, and the
 coordinate of Z=0 will also be displayed.
 
-.. image:: media_uno/image153.jpeg
+.. image:: img/image153.jpeg
 
 
 Code

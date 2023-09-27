@@ -38,7 +38,7 @@ Select the **Tobi** sprite and go to the **Costumes** page. Select the icon in t
 
 .. image:: img/8_upload.png
 
-Then open ``tumbler1.png`` and ``tumbler2.png`` in the ``sunfounder-uno-and-mega-kit\scratch\picture`` path and make sure you have downloaded the relevant material, see :ref:`Download the Code`.
+Then open ``tumbler1.png`` and ``tumbler2.png`` in the ``sunfounder-uno-and-mega-kit\scratch\picture`` path and make sure you have downloaded the relevant material.
 .. image:: img/8_add_tumbler.png
 
 Remove the **Tobi** sprite related costume and change the name to **Tumbler**. Now that we have customized a new sprite Tumbler, we start scripting it.

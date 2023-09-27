@@ -13,7 +13,7 @@ display and a button together to create a simple digital dice.
 Components
 -------------
 
-.. image:: media_uno/uno27.png
+.. image:: img/uno27.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -33,7 +33,7 @@ circularly jumps from 1 to 7 rapidly. When the button is pressed, the
 jumping will slow down until it stops on a number. When the button is
 pressed again, the process will repeat.
 
-.. image:: media_uno/image195.png
+.. image:: img/image195.png
 
 
 Experimental Procedures
@@ -41,7 +41,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit.
 
-.. image:: media_uno/image196.png
+.. image:: img/image196.png
 
 
 **Step 2:** Open the code file.
@@ -54,7 +54,7 @@ You can now see the 7-segment display jump between numbers from 1 to 6.
 Press the button, and the jumping will slow down until it stops three
 seconds later. Press the button again, and the process will repeat.
 
-.. image:: media_uno/image197.jpeg
+.. image:: img/image197.jpeg
    :align: center
 
 Code

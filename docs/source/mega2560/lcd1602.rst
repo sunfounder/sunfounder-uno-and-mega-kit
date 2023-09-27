@@ -18,7 +18,7 @@ characters in each. Now let's check more details!
 Components
 ----------------
 
-.. image:: media_mega2560/mega23.png
+.. image:: img/mega23.png
     :align: center
 
 
@@ -42,7 +42,7 @@ function libraries.
 
 The schematic diagram:
 
-.. image:: media_mega2560/image160.png
+.. image:: img/image160.png
     :align: center
 
 
@@ -52,7 +52,7 @@ Experimental Procedures
 **Step 1:** Build the circuit (make sure the pins are connected
 correctly. Otherwise, characters will not be displayed properly)
 
-.. image:: media_mega2560/image161.png
+.. image:: img/image161.png
     :align: center
 
 **Step 2:** Open the code file.
@@ -68,7 +68,7 @@ correctly. Otherwise, characters will not be displayed properly)
 You should now see the characters "**SunFounder**" and "**hello,
 world**" rolling on the LCD.
 
-.. image:: media_mega2560/image162.jpeg
+.. image:: img/image162.jpeg
     :align: center
 
 Code

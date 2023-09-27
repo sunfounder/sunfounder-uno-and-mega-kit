@@ -15,7 +15,7 @@ accelerate or decelerate automatically.
 Components
 ---------------
 
-.. image:: media_mega2560/mega35.png
+.. image:: img/mega35.png
     :align: center
 
 
@@ -47,7 +47,7 @@ opposite direction.
 
 The schematic diagram:
 
-.. image:: media_mega2560/image239.png
+.. image:: img/image239.png
    :align: center
 
 
@@ -57,7 +57,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit
 
-.. image:: media_mega2560/image240.png
+.. image:: img/image240.png
 
 **Step 2:** Open the code file.
 
@@ -68,7 +68,7 @@ Experimental Procedures
 The blade of the DC motor will begin rotating left and right, in a speed
 that varies accordingly.
 
-.. image:: media_mega2560/image241.jpeg
+.. image:: img/image241.jpeg
 
 Code
 

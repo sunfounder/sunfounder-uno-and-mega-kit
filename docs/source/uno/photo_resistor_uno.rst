@@ -14,7 +14,7 @@ decreases; if it gets lower, the resistance increases.
 Components
 ---------------
 
-.. image:: media_uno/uno13.png
+.. image:: img/uno13.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -27,7 +27,7 @@ Components
 Schematic Diagram
 ---------------------
 
-.. image:: media_uno/image115.png
+.. image:: img/image115.png
    :align: center
 
 Experimental Procedures
@@ -35,7 +35,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit.
 
-.. image:: media_uno/image116.png
+.. image:: img/image116.png
 
 
 **Step 2:** Open the code file.
@@ -48,7 +48,7 @@ Now, shine some light on the photo resistor, and you will see several
 LEDs light up. Shine more light and you will see more LEDs light up.
 When you place it in a dark environment, all the LEDs will go out.
 
-.. image:: media_uno/image117.jpeg
+.. image:: img/image117.jpeg
 
 
 Code

@@ -16,7 +16,7 @@ specific sequence, precisely moving it forward or backward in small
 Components
 -------------
 
-.. image:: media_mega2560/mega32.png
+.. image:: img/mega32.png
     :align: center
 
 
@@ -31,7 +31,7 @@ Schematic Diagram
 
 The schematic diagram of the Stepper Motor Driver:
 
-.. image:: media_mega2560/image221.png
+.. image:: img/image221.png
    :align: center
 
 Experimental Procedures
@@ -51,7 +51,7 @@ GND                  GND
 VCC                  5v
 ==================== =========
 
-.. image:: media_mega2560/image222.png
+.. image:: img/image222.png
 
 
 **Step 2:** Open the code file.
@@ -63,7 +63,7 @@ VCC                  5v
 Now, you should see the rocker arm of the stepper motor spin clockwise
 and counterclockwise alternately.
 
-.. image:: media_mega2560/image223.jpeg
+.. image:: img/image223.jpeg
 
 Code
 --------

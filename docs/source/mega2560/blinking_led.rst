@@ -13,7 +13,7 @@ operation and code in the IDE.
 Components
 --------------------
 
-.. image:: media_mega2560/mega01.png
+.. image:: img/mega01.png
    :align: center
 
 
@@ -36,7 +36,7 @@ light up. When pin 9 outputs low level, the LED goes out.
 
 The schematic diagram: 
 
-.. image:: media_mega2560/image53.png
+.. image:: img/image53.png
     :align: center
 
 
@@ -49,7 +49,7 @@ LED).
 
 Then plug the board into the computer with a 5V USB cable.
 
-.. image:: media_mega2560/image54.png
+.. image:: img/image54.png
     :align: center
 
 
@@ -62,13 +62,13 @@ Before uploading the code, you need to select the **Board** and
 **Port**. Click **Tools** -> **Board** and select **Arduino/Genuino
 Mega or Mega 2560**.
 
-.. image:: media_mega2560/image55.png
+.. image:: img/image55.png
     :align: center
 
 Then select **Tools** -> **Port**. Your port should be different from
 mine.
 
-.. image:: media_mega2560/image56.png
+.. image:: img/image56.png
     :align: center
 
 
@@ -76,20 +76,20 @@ mine.
 
 Click the **Upload** icon to upload the code to the control board.
 
-.. image:: media_mega2560/image57.png
+.. image:: img/image57.png
     :align: center
 
 
 If "Done uploading" appears at the bottom of the window, it means the
 sketch has been successfully uploaded.
 
-.. image:: media_mega2560/image58.png
+.. image:: img/image58.png
     :align: center
 
 
 You should now see the LED blinking.
 
-.. image:: media_mega2560/image59.jpeg
+.. image:: img/image59.jpeg
     :align: center
 
 Code

@@ -14,7 +14,7 @@ Monitor to see its value change.
 Components
 -------------------
 
-.. image:: media_mega2560/mega16.png
+.. image:: img/mega16.png
     :align: center
 
 
@@ -35,7 +35,7 @@ environment and you can click the button on the upper right corner to
 open it. You can send and receive data via the serial port on the
 control board and control the board by input from the keyboard.
 
-.. image:: media_mega2560/image125.png
+.. image:: img/image125.png
     :align: center
 
 
@@ -46,7 +46,7 @@ Mega 2560 board. Finally, the Mega 2560 will perform related operations.
 Click the icon at the top right corner and a window will pop up as shown
 below:
 
-.. image:: media_mega2560/image126.png
+.. image:: img/image126.png
     :align: center
 
 
@@ -63,7 +63,7 @@ control board.
 Schematic Diagram
 ------------------------
 
-.. image:: media_mega2560/mega18.png
+.. image:: img/mega18.png
     :align: center
 
 Experimental Procedures
@@ -71,7 +71,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit
 
-.. image:: media_mega2560/image128.png
+.. image:: img/image128.png
     :align: center
 
 **Step 2:** Open the code file.
@@ -85,7 +85,7 @@ Experimental Procedures
 Find the Serial.begin() code to see what baud rate is set, here is 9600.
 Then click the top right corner icon to open the Serial Monitor.
 
-.. image:: media_mega2560/image129.png
+.. image:: img/image129.png
     :align: center
 
 
@@ -94,7 +94,7 @@ Then click the top right corner icon to open the Serial Monitor.
 The default baud rate for serial monitors is 9600, and if the code is
 also set to 9600, there is no need to change the baud rate bar.
 
-.. image:: media_mega2560/image130.png
+.. image:: img/image130.png
     :align: center
 
 
@@ -105,7 +105,7 @@ If you want to check the corresponding value changes, open the Serial
 Monitor and the data in the window will change with your spinning of the
 potentiometer knob.
 
-.. image:: media_mega2560/image131.jpeg
+.. image:: img/image131.jpeg
     :align: center
 
 Code

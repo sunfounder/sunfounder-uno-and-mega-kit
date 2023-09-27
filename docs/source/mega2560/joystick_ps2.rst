@@ -14,7 +14,7 @@ PS2 is used here.
 Components
 ----------------
 
-.. image:: media_mega2560/mega29.png
+.. image:: img/mega29.png
     :align: center
 
 
@@ -36,7 +36,7 @@ direction of the Joystick knob and pressing of the button.
 
 The schematic diagram:
 
-.. image:: media_mega2560/image198.png
+.. image:: img/image198.png
 
 
 Experimental Procedures
@@ -44,7 +44,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit
 
-.. image:: media_mega2560/image199.png
+.. image:: img/image199.png
 
 **Step 2:** Open the code file.
 
@@ -56,7 +56,7 @@ Now, push the rocker and the coordinates of X and Y axes displayed on
 Serial Monitor will change accordingly; press the button, and the
 coordinate of Z=0 will also be displayed.
 
-.. image:: media_mega2560/image200.jpeg
+.. image:: img/image200.jpeg
 
 
 Code

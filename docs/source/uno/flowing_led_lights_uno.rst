@@ -15,7 +15,7 @@ just like flowing water.
 Components
 ----------------
 
-.. image:: media_uno/uno03.png
+.. image:: img/uno03.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -33,7 +33,7 @@ as High level and the corresponding LED at the pins will light up.
 Control the time of each LED brightening and you will see flowing LED
 lights.
 
-.. image:: media_uno/image57.png
+.. image:: img/image57.png
    :align: center
 
 
@@ -48,7 +48,7 @@ Experimental Procedures
 
 **Step 4:** Upload the sketch to the board.
 
-.. image:: media_uno/image58.png
+.. image:: img/image58.png
    :align: center
 
 Now, you should see eight LEDs brighten one by one from the LED
@@ -57,7 +57,7 @@ at pin 9 to the one at pin 2. After that, the LEDs will light up from
 the LED at pin 9 to that at pin 2 and dim from the LED at pin 2 to that
 at pin 9. This whole process will repeat until the circuit is power off.
 
-.. image:: media_uno/image59.jpeg
+.. image:: img/image59.jpeg
    :align: center
 
 Code

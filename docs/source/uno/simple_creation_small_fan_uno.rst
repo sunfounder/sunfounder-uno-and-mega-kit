@@ -14,7 +14,7 @@ accelerate or decelerate automatically.
 Components
 ----------------
 
-.. image:: media_uno/uno26.png
+.. image:: img/uno26.png
 
 * :ref:`SunFounder R3 Board`
 * :ref:`Breadboard`
@@ -36,7 +36,7 @@ to pin 1Y and 2Y respectively. When pin 10 is set as High level and pin
 9 as Low, the motor will start to rotate towards one direction. When the
 pin 10 is Low and pin 9 is High, it rotates in the opposite direction.
 
-.. image:: media_uno/image190.png
+.. image:: img/image190.png
    :align: center
 
 
@@ -45,7 +45,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit.
 
-.. image:: media_uno/image191.png
+.. image:: img/image191.png
    :align: center
 
 **Step 2:** Open the code file.
@@ -57,7 +57,7 @@ Experimental Procedures
 The blade of the DC motor will begin rotating left and right, in a speed
 that varies accordingly.
 
-.. image:: media_uno/image192.jpeg
+.. image:: img/image192.jpeg
    :align: center
 
 Code

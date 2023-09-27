@@ -16,7 +16,7 @@ different colors.
 Components
 -------------------
 
-.. image:: media_mega2560/mega14.png
+.. image:: img/mega14.png
     :align: center
 
 
@@ -47,7 +47,7 @@ This duration or period is the inverse of the PWM frequency. In other
 words, with Arduino's PWM frequency at about 500Hz, the green lines
 would measure 2 milliseconds each.
 
-.. image:: media_mega2560/image110.jpeg
+.. image:: img/image110.jpeg
     :align: center
 
 
@@ -75,7 +75,7 @@ display different colors.
 Schematic Diagram
 --------------------------
 
-.. image:: media_mega2560/mega15.png
+.. image:: img/mega15.png
     :align: center
 
 
@@ -84,7 +84,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit
 
-.. image:: media_mega2560/image116.png
+.. image:: img/image116.png
     :align: center
 
 
@@ -97,7 +97,7 @@ Experimental Procedures
 Here you should see the RGB LED flash circularly red, green, and blue
 first, then red, orange, yellow, green, blue, indigo, and purple.
 
-.. image:: media_mega2560/image117.jpeg
+.. image:: img/image117.jpeg
 
 Code
 --------
@@ -118,14 +118,14 @@ You can use the paint tool on your computer to get the RGB value.
 
 1. Open the paint tool on your computer and click to Edit colors.
 
-.. image:: media_mega2560/image118.png
+.. image:: img/image118.png
    :align: center
 
 
 2. Select one color, then you can see the RGB value of this color. Fill
    them in the code.
 
-.. image:: media_mega2560/image119.png
+.. image:: img/image119.png
    :align: center
 
 .. code-block:: arduino

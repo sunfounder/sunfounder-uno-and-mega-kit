@@ -9,6 +9,10 @@ Also, there is an On-board LED connected to Pin 13 on the Arduino Uno/Mega2560, 
     :width: 500
     :align: center
 
+Here is the complete code package for this Kit. You can click on the following link to download it:
+
+* :download:`SunFounder Uno Mega Kit Code<https://github.com/sunfounder/sunfounder-uno-and-mega-kit/archive/refs/heads/master.zip>`
+
 You Will Learn
 ---------------------
 
@@ -61,7 +65,9 @@ After waiting for a while, the upload success message will appear.
 
 * Open and run the script directly
 
-Of course, if you want to open the script directly to run it, you can refer to :ref:`Download the Code` and we have uploaded all the code to github.
+Here is the complete code package for this Kit. You can click on the following link to download it:
+
+* :download:`SunFounder Uno Mega Kit Code<https://github.com/sunfounder/sunfounder-uno-and-mega-kit/archive/refs/heads/master.zip>`
 
 You can click on **File** in the top right corner and then choose **Open**.
 
@@ -71,7 +77,7 @@ Choose **Open from Computer**.
 
 .. image:: img/0_dic.png
 
-Then go to the path of ``sunfounder-uno-and-mega-kit\scratch code``, and open **1. Stage Mode.sb3**. Please ensure that you have downloaded the required code by referring to :ref:`Download the Code`.
+Then go to the path of ``sunfounder-uno-and-mega-kit\scratch code``, and open **1. Stage Mode.sb3**.
 
 .. image:: img/0_stage.png
 
@@ -141,7 +147,7 @@ Choose **Open from Computer**.
 
 .. image:: img/0_dic.png
 
-Then go to the path of ``sunfounder-uno-and-mega-kit\scratch code``, and open **1. Upload Mode.sb3**. Please ensure that you have downloaded the required code by referring to :ref:`Download the Code`.
+Then go to the path of ``sunfounder-uno-and-mega-kit\scratch code``, and open **1. Upload Mode.sb3**.
 
 .. image:: img/0_upload.png
 

@@ -19,7 +19,7 @@ temperature measurement device, and is connected with a high-performance
 Components
 ---------------
 
-.. image:: media_uno/uno19.png
+.. image:: img/uno19.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -32,7 +32,7 @@ Components
 Schematic Diagram
 ------------------------------
 
-.. image:: media_uno/image147.png
+.. image:: img/image147.png
    :align: center
 
 
@@ -42,7 +42,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit.
 
-.. image:: media_uno/image148.png
+.. image:: img/image148.png
 
 **Step 2:** Open the code file.
 
@@ -50,10 +50,17 @@ Experimental Procedures
 
 **Step 4:** Upload the sketch to the board.
 
+    .. note::
+
+        * The ``DHT sensor library`` library is used here, you can install it from the **Library Manager**.
+
+        .. image:: img/lib_dht11.png
+            :align: center
+
 Now, you can see the value of the current humidity and temperature
 displayed on the LCD.
 
-.. image:: media_uno/image149.jpeg
+.. image:: img/image149.jpeg
 
 Code
 -------
@@ -64,88 +71,61 @@ Code
 
 Code Analysis
 -----------------------
+#.  Includes the ``DHT.h`` library, which provides functions to interact with the DHT sensors. Then, set the pin and type for the DHT sensor.
 
-**Initialize the humiture and LCD1602**
+    .. code-block:: arduino
 
-.. code-block:: arduino
+        #include "DHT.h"
+        #include <LiquidCrystal.h>                //
+        LiquidCrystal lcd(4, 6, 10, 11, 12, 13);  // initialize the LCD1602
 
-    #include <dht.h> //Include the head file dht.h
+        #define DHTPIN 3       // Set the pin connected to the DHT11 data pin
+        #define DHTTYPE DHT11  // DHT 11
 
-    #include <LiquidCrystal.h> 
+        DHT dht(DHTPIN, DHTTYPE);
 
-    LiquidCrystal lcd(4, 6, 10, 11, 12, 13); // initialize the LCD1602 dht DHT;
+#. Initializes the LCD1602, the serial monitor and the DHT sensor.
 
-    #define DHT11_PIN 3 //the humiture sensor attact to pin3
+    .. code-block:: arduino
+
+        void setup() {
+            lcd.begin(16, 2);    // set up the LCD's number of columns and rows:
+            Serial.begin(9600);  //set the baud bit to 9600bps
+            dht.begin();
+        }
 
 
-**Read the value of humiture**
+#. In the ``loop()`` function, read temperature and humidity values from the DHT11 sensor, and print them to the LCD1602.
 
-.. code-block:: arduino
+    .. code-block:: arduino
 
-    int chk = DHT.read11(DHT11_PIN);
+        void loop() {
+            // Wait a few seconds between measurements.
+            delay(2000);
 
-    switch (chk)
+            // Reading temperature or humidity takes about 250 milliseconds!
+            // Sensor readings may also be up to 2 seconds 'old' (it's a very slow sensor)
+            float humidity = dht.readHumidity();
+            // Read temperature as Celsius (the default)
+            float temperture = dht.readTemperature();
 
-    {
+            // Check if any reads failed and exit early (to try again).
+            if (isnan(humidity) || isnan(temperture)) {
+                Serial.println("Failed to read from DHT sensor!");
+                return;
+            }
+            // DISPLAY DATA
+            lcd.setCursor(0, 0);
+            lcd.print("Tem:");
+            lcd.print(temperature, 1);  //print the temperature on lcd
+            lcd.print(" C");
+            lcd.setCursor(0, 1);
+            lcd.print("Hum:");
+            lcd.print(humidity, 1);  //print the humidity on lcd
+            lcd.print(" %");
+            delay(200);  //wait a while
+        }
 
-    case DHTLIB_OK:
-
-        Serial.println("OK,\t");
-
-        break;
-
-    case DHTLIB_ERROR_CHECKSUM:
-
-        Serial.println("Checksum error,\t");
-
-        break;
-
-    case DHTLIB_ERROR_TIMEOUT:
-
-        Serial.println("Time out error,\t");
-
-        break;
-
-    default:
-
-        Serial.println("Unknown error,\t");
-
-        break;
-
-    }
-
-Use the ``read11()`` function to read the value of the temperature and
-humidity sensor. If OK is displayed on the Serial Monitor, the humiture
-sensor is working properly.
-
-``read11()``: Return values:
-
-.. code-block:: arduino
-
-    // DHTLIB_OK: Indicate the humiture sensor is work well.
-
-    // DHTLIB_ERROR_CHECKSUM
-
-    // DHTLIB_ERROR_TIMEOUT
-
-**Display on the LCD1602**
-
-.. code-block:: arduino
-
-    lcd.setCursor(0, 0);
-
-    lcd.print("Tem:");
-
-    lcd.print(DHT.temperature,1); //print the temperature on lcd，keep one decimal point
-
-    lcd.print(" C");
-
-    lcd.setCursor(0, 1);
-
-    lcd.print("Hum:");
-
-    lcd.print(DHT.humidity,1); //print the humidity on lcd
-
-    lcd.print(" %");
-
-    delay(200); //wait a while
+    * The ``dht.readHumidity()`` function is called to read the humidity value from the DHT sensor.
+    * The ``dht.readTemperature()`` function is called to read the temperature value from the DHT sensor.
+    * The ``isnan()`` function is used to check if the readings are valid. If either the humidity or temperature value is NaN (not a number), it indicates a failed reading from the sensor, and an error message is printed.

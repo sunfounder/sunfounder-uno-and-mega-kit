@@ -16,7 +16,7 @@ specific characters on it.
 Components
 --------------
 
-.. image:: media_mega2560/mega30.png
+.. image:: img/mega30.png
     :align: center
 
 * :ref:`SunFounder Mega Board`
@@ -35,7 +35,7 @@ of pin4-11 as High level to light up the corresponding LED(s).
 
 The schematic diagram:
 
-.. image:: media_mega2560/image205.png
+.. image:: img/image205.png
     :align: center
 
 Experimental Procedures
@@ -59,7 +59,7 @@ dp        4
 “ - “     GND
 ========= ==============
 
-.. image:: media_mega2560/image206.png
+.. image:: img/image206.png
     :align: center
  
 
@@ -72,7 +72,7 @@ dp        4
 You should now see the 7-segment display from 0 to 9 and then A to F,
 back and forth.
 
-.. image:: media_mega2560/image207.jpeg
+.. image:: img/image207.jpeg
 
 Code
 ---------
@@ -131,7 +131,7 @@ Calling these functions into the loop() is to let the 7-Segment display
 
    }
 
-.. image:: media_mega2560/image210.jpeg
+.. image:: img/image210.jpeg
    :align: center
 
 First we need to know how it looks like when display the numeral **2**

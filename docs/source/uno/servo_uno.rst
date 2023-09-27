@@ -17,7 +17,7 @@ the orange one is signal line.
 Components
 -----------------------
 
-.. image:: media_uno/uno14.png
+.. image:: img/uno14.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -29,7 +29,7 @@ Components
 Schematic Diagram
 ---------------------
 
-.. image:: media_uno/image119.png
+.. image:: img/image119.png
 
 
 Experimental Procedures
@@ -44,7 +44,7 @@ of the control board)
 
 **Step 4:** Upload the sketch to the board.
 
-.. image:: media_uno/image120.png
+.. image:: img/image120.png
 
    
 
@@ -53,7 +53,7 @@ Now, you can see the rocker arm of the servo rotate and stop at 90
 degrees (15 degrees each time). And then it rotates in the opposite
 direction.
 
-.. image:: media_uno/image121.jpeg
+.. image:: img/image121.jpeg
 
 Code
 --------

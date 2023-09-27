@@ -13,7 +13,7 @@ operation and code in the IDE.
 Components
 --------------------
 
-.. image:: media_uno/uno01.png
+.. image:: img/uno01.png
     :align: center
 
 * :ref:`SunFounder R3 Board`
@@ -33,7 +33,7 @@ gets through the current limiting resistor to the anode of the LED. And
 since the cathode of the LED is connected to GND, the LED will light up.
 When pin 9 outputs low level, the LED goes out.
 
-.. image:: media_uno/image50.png
+.. image:: img/image50.png
     :align: center
 
 
@@ -45,7 +45,7 @@ LED).
 
 Then plug the board into the computer with a 5V USB cable.
 
-.. image:: media_uno/image51.png
+.. image:: img/image51.png
     :align: center
 
 
@@ -58,13 +58,13 @@ Before uploading the code, you need to select the **Board** and
 **Port**. Click **Tools** -> **Board** and select **Arduino/Genuino
 Uno**.
 
-.. image:: media_uno/image52.png
+.. image:: img/image52.png
    :align: center
 
 Then select **Tools** -> **Port**. Your port should be different from
 mine.
 
-.. image:: media_uno/image53.png
+.. image:: img/image53.png
    :align: center
 
 
@@ -72,18 +72,18 @@ mine.
 
 Click the **Upload** icon to upload the code to the control board.
 
-.. image:: media_uno/image54.png
+.. image:: img/image54.png
    :align: center
 
 If "Done uploading" appears at the bottom of the window, it means the
 sketch has been successfully uploaded.
 
-.. image:: media_uno/image55.png
+.. image:: img/image55.png
    :align: center
 
 You should now see the LED blinking.
 
-.. image:: media_uno/image56.jpeg
+.. image:: img/image56.jpeg
    :align: center
 
 Code

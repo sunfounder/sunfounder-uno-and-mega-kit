@@ -16,7 +16,7 @@ outer environment.
 Components
 ---------------
 
-.. image:: media_mega2560/mega24.png
+.. image:: img/mega24.png
     :align: center
 
 
@@ -40,7 +40,7 @@ NTC one.
 
 The schematic diagram:
 
-.. image:: media_mega2560/mega25.png
+.. image:: img/mega25.png
     :align: center
 
 The principle is that the resistance of the NTC thermistor changes with
@@ -123,7 +123,7 @@ Experimental Procedures
 
 **Step 1:** Build the circuit
 
-.. image:: media_mega2560/image173.png
+.. image:: img/image173.png
     :align: center
 
 **Step 2:** Open the code file.
@@ -134,7 +134,7 @@ Experimental Procedures
 
 Now, you can see the current temperature displayed both in Celsius and Fahrenheit degrees on the LCD1602.
 
-.. image:: media_mega2560/image174.jpeg
+.. image:: img/image174.jpeg
 
 Code
 --------

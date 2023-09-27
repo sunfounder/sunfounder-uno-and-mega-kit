@@ -13,7 +13,7 @@ to build a simple doorbell.
 Components
 ----------------
 
-.. image:: media_mega2560/mega08.png
+.. image:: img/mega08.png
     :align: center
 
 
@@ -33,7 +33,7 @@ In this experiment, we use an active buzzer.
 
 The schematic diagram: 
 
-.. image:: media_mega2560/mega09.png
+.. image:: img/mega09.png
     :align: center
 
 Experimental Procedures
@@ -42,7 +42,7 @@ Experimental Procedures
 **Step 1:** Build the circuit (Long pins of buzzer is the Anode and the
 short pin is Cathode).
 
-.. image:: media_mega2560/image88.png
+.. image:: img/image88.png
 
 **Step 2:** Open the code file.
 
@@ -52,7 +52,7 @@ short pin is Cathode).
 
 Now, you should hear the buzzer beep.
 
-.. image:: media_mega2560/image89.jpeg
+.. image:: img/image89.jpeg
 
 Code
 --------
