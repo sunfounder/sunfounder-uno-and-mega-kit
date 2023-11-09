@@ -82,5 +82,5 @@ SW pins of the joystick ps2.
         Serial.print(analogRead(yPin), DEC);  // print the value of VRX in DEC
         Serial.print("|Z: ");
         Serial.println(digitalRead(swPin));   // print the value of SW
-        delay(500);
+        delay(50);
     }
