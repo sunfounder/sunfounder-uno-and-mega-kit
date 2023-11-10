@@ -13,7 +13,6 @@ const int swPin = 8;  //the SW attach to
 void setup()
 {
   pinMode(swPin, INPUT_PULLUP);  //set the SW pin to INPUT_PULLUP
-  digitalWrite(swPin, HIGH);   //And initial value is HIGH
   Serial.begin(9600);
 }
 
