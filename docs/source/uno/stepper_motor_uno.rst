@@ -1,6 +1,6 @@
 .. _stepper_uno:
 
-Lesson 20 Stepper Motor
+Lesson 19 Stepper Motor
 ============================
 
 Introduction
