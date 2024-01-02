@@ -179,13 +179,15 @@ The stopwatch functionality is achieved by using the built-in ``millis()`` funct
 
         // Function to display a 4-digit number on the 7-segment display
         void displayNumber(long num) {
-            for (int digit = 0; digit < 4; digit++) {
-                clearLEDs(); // Turn off all segments and digits
-                pickDigit(digit); // Activate the current digit
-                int value = (num / (int)pow(10, 3 - digit)) % 10; // Extract the specific digit from the number
-                pickNumber(value); // Illuminate the segments to display the digit
-                delay(del); // Keep the digit illuminated for a short time
-            }
+          int divisor = 1000; // Start with the highest divisor for the first digit
+          for (int digit = 0; digit < 4; digit++) {
+            clearLEDs(); // Turn off all segments and digits
+            pickDigit(digit); // Activate the current digit
+            int value = (num / divisor) % 10; // Extract the specific digit from the number
+            pickNumber(value); // Illuminate the segments to display the digit
+            divisor /= 10; // Reduce the divisor for the next digit
+            delay(del); // Keep the digit illuminated for a short time
+          }
         }
 
     * This function breaks down the 4-digit number into individual digits and displays each digit one at a time in rapid succession. This creates the illusion of all digits being displayed simultaneously due to persistence of vision.
