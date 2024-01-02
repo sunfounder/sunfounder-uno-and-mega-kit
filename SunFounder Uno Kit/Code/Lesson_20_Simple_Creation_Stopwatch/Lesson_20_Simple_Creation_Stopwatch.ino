@@ -52,10 +52,12 @@ void loop() {
 // Function to display a 4-digit number on the 7-segment display
 void displayNumber(long num) {
   for (int digit = 0; digit < 4; digit++) {
+    int divisor = 1000; // Start with the highest divisor for the first digit
     clearLEDs(); // Turn off all segments and digits
     pickDigit(digit); // Activate the current digit
-    int value = (num / (int)pow(10, 3 - digit)) % 10; // Extract the specific digit from the number
+    int value = (num / divisor) % 10; // Extract the specific digit from the number
     pickNumber(value); // Illuminate the segments to display the digit
+    divisor /= 10; // Reduce the divisor for the next digit
     delay(del); // Keep the digit illuminated for a short time
   }
 }
