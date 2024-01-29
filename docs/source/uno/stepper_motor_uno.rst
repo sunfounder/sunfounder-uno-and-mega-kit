@@ -76,7 +76,7 @@ VCC                  5v
 
     #include <Stepper.h> //include a head file
     //the steps of a circle
-    #define STEPS 100
+    #define STEPS 2048
     //set steps and the connection with MCU
     Stepper stepper(STEPS, 2, 3, 4, 5);
     //available to store previous value
@@ -91,8 +91,8 @@ VCC                  5v
 
 .. code-block:: Arduino
 
-    //speed of 180 per minute
-    stepper.setSpeed(180); //set the motor speed in rotations per minute(RPMs)
+    //speed of per minute
+    stepper.setSpeed(15); //set the motor speed in rotations per minute(RPMs)
 
 * ``setSpeed(rpms)``：以每分钟转数 (RPMs) 为单位设置电机速度。此函数不会使电机转动，只是设置调用 ``step()`` 时的速度。
 * ``rpms``：电机每分钟旋转的速度 - 一个正数（长型）。
