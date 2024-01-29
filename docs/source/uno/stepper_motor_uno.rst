@@ -83,7 +83,7 @@ Code Analysis
 
     //the steps of a circle
 
-    #define STEPS 100
+    #define STEPS 2048
 
     //set steps and the connection with MCU
 
@@ -108,9 +108,9 @@ to get the number of steps (e.g. 360 / 3.6 gives 100 steps). (``int``).
 
 .. code-block:: arduino
 
-    //speed of 180 per minute
+    //speed of per minute
 
-    stepper.setSpeed(180); //set the motor speed in rotations per minute(RPMs)
+    stepper.setSpeed(15); //set the motor speed in rotations per minute(RPMs)
 
 **setSpeed(rpms):** Sets the motor speed in rotations per minute (RPMs).
 This function doesn't make the motor turn, just sets the speed at which
