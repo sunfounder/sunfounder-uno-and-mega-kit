@@ -1,8 +1,9 @@
 Stepper Motor
 =========================
 
-.. image:: img/stepper.png
-    :align: center
+.. image:: img/image219.jpeg
+   :align: center
+
 
 Stepper motors, due to their unique design, can be controlled to a high
 degree of accuracy without any feedback mechanisms. The shaft of a
@@ -22,7 +23,7 @@ supply. As long as you electrify all phase windings of the motor by an
 appropriate timing sequence, you can make it rotate step by step. The
 schematic diagram of a four-phase reactive stepper motor:
 
-.. image:: img/image219.jpeg
+.. image:: img/image220.png
    :align: center
 
 In the figure, in the middle of the motor is a rotor - a gear-shaped
@@ -48,8 +49,7 @@ with the magnetic poles of A- and D-phase poles. The similar situation
 goes on and on. Energize the A, B, C and D phases in turn, and the rotor
 will rotate in the order of A, B, C and D.
 
-.. image:: img/image220.png
-   :align: center
+
 
 The four-phase stepper motor has three operating modes: single
 four-step, double four-step, and eight-step. The step angle for the
