@@ -3,7 +3,9 @@
 
 我们已经将所有相关的资料都已经上传到天翼云盘，下面是链接和访问码, 进去之后根据需要选择相应的压缩包进行下载。
 
-    https://cloud.189.cn/web/share?code=vaMv6zYv2eYn（访问码：nn2y）
+* :downoad:`https://cloud.189.cn/web/share?code=vaMv6zYv2eYn`
+
+* （访问码：nn2y）
 
 下载并解压后，你会看到以下文件夹：
 
